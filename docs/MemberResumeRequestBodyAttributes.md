@@ -1,4 +1,4 @@
-# atrium-csharp.Model.MemberResumeRequestBodyAttributes
+# atrium.Model.MemberResumeRequestBodyAttributes
 ## Properties
 
 Name | Type | Description | Notes

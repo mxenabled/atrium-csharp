@@ -1,4 +1,4 @@
-# atrium-csharp.Model.MemberConnectionStatusAttributes
+# atrium.Model.MemberConnectionStatusAttributes
 ## Properties
 
 Name | Type | Description | Notes

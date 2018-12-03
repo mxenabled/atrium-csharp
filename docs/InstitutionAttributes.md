@@ -1,4 +1,4 @@
-# atrium-csharp.Model.InstitutionAttributes
+# atrium.Model.InstitutionAttributes
 ## Properties
 
 Name | Type | Description | Notes

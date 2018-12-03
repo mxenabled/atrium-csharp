@@ -1,4 +1,4 @@
-# atrium-csharp.Api.AccountsApi
+# atrium.Api.AccountsApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,9 +20,9 @@ This endpoint allows you to see every transaction that belongs to a specific acc
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -91,9 +91,9 @@ Use this endpoint to view information about every account that belongs to a user
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -156,9 +156,9 @@ Reading an account allows you to get information about a specific account that b
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -219,9 +219,9 @@ Reading an account allows you to get information about a specific account that b
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {

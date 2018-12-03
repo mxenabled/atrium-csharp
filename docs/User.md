@@ -1,4 +1,4 @@
-# atrium-csharp.Model.User
+# atrium.Model.User
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# atrium-csharp.Model.Transactions
+# atrium.Model.Transactions
 ## Properties
 
 Name | Type | Description | Notes

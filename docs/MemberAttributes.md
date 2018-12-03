@@ -1,4 +1,4 @@
-# atrium-csharp.Model.MemberAttributes
+# atrium.Model.MemberAttributes
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# atrium-csharp.Api.TransactionsApi
+# atrium.Api.TransactionsApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,9 +19,9 @@ Use this endpoint to categorize, cleanse, and classify transactions. These trans
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -80,9 +80,9 @@ Use this endpoint to get all transactions that belong to a specific user, across
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -149,9 +149,9 @@ This endpoint allows you to view information about a specific transaction that b
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {

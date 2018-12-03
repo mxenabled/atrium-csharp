@@ -1,4 +1,4 @@
-# atrium-csharp.Model.CredentialResponseAttributes
+# atrium.Model.CredentialResponseAttributes
 ## Properties
 
 Name | Type | Description | Notes

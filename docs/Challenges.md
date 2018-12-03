@@ -1,4 +1,4 @@
-# atrium-csharp.Model.Challenges
+# atrium.Model.Challenges
 ## Properties
 
 Name | Type | Description | Notes

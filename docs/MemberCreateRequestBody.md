@@ -1,4 +1,4 @@
-# atrium-csharp.Model.MemberCreateRequestBody
+# atrium.Model.MemberCreateRequestBody
 ## Properties
 
 Name | Type | Description | Notes

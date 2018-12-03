@@ -1,4 +1,4 @@
-# atrium-csharp.Model.ConnectWidgetRequestBody
+# atrium.Model.ConnectWidgetRequestBody
 ## Properties
 
 Name | Type | Description | Notes

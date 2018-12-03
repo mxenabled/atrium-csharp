@@ -1,4 +1,4 @@
-# atrium-csharp.Api.VerificationApi
+# atrium.Api.VerificationApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,9 +19,9 @@ Use this endpoint to check whether account and routing numbers are available for
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -82,9 +82,9 @@ Use this endpoint to check whether account and routing numbers are available for
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -145,9 +145,9 @@ The verify endpoint begins a verification process for a member.
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {

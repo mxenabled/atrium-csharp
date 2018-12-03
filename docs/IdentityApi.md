@@ -1,4 +1,4 @@
-# atrium-csharp.Api.IdentityApi
+# atrium.Api.IdentityApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,9 +18,9 @@ The identify endpoint begins an identification process for an already-existing m
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -81,9 +81,9 @@ This endpoint returns an array with information about every account associated w
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {

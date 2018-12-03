@@ -1,4 +1,4 @@
-# atrium-csharp.Api.UsersApi
+# atrium.Api.UsersApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,9 +21,9 @@ Call this endpoint to create a new user. Atrium will respond with the newly-crea
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -82,9 +82,9 @@ Calling this endpoint will permanently delete a user from Atrium. If successful,
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -142,9 +142,9 @@ Use this endpoint to list every user you've created in Atrium.
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -205,9 +205,9 @@ Use this endpoint to read the attributes of a specific user.
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {
@@ -266,9 +266,9 @@ Use this endpoint to update the attributes of a specific user. Atrium will respo
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium-csharp.Api;
-using atrium-csharp.Client;
-using atrium-csharp.Model;
+using atrium.Api;
+using atrium.Client;
+using atrium.Model;
 
 namespace Example
 {

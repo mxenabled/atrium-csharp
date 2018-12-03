@@ -1,4 +1,4 @@
-# atrium-csharp.Model.UserUpdateRequestBody
+# atrium.Model.UserUpdateRequestBody
 ## Properties
 
 Name | Type | Description | Notes

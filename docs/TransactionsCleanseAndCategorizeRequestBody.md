@@ -1,4 +1,4 @@
-# atrium-csharp.Model.TransactionsCleanseAndCategorizeRequestBody
+# atrium.Model.TransactionsCleanseAndCategorizeRequestBody
 ## Properties
 
 Name | Type | Description | Notes
