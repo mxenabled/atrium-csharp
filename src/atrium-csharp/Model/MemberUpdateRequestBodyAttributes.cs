@@ -35,7 +35,7 @@ namespace atrium-csharp.Model
         /// <param name="credentials">credentials.</param>
         /// <param name="identifier">identifier.</param>
         /// <param name="metadata">metadata.</param>
-        public MemberUpdateRequestBodyAttributes(List<Object> credentials = default(List<Object>), string identifier = default(string), string metadata = default(string))
+        public MemberUpdateRequestBodyAttributes(List<CredentialResponseAttributes> credentials = default(List<CredentialResponseAttributes>), string identifier = default(string), string metadata = default(string))
         {
             this.Credentials = credentials;
             this.Identifier = identifier;
@@ -46,7 +46,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Credentials
         /// </summary>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
-        public List<Object> Credentials { get; set; }
+        public List<CredentialResponseAttributes> Credentials { get; set; }
 
         /// <summary>
         /// Gets or Sets Identifier

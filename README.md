@@ -138,7 +138,7 @@ Class | Method | HTTP request | Description
  - [Model.AccountOwners](docs/AccountOwners.md)
  - [Model.Accounts](docs/Accounts.md)
  - [Model.ChallengeAttributes](docs/ChallengeAttributes.md)
- - [Model.ChallengeAttributesOptions](docs/ChallengeAttributesOptions.md)
+ - [Model.ChallengeOptionAttributes](docs/ChallengeOptionAttributes.md)
  - [Model.Challenges](docs/Challenges.md)
  - [Model.ConnectWidget](docs/ConnectWidget.md)
  - [Model.ConnectWidgetAttributes](docs/ConnectWidgetAttributes.md)

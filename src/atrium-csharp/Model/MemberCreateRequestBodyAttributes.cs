@@ -41,7 +41,7 @@ namespace atrium-csharp.Model
         /// <param name="identifier">identifier.</param>
         /// <param name="institutionCode">institutionCode (required).</param>
         /// <param name="metadata">metadata.</param>
-        public MemberCreateRequestBodyAttributes(List<Object> credentials = default(List<Object>), string identifier = default(string), string institutionCode = default(string), string metadata = default(string))
+        public MemberCreateRequestBodyAttributes(List<CredentialResponseAttributes> credentials = default(List<CredentialResponseAttributes>), string identifier = default(string), string institutionCode = default(string), string metadata = default(string))
         {
             // to ensure "credentials" is required (not null)
             if (credentials == null)
@@ -69,7 +69,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Credentials
         /// </summary>
         [DataMember(Name="credentials", EmitDefaultValue=false)]
-        public List<Object> Credentials { get; set; }
+        public List<CredentialResponseAttributes> Credentials { get; set; }
 
         /// <summary>
         /// Gets or Sets Identifier

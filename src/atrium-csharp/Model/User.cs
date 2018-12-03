@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
         /// <param name="user">user.</param>
-        public User(Object user = default(Object))
+        public User(UserAttributes user = default(UserAttributes))
         {
             this._User = user;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets _User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public Object _User { get; set; }
+        public UserAttributes _User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="Transaction" /> class.
         /// </summary>
         /// <param name="transaction">transaction.</param>
-        public Transaction(Object transaction = default(Object))
+        public Transaction(TransactionAttributes transaction = default(TransactionAttributes))
         {
             this._Transaction = transaction;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets _Transaction
         /// </summary>
         [DataMember(Name="transaction", EmitDefaultValue=false)]
-        public Object _Transaction { get; set; }
+        public TransactionAttributes _Transaction { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

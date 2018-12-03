@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="TransactionsCleanseAndCategorize" /> class.
         /// </summary>
         /// <param name="transactions">transactions.</param>
-        public TransactionsCleanseAndCategorize(List<Object> transactions = default(List<Object>))
+        public TransactionsCleanseAndCategorize(List<TransactionsCleanseAndCategorizeAttributes> transactions = default(List<TransactionsCleanseAndCategorizeAttributes>))
         {
             this.Transactions = transactions;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Transactions
         /// </summary>
         [DataMember(Name="transactions", EmitDefaultValue=false)]
-        public List<Object> Transactions { get; set; }
+        public List<TransactionsCleanseAndCategorizeAttributes> Transactions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

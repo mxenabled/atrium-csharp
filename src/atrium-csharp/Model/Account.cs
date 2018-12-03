@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
         /// <param name="account">account.</param>
-        public Account(Object account = default(Object))
+        public Account(AccountAttributes account = default(AccountAttributes))
         {
             this._Account = account;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets _Account
         /// </summary>
         [DataMember(Name="account", EmitDefaultValue=false)]
-        public Object _Account { get; set; }
+        public AccountAttributes _Account { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

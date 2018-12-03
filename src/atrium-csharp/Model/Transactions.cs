@@ -34,7 +34,7 @@ namespace atrium-csharp.Model
         /// </summary>
         /// <param name="transactions">transactions.</param>
         /// <param name="pagination">pagination.</param>
-        public Transactions(List<Object> transactions = default(List<Object>), Object pagination = default(Object))
+        public Transactions(List<TransactionAttributes> transactions = default(List<TransactionAttributes>), Pagination pagination = default(Pagination))
         {
             this._Transactions = transactions;
             this.Pagination = pagination;
@@ -44,13 +44,13 @@ namespace atrium-csharp.Model
         /// Gets or Sets _Transactions
         /// </summary>
         [DataMember(Name="transactions", EmitDefaultValue=false)]
-        public List<Object> _Transactions { get; set; }
+        public List<TransactionAttributes> _Transactions { get; set; }
 
         /// <summary>
         /// Gets or Sets Pagination
         /// </summary>
         [DataMember(Name="pagination", EmitDefaultValue=false)]
-        public Object Pagination { get; set; }
+        public Pagination Pagination { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

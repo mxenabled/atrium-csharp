@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="Challenges" /> class.
         /// </summary>
         /// <param name="challenges">challenges.</param>
-        public Challenges(List<Object> challenges = default(List<Object>))
+        public Challenges(List<ChallengeAttributes> challenges = default(List<ChallengeAttributes>))
         {
             this._Challenges = challenges;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets _Challenges
         /// </summary>
         [DataMember(Name="challenges", EmitDefaultValue=false)]
-        public List<Object> _Challenges { get; set; }
+        public List<ChallengeAttributes> _Challenges { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

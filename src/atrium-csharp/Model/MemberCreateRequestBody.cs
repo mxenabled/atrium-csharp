@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="MemberCreateRequestBody" /> class.
         /// </summary>
         /// <param name="member">member.</param>
-        public MemberCreateRequestBody(Object member = default(Object))
+        public MemberCreateRequestBody(MemberCreateRequestBodyAttributes member = default(MemberCreateRequestBodyAttributes))
         {
             this.Member = member;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public Object Member { get; set; }
+        public MemberCreateRequestBodyAttributes Member { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="Institution" /> class.
         /// </summary>
         /// <param name="institution">institution.</param>
-        public Institution(Object institution = default(Object))
+        public Institution(InstitutionAttributes institution = default(InstitutionAttributes))
         {
             this._Institution = institution;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets _Institution
         /// </summary>
         [DataMember(Name="institution", EmitDefaultValue=false)]
-        public Object _Institution { get; set; }
+        public InstitutionAttributes _Institution { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

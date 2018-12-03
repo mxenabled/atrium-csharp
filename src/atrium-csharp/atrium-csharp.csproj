@@ -12,7 +12,7 @@ OpenAPI spec version: 0.1
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{05636EAE-A534-4F8E-8063-8FE3A9312F62}</ProjectGuid>
+    <ProjectGuid>{EF4A2B8E-A3EB-44AD-A1DA-104F0A739B09}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>atrium-csharp</RootNamespace>

@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="MemberConnectionStatusAttributes" /> class.
         /// </summary>
         /// <param name="challenges">challenges.</param>
-        public MemberConnectionStatusAttributes(List<Object> challenges = default(List<Object>))
+        public MemberConnectionStatusAttributes(List<ChallengeAttributes> challenges = default(List<ChallengeAttributes>))
         {
             this.Challenges = challenges;
         }
@@ -48,7 +48,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Challenges
         /// </summary>
         [DataMember(Name="challenges", EmitDefaultValue=false)]
-        public List<Object> Challenges { get; set; }
+        public List<ChallengeAttributes> Challenges { get; set; }
 
         /// <summary>
         /// Gets or Sets ConnectionStatus

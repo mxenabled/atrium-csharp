@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="MemberResumeRequestBodyAttributes" /> class.
         /// </summary>
         /// <param name="challenges">challenges.</param>
-        public MemberResumeRequestBodyAttributes(List<Object> challenges = default(List<Object>))
+        public MemberResumeRequestBodyAttributes(List<CredentialResponseAttributes> challenges = default(List<CredentialResponseAttributes>))
         {
             this.Challenges = challenges;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Challenges
         /// </summary>
         [DataMember(Name="challenges", EmitDefaultValue=false)]
-        public List<Object> Challenges { get; set; }
+        public List<CredentialResponseAttributes> Challenges { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

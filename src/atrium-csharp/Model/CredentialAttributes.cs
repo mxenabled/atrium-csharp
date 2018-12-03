@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="CredentialAttributes" /> class.
         /// </summary>
         /// <param name="options">options.</param>
-        public CredentialAttributes(List<Object> options = default(List<Object>))
+        public CredentialAttributes(List<CredentialOptionAttributes> options = default(List<CredentialOptionAttributes>))
         {
             this.Options = options;
         }
@@ -60,7 +60,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Options
         /// </summary>
         [DataMember(Name="options", EmitDefaultValue=false)]
-        public List<Object> Options { get; set; }
+        public List<CredentialOptionAttributes> Options { get; set; }
 
         /// <summary>
         /// Gets or Sets Type

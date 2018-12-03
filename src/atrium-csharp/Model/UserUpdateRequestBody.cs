@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="UserUpdateRequestBody" /> class.
         /// </summary>
         /// <param name="user">user.</param>
-        public UserUpdateRequestBody(Object user = default(Object))
+        public UserUpdateRequestBody(UserAttributes user = default(UserAttributes))
         {
             this.User = user;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public Object User { get; set; }
+        public UserAttributes User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

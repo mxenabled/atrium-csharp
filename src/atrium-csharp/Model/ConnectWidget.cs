@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="ConnectWidget" /> class.
         /// </summary>
         /// <param name="user">user.</param>
-        public ConnectWidget(Object user = default(Object))
+        public ConnectWidget(ConnectWidgetAttributes user = default(ConnectWidgetAttributes))
         {
             this.User = user;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public Object User { get; set; }
+        public ConnectWidgetAttributes User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

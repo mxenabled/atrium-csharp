@@ -33,7 +33,7 @@ namespace atrium-csharp.Model
         /// Initializes a new instance of the <see cref="MemberConnectionStatus" /> class.
         /// </summary>
         /// <param name="member">member.</param>
-        public MemberConnectionStatus(Object member = default(Object))
+        public MemberConnectionStatus(MemberConnectionStatusAttributes member = default(MemberConnectionStatusAttributes))
         {
             this.Member = member;
         }
@@ -42,7 +42,7 @@ namespace atrium-csharp.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public Object Member { get; set; }
+        public MemberConnectionStatusAttributes Member { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AggregatedAt** | **string** |  | [optional] 
-**Challenges** | **List&lt;Object&gt;** |  | [optional] 
+**Challenges** | [**List&lt;ChallengeAttributes&gt;**](ChallengeAttributes.md) |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 
 **Guid** | **bool?** |  | [optional] 
 **HasProcessedAccounts** | **bool?** |  | [optional] 

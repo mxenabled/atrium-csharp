@@ -3,7 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Credentials** | **List&lt;Object&gt;** |  | [optional] 
+**Credentials** | [**List&lt;CredentialResponseAttributes&gt;**](CredentialResponseAttributes.md) |  | [optional] 
 **Identifier** | **string** |  | [optional] 
 **Metadata** | **string** |  | [optional] 
 

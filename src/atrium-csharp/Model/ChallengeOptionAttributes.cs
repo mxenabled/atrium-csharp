@@ -24,16 +24,16 @@ using DateConverter = atrium-csharp.Client.DateConverter;
 namespace atrium-csharp.Model
 {
     /// <summary>
-    /// ChallengeAttributesOptions
+    /// ChallengeOptionAttributes
     /// </summary>
     [DataContract]
-    public partial class ChallengeAttributesOptions :  IEquatable<ChallengeAttributesOptions>, IValidatableObject
+    public partial class ChallengeOptionAttributes :  IEquatable<ChallengeOptionAttributes>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChallengeAttributesOptions" /> class.
+        /// Initializes a new instance of the <see cref="ChallengeOptionAttributes" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        public ChallengeAttributesOptions()
+        public ChallengeOptionAttributes()
         {
         }
         
@@ -62,7 +62,7 @@ namespace atrium-csharp.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ChallengeAttributesOptions {\n");
+            sb.Append("class ChallengeOptionAttributes {\n");
             sb.Append("  ImageData: ").Append(ImageData).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -86,15 +86,15 @@ namespace atrium-csharp.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ChallengeAttributesOptions);
+            return this.Equals(input as ChallengeOptionAttributes);
         }
 
         /// <summary>
-        /// Returns true if ChallengeAttributesOptions instances are equal
+        /// Returns true if ChallengeOptionAttributes instances are equal
         /// </summary>
-        /// <param name="input">Instance of ChallengeAttributesOptions to be compared</param>
+        /// <param name="input">Instance of ChallengeOptionAttributes to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ChallengeAttributesOptions input)
+        public bool Equals(ChallengeOptionAttributes input)
         {
             if (input == null)
                 return false;
