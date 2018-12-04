@@ -29,14 +29,11 @@ namespace Example
     {
         public void main()
         {
-            // Configure API key authorization: apiKey
+            // Configure API Key authorization
             Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-API-Key", "Bearer");
-            // Configure API key authorization: clientID
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-Client-ID", "Bearer");
+
+            // Configure Client ID authorization
+            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
 
             var apiInstance = new InstitutionsApi();
             var name = name_example;  // string | This will list only institutions in which the appended string appears. (optional) 
@@ -94,14 +91,11 @@ namespace Example
     {
         public void main()
         {
-            // Configure API key authorization: apiKey
+            // Configure API Key authorization
             Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-API-Key", "Bearer");
-            // Configure API key authorization: clientID
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-Client-ID", "Bearer");
+
+            // Configure Client ID authorization
+            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
 
             var apiInstance = new InstitutionsApi();
             var institutionCode = institutionCode_example;  // string | The institution_code of the institution.
@@ -155,14 +149,11 @@ namespace Example
     {
         public void main()
         {
-            // Configure API key authorization: apiKey
+            // Configure API Key authorization
             Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-API-Key", "Bearer");
-            // Configure API key authorization: clientID
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.AddApiKeyPrefix("MX-Client-ID", "Bearer");
+
+            // Configure Client ID authorization
+            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
 
             var apiInstance = new InstitutionsApi();
             var institutionCode = institutionCode_example;  // string | The institution_code of the institution.
