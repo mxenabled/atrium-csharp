@@ -1,4 +1,4 @@
-# atrium.Model.Institution
+# Atrium.Model.Institution
 ## Properties
 
 Name | Type | Description | Notes

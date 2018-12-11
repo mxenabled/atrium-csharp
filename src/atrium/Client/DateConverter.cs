@@ -9,7 +9,7 @@
 
 using Newtonsoft.Json.Converters;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     public class DateConverter : IsoDateTimeConverter
     {

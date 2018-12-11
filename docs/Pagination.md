@@ -1,4 +1,4 @@
-# atrium.Model.Pagination
+# Atrium.Model.Pagination
 ## Properties
 
 Name | Type | Description | Notes

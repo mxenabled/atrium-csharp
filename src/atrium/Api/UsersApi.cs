@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>User</returns>
         User CreateUser (UserCreateRequestBody body);
@@ -40,7 +40,7 @@ namespace atrium.Api
         /// <remarks>
         /// Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> CreateUserWithHttpInfo (UserCreateRequestBody body);
@@ -50,7 +50,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns></returns>
         void DeleteUser (string userGuid);
@@ -61,7 +61,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserWithHttpInfo (string userGuid);
@@ -71,7 +71,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Users</returns>
@@ -83,7 +83,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of Users</returns>
@@ -94,7 +94,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>User</returns>
         User ReadUser (string userGuid);
@@ -105,7 +105,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of User</returns>
         ApiResponse<User> ReadUserWithHttpInfo (string userGuid);
@@ -115,7 +115,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>User</returns>
@@ -127,7 +127,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>ApiResponse of User</returns>
@@ -140,7 +140,7 @@ namespace atrium.Api
         /// <remarks>
         /// Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> CreateUserAsync (UserCreateRequestBody body);
@@ -151,7 +151,7 @@ namespace atrium.Api
         /// <remarks>
         /// Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body);
@@ -161,7 +161,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of void</returns>
         System.Threading.Tasks.Task DeleteUserAsync (string userGuid);
@@ -172,7 +172,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userGuid);
@@ -182,7 +182,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of Users</returns>
@@ -194,7 +194,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (Users)</returns>
@@ -205,7 +205,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of User</returns>
         System.Threading.Tasks.Task<User> ReadUserAsync (string userGuid);
@@ -216,7 +216,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (User)</returns>
         System.Threading.Tasks.Task<ApiResponse<User>> ReadUserAsyncWithHttpInfo (string userGuid);
@@ -226,7 +226,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>Task of User</returns>
@@ -238,7 +238,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>Task of ApiResponse (User)</returns>
@@ -251,7 +251,7 @@ namespace atrium.Api
     /// </summary>
     public partial class UsersApi : IUsersApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersApi"/> class.
@@ -259,9 +259,9 @@ namespace atrium.Api
         /// <returns></returns>
         public UsersApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -270,14 +270,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public UsersApi(atrium.Client.Configuration configuration = null)
+        public UsersApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -303,12 +303,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -346,7 +346,7 @@ namespace atrium.Api
         /// <summary>
         /// Create user Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>User</returns>
         public User CreateUser (UserCreateRequestBody body)
@@ -358,7 +358,7 @@ namespace atrium.Api
         /// <summary>
         /// Create user Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>ApiResponse of User</returns>
         public ApiResponse< User > CreateUserWithHttpInfo (UserCreateRequestBody body)
@@ -430,7 +430,7 @@ namespace atrium.Api
         /// <summary>
         /// Create user Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> CreateUserAsync (UserCreateRequestBody body)
@@ -443,7 +443,7 @@ namespace atrium.Api
         /// <summary>
         /// Create user Call this endpoint to create a new user. Atrium will respond with the newly-created user object if successful. This endpoint accepts several parameters: identifier, metadata, and is_disabled.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<User>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body)
@@ -515,7 +515,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete user Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns></returns>
         public void DeleteUser (string userGuid)
@@ -526,7 +526,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete user Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteUserWithHttpInfo (string userGuid)
@@ -590,7 +590,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete user Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of void</returns>
         public async System.Threading.Tasks.Task DeleteUserAsync (string userGuid)
@@ -602,7 +602,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete user Calling this endpoint will permanently delete a user from Atrium. If successful, the API will respond with Status: 204 No Content. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userGuid)
@@ -666,7 +666,7 @@ namespace atrium.Api
         /// <summary>
         /// List users Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Users</returns>
@@ -679,7 +679,7 @@ namespace atrium.Api
         /// <summary>
         /// List users Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of Users</returns>
@@ -742,7 +742,7 @@ namespace atrium.Api
         /// <summary>
         /// List users Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of Users</returns>
@@ -756,7 +756,7 @@ namespace atrium.Api
         /// <summary>
         /// List users Use this endpoint to list every user you&#39;ve created in Atrium.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (Users)</returns>
@@ -819,7 +819,7 @@ namespace atrium.Api
         /// <summary>
         /// Read user Use this endpoint to read the attributes of a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>User</returns>
         public User ReadUser (string userGuid)
@@ -831,7 +831,7 @@ namespace atrium.Api
         /// <summary>
         /// Read user Use this endpoint to read the attributes of a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of User</returns>
         public ApiResponse< User > ReadUserWithHttpInfo (string userGuid)
@@ -895,7 +895,7 @@ namespace atrium.Api
         /// <summary>
         /// Read user Use this endpoint to read the attributes of a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of User</returns>
         public async System.Threading.Tasks.Task<User> ReadUserAsync (string userGuid)
@@ -908,7 +908,7 @@ namespace atrium.Api
         /// <summary>
         /// Read user Use this endpoint to read the attributes of a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (User)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<User>> ReadUserAsyncWithHttpInfo (string userGuid)
@@ -972,7 +972,7 @@ namespace atrium.Api
         /// <summary>
         /// Update user Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>User</returns>
@@ -985,7 +985,7 @@ namespace atrium.Api
         /// <summary>
         /// Update user Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>ApiResponse of User</returns>
@@ -1059,7 +1059,7 @@ namespace atrium.Api
         /// <summary>
         /// Update user Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>Task of User</returns>
@@ -1073,7 +1073,7 @@ namespace atrium.Api
         /// <summary>
         /// Update user Use this endpoint to update the attributes of a specific user. Atrium will respond with the updated user object.&lt;br&gt; Disabling a user means that accounts and transactions associated with it will not be updated in the background by MX. It will also restrict access to that user&#39;s data until they are no longer disabled. Users who are disabled for the entirety of an Atrium billing period will not be factored into that month&#39;s bill.&lt;br&gt; To disable a user, update it and set the is_disabled parameter to true. Set it to false to re-enable the user. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
         /// <returns>Task of ApiResponse (User)</returns>

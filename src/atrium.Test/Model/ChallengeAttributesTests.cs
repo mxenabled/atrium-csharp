@@ -14,13 +14,13 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using atrium.Api;
-using atrium.Model;
-using atrium.Client;
+using Atrium.Api;
+using Atrium.Model;
+using Atrium.Client;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace atrium.Test
+namespace Atrium.Test
 {
     /// <summary>
     ///  Class for testing ChallengeAttributes
@@ -103,6 +103,14 @@ namespace atrium.Test
         public void OptionsTest()
         {
             // TODO unit test for the property 'Options'
+        }
+        /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Test]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
         }
 
     }

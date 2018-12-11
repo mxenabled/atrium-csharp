@@ -1,4 +1,4 @@
-# atrium - the C# library for the MX API
+# Atrium - the C# library for the MX API
 
 The MX Atrium API supports over 48,000 data connections to thousands of financial institutions. It provides secure access to your users' accounts and transactions with industry-leading cleansing, categorization, and classification.  Atrium is designed according to resource-oriented REST architecture and responds with JSON bodies and HTTP response codes.  Use Atrium's development environment, vestibule.mx.com, to quickly get up and running. The development environment limits are 100 users, 25 members per user, and access to the top 15 institutions. Contact MX to purchase production access. 
 
@@ -29,9 +29,9 @@ Run the following command to generate the DLL
 
 Then include the DLL (under the `bin` folder) in the C# project, and use the namespaces:
 ```csharp
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 ```
 <a name="getting-started"></a>
 ## Example Usage
@@ -41,9 +41,9 @@ Please see `docs` directory for additional endpoint examples
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 
 namespace Example
 {

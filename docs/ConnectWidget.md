@@ -1,4 +1,4 @@
-# atrium.Model.ConnectWidget
+# Atrium.Model.ConnectWidget
 ## Properties
 
 Name | Type | Description | Notes

@@ -15,7 +15,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// Represents a set of configuration settings
@@ -416,7 +416,7 @@ namespace atrium.Client
         /// </summary>
         public static String ToDebugReport()
         {
-            String report = "C# SDK (atrium) Debug Report:\n";
+            String report = "C# SDK (Atrium) Debug Report:\n";
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 0.1\n";

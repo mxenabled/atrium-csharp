@@ -1,4 +1,4 @@
-# atrium.Model.AccountOwners
+# Atrium.Model.AccountOwners
 ## Properties
 
 Name | Type | Description | Notes

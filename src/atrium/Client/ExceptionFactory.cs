@@ -11,7 +11,7 @@
 using System;
 using RestSharp;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// A delegate to ExceptionFactory method

@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>TransactionsCleanseAndCategorize</returns>
         TransactionsCleanseAndCategorize CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body);
@@ -40,7 +40,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>ApiResponse of TransactionsCleanseAndCategorize</returns>
         ApiResponse<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
@@ -50,7 +50,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -65,7 +65,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -79,7 +79,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Transaction</returns>
@@ -91,7 +91,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Transaction</returns>
@@ -104,7 +104,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>Task of TransactionsCleanseAndCategorize</returns>
         System.Threading.Tasks.Task<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body);
@@ -115,7 +115,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorize)</returns>
         System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorize>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
@@ -125,7 +125,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -140,7 +140,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -154,7 +154,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Transaction</returns>
@@ -166,7 +166,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Transaction)</returns>
@@ -179,7 +179,7 @@ namespace atrium.Api
     /// </summary>
     public partial class TransactionsApi : ITransactionsApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="TransactionsApi"/> class.
@@ -187,9 +187,9 @@ namespace atrium.Api
         /// <returns></returns>
         public TransactionsApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -198,14 +198,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public TransactionsApi(atrium.Client.Configuration configuration = null)
+        public TransactionsApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -231,12 +231,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -274,7 +274,7 @@ namespace atrium.Api
         /// <summary>
         /// Categorize transactions Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>TransactionsCleanseAndCategorize</returns>
         public TransactionsCleanseAndCategorize CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body)
@@ -286,7 +286,7 @@ namespace atrium.Api
         /// <summary>
         /// Categorize transactions Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>ApiResponse of TransactionsCleanseAndCategorize</returns>
         public ApiResponse< TransactionsCleanseAndCategorize > CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
@@ -358,7 +358,7 @@ namespace atrium.Api
         /// <summary>
         /// Categorize transactions Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>Task of TransactionsCleanseAndCategorize</returns>
         public async System.Threading.Tasks.Task<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body)
@@ -371,7 +371,7 @@ namespace atrium.Api
         /// <summary>
         /// Categorize transactions Use this endpoint to categorize, cleanse, and classify transactions. These transactions are not persisted or stored on the MX platform.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
         /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorize)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorize>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
@@ -443,7 +443,7 @@ namespace atrium.Api
         /// <summary>
         /// List transactions for a user Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -459,7 +459,7 @@ namespace atrium.Api
         /// <summary>
         /// List transactions for a user Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -531,7 +531,7 @@ namespace atrium.Api
         /// <summary>
         /// List transactions for a user Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -548,7 +548,7 @@ namespace atrium.Api
         /// <summary>
         /// List transactions for a user Use this endpoint to get all transactions that belong to a specific user, across all the user&#39;s members and accounts.&lt;br&gt; This endpoint accepts optional query parameters, from_date and to_date, which filter transactions according to the date they were posted. If no values are given, from_date will default to 90 days prior to the request, and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -620,7 +620,7 @@ namespace atrium.Api
         /// <summary>
         /// Read a transaction This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Transaction</returns>
@@ -633,7 +633,7 @@ namespace atrium.Api
         /// <summary>
         /// Read a transaction This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Transaction</returns>
@@ -702,7 +702,7 @@ namespace atrium.Api
         /// <summary>
         /// Read a transaction This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Transaction</returns>
@@ -716,7 +716,7 @@ namespace atrium.Api
         /// <summary>
         /// Read a transaction This endpoint allows you to view information about a specific transaction that belongs to a user.&lt;br&gt;
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Transaction)</returns>

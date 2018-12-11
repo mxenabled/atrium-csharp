@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint will return a URL for an embeddable version of MX Connect.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ConnectWidget</returns>
@@ -41,7 +41,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint will return a URL for an embeddable version of MX Connect.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ApiResponse of ConnectWidget</returns>
@@ -54,7 +54,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint will return a URL for an embeddable version of MX Connect.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>Task of ConnectWidget</returns>
@@ -66,7 +66,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint will return a URL for an embeddable version of MX Connect.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>Task of ApiResponse (ConnectWidget)</returns>
@@ -79,7 +79,7 @@ namespace atrium.Api
     /// </summary>
     public partial class ConnectWidgetApi : IConnectWidgetApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectWidgetApi"/> class.
@@ -87,9 +87,9 @@ namespace atrium.Api
         /// <returns></returns>
         public ConnectWidgetApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -98,14 +98,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ConnectWidgetApi(atrium.Client.Configuration configuration = null)
+        public ConnectWidgetApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -131,12 +131,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -174,7 +174,7 @@ namespace atrium.Api
         /// <summary>
         /// Embedding in a website This endpoint will return a URL for an embeddable version of MX Connect.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ConnectWidget</returns>
@@ -187,7 +187,7 @@ namespace atrium.Api
         /// <summary>
         /// Embedding in a website This endpoint will return a URL for an embeddable version of MX Connect.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>ApiResponse of ConnectWidget</returns>
@@ -264,7 +264,7 @@ namespace atrium.Api
         /// <summary>
         /// Embedding in a website This endpoint will return a URL for an embeddable version of MX Connect.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>Task of ConnectWidget</returns>
@@ -278,7 +278,7 @@ namespace atrium.Api
         /// <summary>
         /// Embedding in a website This endpoint will return a URL for an embeddable version of MX Connect.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
         /// <returns>Task of ApiResponse (ConnectWidget)</returns>

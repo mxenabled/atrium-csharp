@@ -20,7 +20,7 @@ using System.Text;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// API client is mainly responsible for making the HTTP call to the API backend.
@@ -51,7 +51,7 @@ namespace atrium.Client
         /// </summary>
         public ApiClient()
         {
-            Configuration = atrium.Client.Configuration.Default;
+            Configuration = Atrium.Client.Configuration.Default;
             RestClient = new RestClient("https://vestibule.mx.com");
         }
 
@@ -62,7 +62,7 @@ namespace atrium.Client
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
         {
-            Configuration = config ?? atrium.Client.Configuration.Default;
+            Configuration = config ?? Atrium.Client.Configuration.Default;
 
             RestClient = new RestClient(Configuration.BasePath);
         }

@@ -1,4 +1,4 @@
-# atrium.Api.InstitutionsApi
+# Atrium.Api.InstitutionsApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,9 +19,9 @@ This endpoint allows you to see what institutions are available for connection. 
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 
 namespace Example
 {
@@ -81,9 +81,9 @@ This endpoint allows you to see information for a specific institution.
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 
 namespace Example
 {
@@ -139,9 +139,9 @@ Use this endpoint to see which credentials will be needed to create a member for
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 
 namespace Example
 {

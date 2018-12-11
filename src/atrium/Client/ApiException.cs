@@ -9,7 +9,7 @@
 
 using System;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// API Exception

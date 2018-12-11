@@ -19,9 +19,9 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
-using DateConverter = atrium.Client.DateConverter;
+using DateConverter = Atrium.Client.DateConverter;
 
-namespace atrium.Model
+namespace Atrium.Model
 {
     /// <summary>
     /// ChallengeAttributes
@@ -69,6 +69,12 @@ namespace atrium.Model
         public List<ChallengeOptionAttributes> Options { get; set; }
 
         /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; private set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -81,6 +87,7 @@ namespace atrium.Model
             sb.Append("  ImageData: ").Append(ImageData).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +146,11 @@ namespace atrium.Model
                     this.Options == input.Options ||
                     this.Options != null &&
                     this.Options.SequenceEqual(input.Options)
+                ) && 
+                (
+                    this.Type == input.Type ||
+                    (this.Type != null &&
+                    this.Type.Equals(input.Type))
                 );
         }
 
@@ -161,6 +173,8 @@ namespace atrium.Model
                     hashCode = hashCode * 59 + this.Label.GetHashCode();
                 if (this.Options != null)
                     hashCode = hashCode * 59 + this.Options.GetHashCode();
+                if (this.Type != null)
+                    hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
             }
         }

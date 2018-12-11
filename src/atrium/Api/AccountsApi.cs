@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -45,7 +45,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -60,7 +60,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -73,7 +73,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -85,7 +85,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Account</returns>
@@ -97,7 +97,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Account</returns>
@@ -108,7 +108,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -121,7 +121,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -135,7 +135,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -151,7 +151,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -166,7 +166,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -179,7 +179,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -191,7 +191,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Account</returns>
@@ -203,7 +203,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Account)</returns>
@@ -214,7 +214,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -227,7 +227,7 @@ namespace atrium.Api
         /// <remarks>
         /// Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -241,7 +241,7 @@ namespace atrium.Api
     /// </summary>
     public partial class AccountsApi : IAccountsApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AccountsApi"/> class.
@@ -249,9 +249,9 @@ namespace atrium.Api
         /// <returns></returns>
         public AccountsApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -260,14 +260,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public AccountsApi(atrium.Client.Configuration configuration = null)
+        public AccountsApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -293,12 +293,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -336,7 +336,7 @@ namespace atrium.Api
         /// <summary>
         /// List account transactions This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -353,7 +353,7 @@ namespace atrium.Api
         /// <summary>
         /// List account transactions This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -430,7 +430,7 @@ namespace atrium.Api
         /// <summary>
         /// List account transactions This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -448,7 +448,7 @@ namespace atrium.Api
         /// <summary>
         /// List account transactions This endpoint allows you to see every transaction that belongs to a specific account. The default from_date is 90 days prior to the request, and the default to_date is 5 days from the time of the request.&lt;br&gt; The from_date and to_date parameters can optionally be appended to the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -525,7 +525,7 @@ namespace atrium.Api
         /// <summary>
         /// List accounts for a user Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -539,7 +539,7 @@ namespace atrium.Api
         /// <summary>
         /// List accounts for a user Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -607,7 +607,7 @@ namespace atrium.Api
         /// <summary>
         /// List accounts for a user Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -622,7 +622,7 @@ namespace atrium.Api
         /// <summary>
         /// List accounts for a user Use this endpoint to view information about every account that belongs to a user. You&#39;ll need the user&#39;s GUID to access this list. The information will include the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the account balance, the date the account was started, etc.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -690,7 +690,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Account</returns>
@@ -703,7 +703,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Account</returns>
@@ -772,7 +772,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Account</returns>
@@ -786,7 +786,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Account)</returns>
@@ -855,7 +855,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -869,7 +869,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -943,7 +943,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
@@ -958,7 +958,7 @@ namespace atrium.Api
         /// <summary>
         /// Read an account Reading an account allows you to get information about a specific account that belongs to a user. That includes the account type — e.g., CHECKING, MONEY_MARKET, or PROPERTY — the balance, the date the account was started, and much more.&lt;br&gt; There are two endpoints for reading an account. Both will return the same information.&lt;br&gt; It&#39;s important to remember that balance and available_balance will normally be positive numbers — for all account types. But this should be interpreted differently for debt accounts and asset accounts.&lt;br&gt; An asset account, e.g., CHECKING, SAVINGS, or INVESTMENT, will have a positive balance unless it is in an overdraft condition, in which case the balance will be negative.&lt;br&gt; On the other hand, a debt account, e.g., CREDIT CARD, LOAN, MORTGAGE, would have a positivebalance when the user owes money on the account. It would have a negative balance if the account has been overpaid. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>

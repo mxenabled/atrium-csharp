@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// The identify endpoint begins an identification process for an already-existing member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -41,7 +41,7 @@ namespace atrium.Api
         /// <remarks>
         /// The identify endpoint begins an identification process for an already-existing member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -52,7 +52,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>AccountOwners</returns>
@@ -64,7 +64,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of AccountOwners</returns>
@@ -77,7 +77,7 @@ namespace atrium.Api
         /// <remarks>
         /// The identify endpoint begins an identification process for an already-existing member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -89,7 +89,7 @@ namespace atrium.Api
         /// <remarks>
         /// The identify endpoint begins an identification process for an already-existing member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -100,7 +100,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of AccountOwners</returns>
@@ -112,7 +112,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (AccountOwners)</returns>
@@ -125,7 +125,7 @@ namespace atrium.Api
     /// </summary>
     public partial class IdentityApi : IIdentityApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="IdentityApi"/> class.
@@ -133,9 +133,9 @@ namespace atrium.Api
         /// <returns></returns>
         public IdentityApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -144,14 +144,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public IdentityApi(atrium.Client.Configuration configuration = null)
+        public IdentityApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -177,12 +177,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -220,7 +220,7 @@ namespace atrium.Api
         /// <summary>
         /// Identify The identify endpoint begins an identification process for an already-existing member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -233,7 +233,7 @@ namespace atrium.Api
         /// <summary>
         /// Identify The identify endpoint begins an identification process for an already-existing member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -303,7 +303,7 @@ namespace atrium.Api
         /// <summary>
         /// Identify The identify endpoint begins an identification process for an already-existing member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -317,7 +317,7 @@ namespace atrium.Api
         /// <summary>
         /// Identify The identify endpoint begins an identification process for an already-existing member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -387,7 +387,7 @@ namespace atrium.Api
         /// <summary>
         /// List member account owners This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>AccountOwners</returns>
@@ -400,7 +400,7 @@ namespace atrium.Api
         /// <summary>
         /// List member account owners This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of AccountOwners</returns>
@@ -469,7 +469,7 @@ namespace atrium.Api
         /// <summary>
         /// List member account owners This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of AccountOwners</returns>
@@ -483,7 +483,7 @@ namespace atrium.Api
         /// <summary>
         /// List member account owners This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (AccountOwners)</returns>

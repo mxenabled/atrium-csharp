@@ -1,4 +1,4 @@
-# atrium.Model.MemberUpdateRequestBody
+# Atrium.Model.MemberUpdateRequestBody
 ## Properties
 
 Name | Type | Description | Notes

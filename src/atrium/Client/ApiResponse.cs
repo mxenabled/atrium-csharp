@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// API Response

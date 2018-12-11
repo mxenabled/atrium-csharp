@@ -1,4 +1,4 @@
-# atrium.Model.MemberResumeRequestBody
+# Atrium.Model.MemberResumeRequestBody
 ## Properties
 
 Name | Type | Description | Notes

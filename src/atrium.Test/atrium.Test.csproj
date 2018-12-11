@@ -14,8 +14,8 @@ OpenAPI spec version: 0.1
     <ProjectGuid>{19F1DEBC-DE5E-4517-8062-F000CD499087}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>atrium.Test</RootNamespace>
-    <AssemblyName>atrium.Test</AssemblyName>
+    <RootNamespace>Atrium.Test</RootNamespace>
+    <AssemblyName>Atrium.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -80,9 +80,9 @@ OpenAPI spec version: 0.1
   </ItemGroup>
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-      <ProjectReference Include="..\atrium\atrium.csproj">
-          <Project>{53556D58-BE5E-4444-B9C5-66289FADEFDC}</Project>
-          <Name>atrium</Name>
+      <ProjectReference Include="..\Atrium\Atrium.csproj">
+          <Project>{6DAA76F1-F0EA-4D8B-9DAA-3D4C682AA952}</Project>
+          <Name>Atrium</Name>
       </ProjectReference>
   </ItemGroup>
 </Project>

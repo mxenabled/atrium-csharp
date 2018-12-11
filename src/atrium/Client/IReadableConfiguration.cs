@@ -10,7 +10,7 @@
 
 using System.Collections.Generic;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// Represents a readable-only configuration contract.

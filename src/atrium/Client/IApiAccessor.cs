@@ -14,7 +14,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
 
-namespace atrium.Client
+namespace Atrium.Client
 {
     /// <summary>
     /// Represents configuration aspects required to interact with the API endpoints.

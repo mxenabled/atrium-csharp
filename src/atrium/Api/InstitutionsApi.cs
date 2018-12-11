@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -42,7 +42,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -54,7 +54,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see information for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Institution</returns>
         Institution ReadInstitution (string institutionCode);
@@ -65,7 +65,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see information for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>ApiResponse of Institution</returns>
         ApiResponse<Institution> ReadInstitutionWithHttpInfo (string institutionCode);
@@ -75,7 +75,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Credentials</returns>
         Credentials ReadInstitutionCredentials (string institutionCode);
@@ -86,7 +86,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>ApiResponse of Credentials</returns>
         ApiResponse<Credentials> ReadInstitutionCredentialsWithHttpInfo (string institutionCode);
@@ -98,7 +98,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -111,7 +111,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -123,7 +123,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see information for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of Institution</returns>
         System.Threading.Tasks.Task<Institution> ReadInstitutionAsync (string institutionCode);
@@ -134,7 +134,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to see information for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of ApiResponse (Institution)</returns>
         System.Threading.Tasks.Task<ApiResponse<Institution>> ReadInstitutionAsyncWithHttpInfo (string institutionCode);
@@ -144,7 +144,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of Credentials</returns>
         System.Threading.Tasks.Task<Credentials> ReadInstitutionCredentialsAsync (string institutionCode);
@@ -155,7 +155,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of ApiResponse (Credentials)</returns>
         System.Threading.Tasks.Task<ApiResponse<Credentials>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode);
@@ -167,7 +167,7 @@ namespace atrium.Api
     /// </summary>
     public partial class InstitutionsApi : IInstitutionsApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InstitutionsApi"/> class.
@@ -175,9 +175,9 @@ namespace atrium.Api
         /// <returns></returns>
         public InstitutionsApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -186,14 +186,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public InstitutionsApi(atrium.Client.Configuration configuration = null)
+        public InstitutionsApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -219,12 +219,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -262,7 +262,7 @@ namespace atrium.Api
         /// <summary>
         /// List institutions This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -276,7 +276,7 @@ namespace atrium.Api
         /// <summary>
         /// List institutions This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -341,7 +341,7 @@ namespace atrium.Api
         /// <summary>
         /// List institutions This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -356,7 +356,7 @@ namespace atrium.Api
         /// <summary>
         /// List institutions This endpoint allows you to see what institutions are available for connection. Information returned will include the institution_code assigned to a particular institution, URLs for the financial institution&#39;s logo, and the URL for its website.&lt;br&gt; This endpoint takes an optional query string, name&#x3D;{string}. This will list only institutions in which the appended string appears. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -421,7 +421,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution This endpoint allows you to see information for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Institution</returns>
         public Institution ReadInstitution (string institutionCode)
@@ -433,7 +433,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution This endpoint allows you to see information for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>ApiResponse of Institution</returns>
         public ApiResponse< Institution > ReadInstitutionWithHttpInfo (string institutionCode)
@@ -497,7 +497,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution This endpoint allows you to see information for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of Institution</returns>
         public async System.Threading.Tasks.Task<Institution> ReadInstitutionAsync (string institutionCode)
@@ -510,7 +510,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution This endpoint allows you to see information for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of ApiResponse (Institution)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Institution>> ReadInstitutionAsyncWithHttpInfo (string institutionCode)
@@ -574,7 +574,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution credentials Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Credentials</returns>
         public Credentials ReadInstitutionCredentials (string institutionCode)
@@ -586,7 +586,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution credentials Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>ApiResponse of Credentials</returns>
         public ApiResponse< Credentials > ReadInstitutionCredentialsWithHttpInfo (string institutionCode)
@@ -650,7 +650,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution credentials Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of Credentials</returns>
         public async System.Threading.Tasks.Task<Credentials> ReadInstitutionCredentialsAsync (string institutionCode)
@@ -663,7 +663,7 @@ namespace atrium.Api
         /// <summary>
         /// Read institution credentials Use this endpoint to see which credentials will be needed to create a member for a specific institution.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
         /// <returns>Task of ApiResponse (Credentials)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Credentials>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode)

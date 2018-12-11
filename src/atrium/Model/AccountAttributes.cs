@@ -19,9 +19,9 @@ using System.Runtime.Serialization;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.ComponentModel.DataAnnotations;
-using DateConverter = atrium.Client.DateConverter;
+using DateConverter = Atrium.Client.DateConverter;
 
-namespace atrium.Model
+namespace Atrium.Model
 {
     /// <summary>
     /// AccountAttributes

@@ -12,10 +12,10 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using RestSharp;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Model;
 
-namespace atrium.Api
+namespace Atrium.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
@@ -29,7 +29,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -41,7 +41,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -52,7 +52,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Member</returns>
@@ -64,7 +64,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>ApiResponse of Member</returns>
@@ -75,7 +75,7 @@ namespace atrium.Api
         /// <remarks>
         /// Accessing this endpoint will permanently delete a member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns></returns>
@@ -87,7 +87,7 @@ namespace atrium.Api
         /// <remarks>
         /// Accessing this endpoint will permanently delete a member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -98,7 +98,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -112,7 +112,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -125,7 +125,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Credentials</returns>
@@ -137,7 +137,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Credentials</returns>
@@ -148,7 +148,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Challenges</returns>
@@ -160,7 +160,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Challenges</returns>
@@ -171,7 +171,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -187,7 +187,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -202,7 +202,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every member associated with a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -215,7 +215,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every member associated with a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -227,7 +227,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -239,7 +239,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -250,7 +250,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>MemberConnectionStatus</returns>
@@ -262,7 +262,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of MemberConnectionStatus</returns>
@@ -273,7 +273,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -286,7 +286,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -298,7 +298,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -311,7 +311,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -325,7 +325,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -337,7 +337,7 @@ namespace atrium.Api
         /// <remarks>
         /// Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -348,7 +348,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Task of Member</returns>
@@ -360,7 +360,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -371,7 +371,7 @@ namespace atrium.Api
         /// <remarks>
         /// Accessing this endpoint will permanently delete a member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of void</returns>
@@ -383,7 +383,7 @@ namespace atrium.Api
         /// <remarks>
         /// Accessing this endpoint will permanently delete a member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -394,7 +394,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -408,7 +408,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array with information about every account associated with a particular member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -421,7 +421,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Credentials</returns>
@@ -433,7 +433,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Credentials)</returns>
@@ -444,7 +444,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Challenges</returns>
@@ -456,7 +456,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Challenges)</returns>
@@ -467,7 +467,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -483,7 +483,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -498,7 +498,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every member associated with a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -511,7 +511,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint returns an array which contains information on every member associated with a specific user.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -523,7 +523,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -535,7 +535,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to read the attributes of a specific member.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -546,7 +546,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of MemberConnectionStatus</returns>
@@ -558,7 +558,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (MemberConnectionStatus)</returns>
@@ -569,7 +569,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -582,7 +582,7 @@ namespace atrium.Api
         /// <remarks>
         /// This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -594,7 +594,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -607,7 +607,7 @@ namespace atrium.Api
         /// <remarks>
         /// Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </remarks>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -621,7 +621,7 @@ namespace atrium.Api
     /// </summary>
     public partial class MembersApi : IMembersApi
     {
-        private atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
+        private Atrium.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MembersApi"/> class.
@@ -629,9 +629,9 @@ namespace atrium.Api
         /// <returns></returns>
         public MembersApi(String basePath)
         {
-            this.Configuration = new atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -640,14 +640,14 @@ namespace atrium.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public MembersApi(atrium.Client.Configuration configuration = null)
+        public MembersApi(Atrium.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = atrium.Client.Configuration.Default;
+                this.Configuration = Atrium.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
-            ExceptionFactory = atrium.Client.Configuration.DefaultExceptionFactory;
+            ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
 
         /// <summary>
@@ -673,12 +673,12 @@ namespace atrium.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public atrium.Client.Configuration Configuration {get; set;}
+        public Atrium.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
         /// </summary>
-        public atrium.Client.ExceptionFactory ExceptionFactory
+        public Atrium.Client.ExceptionFactory ExceptionFactory
         {
             get
             {
@@ -716,7 +716,7 @@ namespace atrium.Api
         /// <summary>
         /// Aggregate member Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -729,7 +729,7 @@ namespace atrium.Api
         /// <summary>
         /// Aggregate member Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -798,7 +798,7 @@ namespace atrium.Api
         /// <summary>
         /// Aggregate member Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -812,7 +812,7 @@ namespace atrium.Api
         /// <summary>
         /// Aggregate member Calling this endpoint initiates an aggregation event for the member. This brings in the latest account and transaction data from the connected institution. If this data has recently been updated, MX may not initiate an aggregation event. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -881,7 +881,7 @@ namespace atrium.Api
         /// <summary>
         /// Create member This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Member</returns>
@@ -894,7 +894,7 @@ namespace atrium.Api
         /// <summary>
         /// Create member This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>ApiResponse of Member</returns>
@@ -971,7 +971,7 @@ namespace atrium.Api
         /// <summary>
         /// Create member This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Task of Member</returns>
@@ -985,7 +985,7 @@ namespace atrium.Api
         /// <summary>
         /// Create member This endpoint allows you to create a new member. Members are created with the required parameters credentials and institution_code, and the optional parameters identifier and metadata.&lt;br&gt; When creating a member, you&#39;ll need to include the correct type of credential required by the financial institution and provided by the user. You can find out which credential type is required with the /institutions/{institution_code}/credentials endpoint.&lt;br&gt; If successful, Atrium will respond with the newly-created member object.&lt;br&gt; Once you successfully create a member, MX will immediately validate the provided credentials and attempt to aggregate data for accounts and transactions. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -1062,7 +1062,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete member Accessing this endpoint will permanently delete a member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns></returns>
@@ -1074,7 +1074,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete member Accessing this endpoint will permanently delete a member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1143,7 +1143,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete member Accessing this endpoint will permanently delete a member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of void</returns>
@@ -1156,7 +1156,7 @@ namespace atrium.Api
         /// <summary>
         /// Delete member Accessing this endpoint will permanently delete a member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse</returns>
@@ -1225,7 +1225,7 @@ namespace atrium.Api
         /// <summary>
         /// List member accounts This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -1240,7 +1240,7 @@ namespace atrium.Api
         /// <summary>
         /// List member accounts This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -1313,7 +1313,7 @@ namespace atrium.Api
         /// <summary>
         /// List member accounts This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -1329,7 +1329,7 @@ namespace atrium.Api
         /// <summary>
         /// List member accounts This endpoint returns an array with information about every account associated with a particular member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
@@ -1402,7 +1402,7 @@ namespace atrium.Api
         /// <summary>
         /// List member credentials This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Credentials</returns>
@@ -1415,7 +1415,7 @@ namespace atrium.Api
         /// <summary>
         /// List member credentials This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Credentials</returns>
@@ -1484,7 +1484,7 @@ namespace atrium.Api
         /// <summary>
         /// List member credentials This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Credentials</returns>
@@ -1498,7 +1498,7 @@ namespace atrium.Api
         /// <summary>
         /// List member credentials This endpoint returns an array which contains information on every non-MFA credential associated with a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Credentials)</returns>
@@ -1567,7 +1567,7 @@ namespace atrium.Api
         /// <summary>
         /// List member MFA challenges Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Challenges</returns>
@@ -1580,7 +1580,7 @@ namespace atrium.Api
         /// <summary>
         /// List member MFA challenges Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Challenges</returns>
@@ -1649,7 +1649,7 @@ namespace atrium.Api
         /// <summary>
         /// List member MFA challenges Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Challenges</returns>
@@ -1663,7 +1663,7 @@ namespace atrium.Api
         /// <summary>
         /// List member MFA challenges Use this endpoint for information on what multi-factor authentication challenges need to be answered in order to aggregate a member.&lt;br&gt; If the aggregation is not challenged, i.e., the member does not have a connection status of CHALLENGED, then code 204 No Content will be returned.&lt;br&gt; If the aggregation has been challenged, i.e., the member does have a connection status of CHALLENGED, then code 200 OK will be returned — along with the corresponding credentials. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Challenges)</returns>
@@ -1732,7 +1732,7 @@ namespace atrium.Api
         /// <summary>
         /// List member transactions Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -1749,7 +1749,7 @@ namespace atrium.Api
         /// <summary>
         /// List member transactions Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -1826,7 +1826,7 @@ namespace atrium.Api
         /// <summary>
         /// List member transactions Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -1844,7 +1844,7 @@ namespace atrium.Api
         /// <summary>
         /// List member transactions Use this endpoint to get all transactions from all accounts associated with a specific member.&lt;br&gt; This endpoint accepts optional URL query parameters — from_date and to_date — which are used to filter transactions according to the date they were posted. If no values are given for the query parameters, from_date will default to 90 days prior to the request and to_date will default to 5 days from the time of the request. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
@@ -1921,7 +1921,7 @@ namespace atrium.Api
         /// <summary>
         /// List members This endpoint returns an array which contains information on every member associated with a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -1935,7 +1935,7 @@ namespace atrium.Api
         /// <summary>
         /// List members This endpoint returns an array which contains information on every member associated with a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -2003,7 +2003,7 @@ namespace atrium.Api
         /// <summary>
         /// List members This endpoint returns an array which contains information on every member associated with a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -2018,7 +2018,7 @@ namespace atrium.Api
         /// <summary>
         /// List members This endpoint returns an array which contains information on every member associated with a specific user.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
@@ -2086,7 +2086,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member Use this endpoint to read the attributes of a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Member</returns>
@@ -2099,7 +2099,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member Use this endpoint to read the attributes of a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of Member</returns>
@@ -2168,7 +2168,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member Use this endpoint to read the attributes of a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of Member</returns>
@@ -2182,7 +2182,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member Use this endpoint to read the attributes of a specific member.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (Member)</returns>
@@ -2251,7 +2251,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member connection status This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>MemberConnectionStatus</returns>
@@ -2264,7 +2264,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member connection status This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of MemberConnectionStatus</returns>
@@ -2333,7 +2333,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member connection status This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of MemberConnectionStatus</returns>
@@ -2347,7 +2347,7 @@ namespace atrium.Api
         /// <summary>
         /// Read member connection status This endpoint provides the status of the member&#39;s most recent aggregation event. This is an important step in the aggregation process, and the results returned by this endpoint should determine what you do next in order to successfully aggregate a member.&lt;br&gt; MX has introduced new, more detailed information on the current status of a member&#39;s connection to a financial institution and the state of its aggregation: the connection_status field. These are intended to replace and expand upon the information provided in the status field, which will soon be deprecated; support for the status field remains for the time being. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (MemberConnectionStatus)</returns>
@@ -2416,7 +2416,7 @@ namespace atrium.Api
         /// <summary>
         /// Resume aggregation from MFA This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -2430,7 +2430,7 @@ namespace atrium.Api
         /// <summary>
         /// Resume aggregation from MFA This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -2512,7 +2512,7 @@ namespace atrium.Api
         /// <summary>
         /// Resume aggregation from MFA This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -2527,7 +2527,7 @@ namespace atrium.Api
         /// <summary>
         /// Resume aggregation from MFA This endpoint answers the challenges needed when a member has been challenged by multi-factor authentication.
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object with MFA challenge answers</param>
@@ -2609,7 +2609,7 @@ namespace atrium.Api
         /// <summary>
         /// Update member Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -2623,7 +2623,7 @@ namespace atrium.Api
         /// <summary>
         /// Update member Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -2702,7 +2702,7 @@ namespace atrium.Api
         /// <summary>
         /// Update member Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>
@@ -2717,7 +2717,7 @@ namespace atrium.Api
         /// <summary>
         /// Update member Use this endpoint to update a member&#39;s attributes. Only the credentials, identifier, and metadata parameters can be updated. To get a list of the required credentials for the member, use the list member credentials endpoint. 
         /// </summary>
-        /// <exception cref="atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Member object to be updated with optional parameters (credentials, identifier, metadata) (optional)</param>

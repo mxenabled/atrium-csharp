@@ -1,4 +1,4 @@
-# atrium.Model.TransactionsCleanseAndCategorizeAttributes
+# Atrium.Model.TransactionsCleanseAndCategorizeAttributes
 ## Properties
 
 Name | Type | Description | Notes

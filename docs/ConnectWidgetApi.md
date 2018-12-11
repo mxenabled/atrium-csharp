@@ -1,4 +1,4 @@
-# atrium.Api.ConnectWidgetApi
+# Atrium.Api.ConnectWidgetApi
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,9 +17,9 @@ This endpoint will return a URL for an embeddable version of MX Connect.
 ```csharp
 using System;
 using System.Diagnostics;
-using atrium.Api;
-using atrium.Client;
-using atrium.Model;
+using Atrium.Api;
+using Atrium.Client;
+using Atrium.Model;
 
 namespace Example
 {

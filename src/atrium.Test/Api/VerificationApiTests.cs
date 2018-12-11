@@ -16,11 +16,11 @@ using System.Reflection;
 using RestSharp;
 using NUnit.Framework;
 
-using atrium.Client;
-using atrium.Api;
-using atrium.Model;
+using Atrium.Client;
+using Atrium.Api;
+using Atrium.Model;
 
-namespace atrium.Test
+namespace Atrium.Test
 {
     /// <summary>
     ///  Class for testing VerificationApi

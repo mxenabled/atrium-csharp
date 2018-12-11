@@ -1,4 +1,4 @@
-# atrium.Model.Users
+# Atrium.Model.Users
 ## Properties
 
 Name | Type | Description | Notes

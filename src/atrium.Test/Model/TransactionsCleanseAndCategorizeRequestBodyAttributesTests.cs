@@ -14,13 +14,13 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
-using atrium.Api;
-using atrium.Model;
-using atrium.Client;
+using Atrium.Api;
+using Atrium.Model;
+using Atrium.Client;
 using System.Reflection;
 using Newtonsoft.Json;
 
-namespace atrium.Test
+namespace Atrium.Test
 {
     /// <summary>
     ///  Class for testing TransactionsCleanseAndCategorizeRequestBodyAttributes
