@@ -33,7 +33,7 @@ namespace Atrium.Model
         /// Initializes a new instance of the <see cref="TransactionsCleanseAndCategorizeRequestBody" /> class.
         /// </summary>
         /// <param name="transactions">transactions.</param>
-        public TransactionsCleanseAndCategorizeRequestBody(List<TransactionsCleanseAndCategorizeRequestBodyAttributes> transactions = default(List<TransactionsCleanseAndCategorizeRequestBodyAttributes>))
+        public TransactionsCleanseAndCategorizeRequestBody(List<TransactionCleanseAndCategorizeRequest> transactions = default(List<TransactionCleanseAndCategorizeRequest>))
         {
             this.Transactions = transactions;
         }
@@ -42,7 +42,7 @@ namespace Atrium.Model
         /// Gets or Sets Transactions
         /// </summary>
         [DataMember(Name="transactions", EmitDefaultValue=false)]
-        public List<TransactionsCleanseAndCategorizeRequestBodyAttributes> Transactions { get; set; }
+        public List<TransactionCleanseAndCategorizeRequest> Transactions { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

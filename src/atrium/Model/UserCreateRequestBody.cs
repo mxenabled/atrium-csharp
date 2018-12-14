@@ -33,7 +33,7 @@ namespace Atrium.Model
         /// Initializes a new instance of the <see cref="UserCreateRequestBody" /> class.
         /// </summary>
         /// <param name="user">user.</param>
-        public UserCreateRequestBody(UserAttributes user = default(UserAttributes))
+        public UserCreateRequestBody(User user = default(User))
         {
             this.User = user;
         }
@@ -42,7 +42,7 @@ namespace Atrium.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserAttributes User { get; set; }
+        public User User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

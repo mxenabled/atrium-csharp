@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listaccounttransactions"></a>
 # **ListAccountTransactions**
-> Transactions ListAccountTransactions (string accountGuid, string userGuid, string fromDate = null, string toDate = null, int? page = null, int? recordsPerPage = null)
+> TransactionsResponseBody ListAccountTransactions (string accountGuid, string userGuid, string fromDate = null, string toDate = null, int? page = null, int? recordsPerPage = null)
 
 List account transactions
 
@@ -47,7 +47,7 @@ namespace Example
             try
             {
                 // List account transactions
-                Transactions result = apiInstance.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
+                TransactionsResponseBody result = apiInstance.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -72,13 +72,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Transactions**](Transactions.md)
+[**TransactionsResponseBody**](TransactionsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listuseraccounts"></a>
 # **ListUserAccounts**
-> Accounts ListUserAccounts (string userGuid, int? page = null, int? recordsPerPage = null)
+> AccountsResponseBody ListUserAccounts (string userGuid, int? page = null, int? recordsPerPage = null)
 
 List accounts for a user
 
@@ -112,7 +112,7 @@ namespace Example
             try
             {
                 // List accounts for a user
-                Accounts result = apiInstance.ListUserAccounts(userGuid, page, recordsPerPage);
+                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -134,13 +134,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Accounts**](Accounts.md)
+[**AccountsResponseBody**](AccountsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readaccount"></a>
 # **ReadAccount**
-> Account ReadAccount (string accountGuid, string userGuid)
+> AccountResponseBody ReadAccount (string accountGuid, string userGuid)
 
 Read an account
 
@@ -173,7 +173,7 @@ namespace Example
             try
             {
                 // Read an account
-                Account result = apiInstance.ReadAccount(accountGuid, userGuid);
+                AccountResponseBody result = apiInstance.ReadAccount(accountGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -194,13 +194,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Account**](Account.md)
+[**AccountResponseBody**](AccountResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readaccountbymemberguid"></a>
 # **ReadAccountByMemberGUID**
-> Account ReadAccountByMemberGUID (string accountGuid, string memberGuid, string userGuid)
+> AccountResponseBody ReadAccountByMemberGUID (string accountGuid, string memberGuid, string userGuid)
 
 Read an account
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Read an account
-                Account result = apiInstance.ReadAccountByMemberGUID(accountGuid, memberGuid, userGuid);
+                AccountResponseBody result = apiInstance.ReadAccountByMemberGUID(accountGuid, memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -256,7 +256,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Account**](Account.md)
+[**AccountResponseBody**](AccountResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

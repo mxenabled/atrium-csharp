@@ -65,12 +65,36 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property '_User'
+        /// Test the property 'Guid'
         /// </summary>
         [Test]
-        public void _UserTest()
+        public void GuidTest()
         {
-            // TODO unit test for the property '_User'
+            // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'Identifier'
+        /// </summary>
+        [Test]
+        public void IdentifierTest()
+        {
+            // TODO unit test for the property 'Identifier'
+        }
+        /// <summary>
+        /// Test the property 'IsDisabled'
+        /// </summary>
+        [Test]
+        public void IsDisabledTest()
+        {
+            // TODO unit test for the property 'IsDisabled'
+        }
+        /// <summary>
+        /// Test the property 'Metadata'
+        /// </summary>
+        [Test]
+        public void MetadataTest()
+        {
+            // TODO unit test for the property 'Metadata'
         }
 
     }

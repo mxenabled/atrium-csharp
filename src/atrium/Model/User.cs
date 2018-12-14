@@ -32,17 +32,39 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="User" /> class.
         /// </summary>
-        /// <param name="user">user.</param>
-        public User(UserAttributes user = default(UserAttributes))
+        /// <param name="identifier">identifier.</param>
+        /// <param name="isDisabled">isDisabled.</param>
+        /// <param name="metadata">metadata.</param>
+        public User(string identifier = default(string), bool? isDisabled = default(bool?), string metadata = default(string))
         {
-            this._User = user;
+            this.Identifier = identifier;
+            this.IsDisabled = isDisabled;
+            this.Metadata = metadata;
         }
         
         /// <summary>
-        /// Gets or Sets _User
+        /// Gets or Sets Guid
         /// </summary>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public UserAttributes _User { get; set; }
+        [DataMember(Name="guid", EmitDefaultValue=false)]
+        public string Guid { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Identifier
+        /// </summary>
+        [DataMember(Name="identifier", EmitDefaultValue=false)]
+        public string Identifier { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IsDisabled
+        /// </summary>
+        [DataMember(Name="is_disabled", EmitDefaultValue=false)]
+        public bool? IsDisabled { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Metadata
+        /// </summary>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public string Metadata { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +74,10 @@ namespace Atrium.Model
         {
             var sb = new StringBuilder();
             sb.Append("class User {\n");
-            sb.Append("  _User: ").Append(_User).Append("\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
+            sb.Append("  Identifier: ").Append(Identifier).Append("\n");
+            sb.Append("  IsDisabled: ").Append(IsDisabled).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +113,24 @@ namespace Atrium.Model
 
             return 
                 (
-                    this._User == input._User ||
-                    (this._User != null &&
-                    this._User.Equals(input._User))
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
+                ) && 
+                (
+                    this.Identifier == input.Identifier ||
+                    (this.Identifier != null &&
+                    this.Identifier.Equals(input.Identifier))
+                ) && 
+                (
+                    this.IsDisabled == input.IsDisabled ||
+                    (this.IsDisabled != null &&
+                    this.IsDisabled.Equals(input.IsDisabled))
+                ) && 
+                (
+                    this.Metadata == input.Metadata ||
+                    (this.Metadata != null &&
+                    this.Metadata.Equals(input.Metadata))
                 );
         }
 
@@ -103,8 +143,14 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._User != null)
-                    hashCode = hashCode * 59 + this._User.GetHashCode();
+                if (this.Guid != null)
+                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                if (this.Identifier != null)
+                    hashCode = hashCode * 59 + this.Identifier.GetHashCode();
+                if (this.IsDisabled != null)
+                    hashCode = hashCode * 59 + this.IsDisabled.GetHashCode();
+                if (this.Metadata != null)
+                    hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 return hashCode;
             }
         }

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listinstitutions"></a>
 # **ListInstitutions**
-> Institutions ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
+> InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
 
 List institutions
 
@@ -43,7 +43,7 @@ namespace Example
             try
             {
                 // List institutions
-                Institutions result = apiInstance.ListInstitutions(name, page, recordsPerPage);
+                InstitutionsResponseBody result = apiInstance.ListInstitutions(name, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,13 +65,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Institutions**](Institutions.md)
+[**InstitutionsResponseBody**](InstitutionsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readinstitution"></a>
 # **ReadInstitution**
-> Institution ReadInstitution (string institutionCode)
+> InstitutionResponseBody ReadInstitution (string institutionCode)
 
 Read institution
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // Read institution
-                Institution result = apiInstance.ReadInstitution(institutionCode);
+                InstitutionResponseBody result = apiInstance.ReadInstitution(institutionCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,13 +123,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Institution**](Institution.md)
+[**InstitutionResponseBody**](InstitutionResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readinstitutioncredentials"></a>
 # **ReadInstitutionCredentials**
-> Credentials ReadInstitutionCredentials (string institutionCode)
+> CredentialsResponseBody ReadInstitutionCredentials (string institutionCode)
 
 Read institution credentials
 
@@ -161,7 +161,7 @@ namespace Example
             try
             {
                 // Read institution credentials
-                Credentials result = apiInstance.ReadInstitutionCredentials(institutionCode);
+                CredentialsResponseBody result = apiInstance.ReadInstitutionCredentials(institutionCode);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Credentials**](Credentials.md)
+[**CredentialsResponseBody**](CredentialsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

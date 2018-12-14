@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="aggregatemember"></a>
 # **AggregateMember**
-> Member AggregateMember (string memberGuid, string userGuid)
+> MemberResponseBody AggregateMember (string memberGuid, string userGuid)
 
 Aggregate member
 
@@ -51,7 +51,7 @@ namespace Example
             try
             {
                 // Aggregate member
-                Member result = apiInstance.AggregateMember(memberGuid, userGuid);
+                MemberResponseBody result = apiInstance.AggregateMember(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -72,13 +72,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createmember"></a>
 # **CreateMember**
-> Member CreateMember (string userGuid, MemberCreateRequestBody body)
+> MemberResponseBody CreateMember (string userGuid, MemberCreateRequestBody body)
 
 Create member
 
@@ -111,7 +111,7 @@ namespace Example
             try
             {
                 // Create member
-                Member result = apiInstance.CreateMember(userGuid, body);
+                MemberResponseBody result = apiInstance.CreateMember(userGuid, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -132,7 +132,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -197,7 +197,7 @@ void (empty response body)
 
 <a name="listmemberaccounts"></a>
 # **ListMemberAccounts**
-> Accounts ListMemberAccounts (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+> AccountsResponseBody ListMemberAccounts (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
 List member accounts
 
@@ -232,7 +232,7 @@ namespace Example
             try
             {
                 // List member accounts
-                Accounts result = apiInstance.ListMemberAccounts(memberGuid, userGuid, page, recordsPerPage);
+                AccountsResponseBody result = apiInstance.ListMemberAccounts(memberGuid, userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,13 +255,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Accounts**](Accounts.md)
+[**AccountsResponseBody**](AccountsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listmembercredentials"></a>
 # **ListMemberCredentials**
-> Credentials ListMemberCredentials (string memberGuid, string userGuid)
+> CredentialsResponseBody ListMemberCredentials (string memberGuid, string userGuid)
 
 List member credentials
 
@@ -294,7 +294,7 @@ namespace Example
             try
             {
                 // List member credentials
-                Credentials result = apiInstance.ListMemberCredentials(memberGuid, userGuid);
+                CredentialsResponseBody result = apiInstance.ListMemberCredentials(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -315,13 +315,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Credentials**](Credentials.md)
+[**CredentialsResponseBody**](CredentialsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listmembermfachallenges"></a>
 # **ListMemberMFAChallenges**
-> Challenges ListMemberMFAChallenges (string memberGuid, string userGuid)
+> ChallengesResponseBody ListMemberMFAChallenges (string memberGuid, string userGuid)
 
 List member MFA challenges
 
@@ -354,7 +354,7 @@ namespace Example
             try
             {
                 // List member MFA challenges
-                Challenges result = apiInstance.ListMemberMFAChallenges(memberGuid, userGuid);
+                ChallengesResponseBody result = apiInstance.ListMemberMFAChallenges(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -375,13 +375,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Challenges**](Challenges.md)
+[**ChallengesResponseBody**](ChallengesResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listmembertransactions"></a>
 # **ListMemberTransactions**
-> Transactions ListMemberTransactions (string memberGuid, string userGuid, string fromDate = null, string toDate = null, int? page = null, int? recordsPerPage = null)
+> TransactionsResponseBody ListMemberTransactions (string memberGuid, string userGuid, string fromDate = null, string toDate = null, int? page = null, int? recordsPerPage = null)
 
 List member transactions
 
@@ -418,7 +418,7 @@ namespace Example
             try
             {
                 // List member transactions
-                Transactions result = apiInstance.ListMemberTransactions(memberGuid, userGuid, fromDate, toDate, page, recordsPerPage);
+                TransactionsResponseBody result = apiInstance.ListMemberTransactions(memberGuid, userGuid, fromDate, toDate, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -443,13 +443,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Transactions**](Transactions.md)
+[**TransactionsResponseBody**](TransactionsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listmembers"></a>
 # **ListMembers**
-> Members ListMembers (string userGuid, int? page = null, int? recordsPerPage = null)
+> MembersResponseBody ListMembers (string userGuid, int? page = null, int? recordsPerPage = null)
 
 List members
 
@@ -483,7 +483,7 @@ namespace Example
             try
             {
                 // List members
-                Members result = apiInstance.ListMembers(userGuid, page, recordsPerPage);
+                MembersResponseBody result = apiInstance.ListMembers(userGuid, page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -505,13 +505,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Members**](Members.md)
+[**MembersResponseBody**](MembersResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readmember"></a>
 # **ReadMember**
-> Member ReadMember (string memberGuid, string userGuid)
+> MemberResponseBody ReadMember (string memberGuid, string userGuid)
 
 Read member
 
@@ -544,7 +544,7 @@ namespace Example
             try
             {
                 // Read member
-                Member result = apiInstance.ReadMember(memberGuid, userGuid);
+                MemberResponseBody result = apiInstance.ReadMember(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -565,13 +565,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readmemberstatus"></a>
 # **ReadMemberStatus**
-> MemberConnectionStatus ReadMemberStatus (string memberGuid, string userGuid)
+> MemberConnectionStatusResponseBody ReadMemberStatus (string memberGuid, string userGuid)
 
 Read member connection status
 
@@ -604,7 +604,7 @@ namespace Example
             try
             {
                 // Read member connection status
-                MemberConnectionStatus result = apiInstance.ReadMemberStatus(memberGuid, userGuid);
+                MemberConnectionStatusResponseBody result = apiInstance.ReadMemberStatus(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -625,13 +625,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MemberConnectionStatus**](MemberConnectionStatus.md)
+[**MemberConnectionStatusResponseBody**](MemberConnectionStatusResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="resumemember"></a>
 # **ResumeMember**
-> Member ResumeMember (string memberGuid, string userGuid, MemberResumeRequestBody body)
+> MemberResponseBody ResumeMember (string memberGuid, string userGuid, MemberResumeRequestBody body)
 
 Resume aggregation from MFA
 
@@ -665,7 +665,7 @@ namespace Example
             try
             {
                 // Resume aggregation from MFA
-                Member result = apiInstance.ResumeMember(memberGuid, userGuid, body);
+                MemberResponseBody result = apiInstance.ResumeMember(memberGuid, userGuid, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -687,13 +687,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="updatemember"></a>
 # **UpdateMember**
-> Member UpdateMember (string memberGuid, string userGuid, MemberUpdateRequestBody body = null)
+> MemberResponseBody UpdateMember (string memberGuid, string userGuid, MemberUpdateRequestBody body = null)
 
 Update member
 
@@ -727,7 +727,7 @@ namespace Example
             try
             {
                 // Update member
-                Member result = apiInstance.UpdateMember(memberGuid, userGuid, body);
+                MemberResponseBody result = apiInstance.UpdateMember(memberGuid, userGuid, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -749,7 +749,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

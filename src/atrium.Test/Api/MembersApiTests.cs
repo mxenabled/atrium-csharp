@@ -72,7 +72,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.AggregateMember(memberGuid, userGuid);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Atrium.Test
             //string userGuid = null;
             //MemberCreateRequestBody body = null;
             //var response = instance.CreateMember(userGuid, body);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -113,7 +113,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListMemberAccounts(memberGuid, userGuid, page, recordsPerPage);
-            //Assert.IsInstanceOf<Accounts> (response, "response is Accounts");
+            //Assert.IsInstanceOf<AccountsResponseBody> (response, "response is AccountsResponseBody");
         }
         
         /// <summary>
@@ -126,7 +126,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ListMemberCredentials(memberGuid, userGuid);
-            //Assert.IsInstanceOf<Credentials> (response, "response is Credentials");
+            //Assert.IsInstanceOf<CredentialsResponseBody> (response, "response is CredentialsResponseBody");
         }
         
         /// <summary>
@@ -139,7 +139,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ListMemberMFAChallenges(memberGuid, userGuid);
-            //Assert.IsInstanceOf<Challenges> (response, "response is Challenges");
+            //Assert.IsInstanceOf<ChallengesResponseBody> (response, "response is ChallengesResponseBody");
         }
         
         /// <summary>
@@ -156,7 +156,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListMemberTransactions(memberGuid, userGuid, fromDate, toDate, page, recordsPerPage);
-            //Assert.IsInstanceOf<Transactions> (response, "response is Transactions");
+            //Assert.IsInstanceOf<TransactionsResponseBody> (response, "response is TransactionsResponseBody");
         }
         
         /// <summary>
@@ -170,7 +170,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListMembers(userGuid, page, recordsPerPage);
-            //Assert.IsInstanceOf<Members> (response, "response is Members");
+            //Assert.IsInstanceOf<MembersResponseBody> (response, "response is MembersResponseBody");
         }
         
         /// <summary>
@@ -183,7 +183,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ReadMember(memberGuid, userGuid);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -196,7 +196,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ReadMemberStatus(memberGuid, userGuid);
-            //Assert.IsInstanceOf<MemberConnectionStatus> (response, "response is MemberConnectionStatus");
+            //Assert.IsInstanceOf<MemberConnectionStatusResponseBody> (response, "response is MemberConnectionStatusResponseBody");
         }
         
         /// <summary>
@@ -210,7 +210,7 @@ namespace Atrium.Test
             //string userGuid = null;
             //MemberResumeRequestBody body = null;
             //var response = instance.ResumeMember(memberGuid, userGuid, body);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -224,7 +224,7 @@ namespace Atrium.Test
             //string userGuid = null;
             //MemberUpdateRequestBody body = null;
             //var response = instance.UpdateMember(memberGuid, userGuid, body);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
     }

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="cleanseandcategorizetransactions"></a>
 # **CleanseAndCategorizeTransactions**
-> TransactionsCleanseAndCategorize CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body)
+> TransactionsCleanseAndCategorizeResponseBody CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body)
 
 Categorize transactions
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Categorize transactions
-                TransactionsCleanseAndCategorize result = apiInstance.CleanseAndCategorizeTransactions(body);
+                TransactionsCleanseAndCategorizeResponseBody result = apiInstance.CleanseAndCategorizeTransactions(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,13 +61,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**TransactionsCleanseAndCategorize**](TransactionsCleanseAndCategorize.md)
+[**TransactionsCleanseAndCategorizeResponseBody**](TransactionsCleanseAndCategorizeResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listusertransactions"></a>
 # **ListUserTransactions**
-> Transactions ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
+> TransactionsResponseBody ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
 
 List transactions for a user
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // List transactions for a user
-                Transactions result = apiInstance.ListUserTransactions(userGuid, page, fromDate, recordsPerPage, toDate);
+                TransactionsResponseBody result = apiInstance.ListUserTransactions(userGuid, page, fromDate, recordsPerPage, toDate);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -127,13 +127,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Transactions**](Transactions.md)
+[**TransactionsResponseBody**](TransactionsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readtransaction"></a>
 # **ReadTransaction**
-> Transaction ReadTransaction (string transactionGuid, string userGuid)
+> TransactionResponseBody ReadTransaction (string transactionGuid, string userGuid)
 
 Read a transaction
 
@@ -166,7 +166,7 @@ namespace Example
             try
             {
                 // Read a transaction
-                Transaction result = apiInstance.ReadTransaction(transactionGuid, userGuid);
+                TransactionResponseBody result = apiInstance.ReadTransaction(transactionGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Transaction**](Transaction.md)
+[**TransactionResponseBody**](TransactionResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

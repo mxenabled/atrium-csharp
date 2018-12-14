@@ -33,7 +33,7 @@ namespace Atrium.Model
         /// Initializes a new instance of the <see cref="MemberUpdateRequestBody" /> class.
         /// </summary>
         /// <param name="member">member.</param>
-        public MemberUpdateRequestBody(MemberUpdateRequestBodyAttributes member = default(MemberUpdateRequestBodyAttributes))
+        public MemberUpdateRequestBody(MemberUpdateRequest member = default(MemberUpdateRequest))
         {
             this.Member = member;
         }
@@ -42,7 +42,7 @@ namespace Atrium.Model
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
-        public MemberUpdateRequestBodyAttributes Member { get; set; }
+        public MemberUpdateRequest Member { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object

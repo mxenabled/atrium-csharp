@@ -31,8 +31,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>TransactionsCleanseAndCategorize</returns>
-        TransactionsCleanseAndCategorize CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body);
+        /// <returns>TransactionsCleanseAndCategorizeResponseBody</returns>
+        TransactionsCleanseAndCategorizeResponseBody CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body);
 
         /// <summary>
         /// Categorize transactions
@@ -42,8 +42,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>ApiResponse of TransactionsCleanseAndCategorize</returns>
-        ApiResponse<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
+        /// <returns>ApiResponse of TransactionsCleanseAndCategorizeResponseBody</returns>
+        ApiResponse<TransactionsCleanseAndCategorizeResponseBody> CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
         /// <summary>
         /// List transactions for a user
         /// </summary>
@@ -56,8 +56,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Transactions</returns>
-        Transactions ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
+        /// <returns>TransactionsResponseBody</returns>
+        TransactionsResponseBody ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
 
         /// <summary>
         /// List transactions for a user
@@ -71,8 +71,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>ApiResponse of Transactions</returns>
-        ApiResponse<Transactions> ListUserTransactionsWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
+        /// <returns>ApiResponse of TransactionsResponseBody</returns>
+        ApiResponse<TransactionsResponseBody> ListUserTransactionsWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
         /// <summary>
         /// Read a transaction
         /// </summary>
@@ -82,8 +82,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Transaction</returns>
-        Transaction ReadTransaction (string transactionGuid, string userGuid);
+        /// <returns>TransactionResponseBody</returns>
+        TransactionResponseBody ReadTransaction (string transactionGuid, string userGuid);
 
         /// <summary>
         /// Read a transaction
@@ -94,8 +94,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of Transaction</returns>
-        ApiResponse<Transaction> ReadTransactionWithHttpInfo (string transactionGuid, string userGuid);
+        /// <returns>ApiResponse of TransactionResponseBody</returns>
+        ApiResponse<TransactionResponseBody> ReadTransactionWithHttpInfo (string transactionGuid, string userGuid);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -106,8 +106,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>Task of TransactionsCleanseAndCategorize</returns>
-        System.Threading.Tasks.Task<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body);
+        /// <returns>Task of TransactionsCleanseAndCategorizeResponseBody</returns>
+        System.Threading.Tasks.Task<TransactionsCleanseAndCategorizeResponseBody> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body);
 
         /// <summary>
         /// Categorize transactions
@@ -117,8 +117,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorize)</returns>
-        System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorize>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
+        /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorizeResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorizeResponseBody>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body);
         /// <summary>
         /// List transactions for a user
         /// </summary>
@@ -131,8 +131,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Task of Transactions</returns>
-        System.Threading.Tasks.Task<Transactions> ListUserTransactionsAsync (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
+        /// <returns>Task of TransactionsResponseBody</returns>
+        System.Threading.Tasks.Task<TransactionsResponseBody> ListUserTransactionsAsync (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
 
         /// <summary>
         /// List transactions for a user
@@ -146,8 +146,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Task of ApiResponse (Transactions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Transactions>> ListUserTransactionsAsyncWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
+        /// <returns>Task of ApiResponse (TransactionsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListUserTransactionsAsyncWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null);
         /// <summary>
         /// Read a transaction
         /// </summary>
@@ -157,8 +157,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of Transaction</returns>
-        System.Threading.Tasks.Task<Transaction> ReadTransactionAsync (string transactionGuid, string userGuid);
+        /// <returns>Task of TransactionResponseBody</returns>
+        System.Threading.Tasks.Task<TransactionResponseBody> ReadTransactionAsync (string transactionGuid, string userGuid);
 
         /// <summary>
         /// Read a transaction
@@ -169,8 +169,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (Transaction)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Transaction>> ReadTransactionAsyncWithHttpInfo (string transactionGuid, string userGuid);
+        /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadTransactionAsyncWithHttpInfo (string transactionGuid, string userGuid);
         #endregion Asynchronous Operations
     }
 
@@ -276,10 +276,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>TransactionsCleanseAndCategorize</returns>
-        public TransactionsCleanseAndCategorize CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body)
+        /// <returns>TransactionsCleanseAndCategorizeResponseBody</returns>
+        public TransactionsCleanseAndCategorizeResponseBody CleanseAndCategorizeTransactions (TransactionsCleanseAndCategorizeRequestBody body)
         {
-             ApiResponse<TransactionsCleanseAndCategorize> localVarResponse = CleanseAndCategorizeTransactionsWithHttpInfo(body);
+             ApiResponse<TransactionsCleanseAndCategorizeResponseBody> localVarResponse = CleanseAndCategorizeTransactionsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -288,8 +288,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>ApiResponse of TransactionsCleanseAndCategorize</returns>
-        public ApiResponse< TransactionsCleanseAndCategorize > CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
+        /// <returns>ApiResponse of TransactionsCleanseAndCategorizeResponseBody</returns>
+        public ApiResponse< TransactionsCleanseAndCategorizeResponseBody > CleanseAndCategorizeTransactionsWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -350,9 +350,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TransactionsCleanseAndCategorize>(localVarStatusCode,
+            return new ApiResponse<TransactionsCleanseAndCategorizeResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransactionsCleanseAndCategorize) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsCleanseAndCategorize)));
+                (TransactionsCleanseAndCategorizeResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsCleanseAndCategorizeResponseBody)));
         }
 
         /// <summary>
@@ -360,10 +360,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>Task of TransactionsCleanseAndCategorize</returns>
-        public async System.Threading.Tasks.Task<TransactionsCleanseAndCategorize> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body)
+        /// <returns>Task of TransactionsCleanseAndCategorizeResponseBody</returns>
+        public async System.Threading.Tasks.Task<TransactionsCleanseAndCategorizeResponseBody> CleanseAndCategorizeTransactionsAsync (TransactionsCleanseAndCategorizeRequestBody body)
         {
-             ApiResponse<TransactionsCleanseAndCategorize> localVarResponse = await CleanseAndCategorizeTransactionsAsyncWithHttpInfo(body);
+             ApiResponse<TransactionsCleanseAndCategorizeResponseBody> localVarResponse = await CleanseAndCategorizeTransactionsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -373,8 +373,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)</param>
-        /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorize)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorize>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
+        /// <returns>Task of ApiResponse (TransactionsCleanseAndCategorizeResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransactionsCleanseAndCategorizeResponseBody>> CleanseAndCategorizeTransactionsAsyncWithHttpInfo (TransactionsCleanseAndCategorizeRequestBody body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -435,9 +435,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<TransactionsCleanseAndCategorize>(localVarStatusCode,
+            return new ApiResponse<TransactionsCleanseAndCategorizeResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (TransactionsCleanseAndCategorize) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsCleanseAndCategorize)));
+                (TransactionsCleanseAndCategorizeResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsCleanseAndCategorizeResponseBody)));
         }
 
         /// <summary>
@@ -449,10 +449,10 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Transactions</returns>
-        public Transactions ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
+        /// <returns>TransactionsResponseBody</returns>
+        public TransactionsResponseBody ListUserTransactions (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
         {
-             ApiResponse<Transactions> localVarResponse = ListUserTransactionsWithHttpInfo(userGuid, page, fromDate, recordsPerPage, toDate);
+             ApiResponse<TransactionsResponseBody> localVarResponse = ListUserTransactionsWithHttpInfo(userGuid, page, fromDate, recordsPerPage, toDate);
              return localVarResponse.Data;
         }
 
@@ -465,8 +465,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>ApiResponse of Transactions</returns>
-        public ApiResponse< Transactions > ListUserTransactionsWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
+        /// <returns>ApiResponse of TransactionsResponseBody</returns>
+        public ApiResponse< TransactionsResponseBody > ListUserTransactionsWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -523,9 +523,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transactions>(localVarStatusCode,
+            return new ApiResponse<TransactionsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transactions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transactions)));
+                (TransactionsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsResponseBody)));
         }
 
         /// <summary>
@@ -537,10 +537,10 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Task of Transactions</returns>
-        public async System.Threading.Tasks.Task<Transactions> ListUserTransactionsAsync (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
+        /// <returns>Task of TransactionsResponseBody</returns>
+        public async System.Threading.Tasks.Task<TransactionsResponseBody> ListUserTransactionsAsync (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
         {
-             ApiResponse<Transactions> localVarResponse = await ListUserTransactionsAsyncWithHttpInfo(userGuid, page, fromDate, recordsPerPage, toDate);
+             ApiResponse<TransactionsResponseBody> localVarResponse = await ListUserTransactionsAsyncWithHttpInfo(userGuid, page, fromDate, recordsPerPage, toDate);
              return localVarResponse.Data;
 
         }
@@ -554,8 +554,8 @@ namespace Atrium.Api
         /// <param name="fromDate">Filter transactions from this date. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <param name="toDate">Filter transactions to this date. (optional)</param>
-        /// <returns>Task of ApiResponse (Transactions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Transactions>> ListUserTransactionsAsyncWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
+        /// <returns>Task of ApiResponse (TransactionsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransactionsResponseBody>> ListUserTransactionsAsyncWithHttpInfo (string userGuid, int? page = null, string fromDate = null, int? recordsPerPage = null, string toDate = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -612,9 +612,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transactions>(localVarStatusCode,
+            return new ApiResponse<TransactionsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transactions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transactions)));
+                (TransactionsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionsResponseBody)));
         }
 
         /// <summary>
@@ -623,10 +623,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Transaction</returns>
-        public Transaction ReadTransaction (string transactionGuid, string userGuid)
+        /// <returns>TransactionResponseBody</returns>
+        public TransactionResponseBody ReadTransaction (string transactionGuid, string userGuid)
         {
-             ApiResponse<Transaction> localVarResponse = ReadTransactionWithHttpInfo(transactionGuid, userGuid);
+             ApiResponse<TransactionResponseBody> localVarResponse = ReadTransactionWithHttpInfo(transactionGuid, userGuid);
              return localVarResponse.Data;
         }
 
@@ -636,8 +636,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of Transaction</returns>
-        public ApiResponse< Transaction > ReadTransactionWithHttpInfo (string transactionGuid, string userGuid)
+        /// <returns>ApiResponse of TransactionResponseBody</returns>
+        public ApiResponse< TransactionResponseBody > ReadTransactionWithHttpInfo (string transactionGuid, string userGuid)
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
@@ -694,9 +694,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transaction>(localVarStatusCode,
+            return new ApiResponse<TransactionResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transaction) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transaction)));
+                (TransactionResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionResponseBody)));
         }
 
         /// <summary>
@@ -705,10 +705,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of Transaction</returns>
-        public async System.Threading.Tasks.Task<Transaction> ReadTransactionAsync (string transactionGuid, string userGuid)
+        /// <returns>Task of TransactionResponseBody</returns>
+        public async System.Threading.Tasks.Task<TransactionResponseBody> ReadTransactionAsync (string transactionGuid, string userGuid)
         {
-             ApiResponse<Transaction> localVarResponse = await ReadTransactionAsyncWithHttpInfo(transactionGuid, userGuid);
+             ApiResponse<TransactionResponseBody> localVarResponse = await ReadTransactionAsyncWithHttpInfo(transactionGuid, userGuid);
              return localVarResponse.Data;
 
         }
@@ -719,8 +719,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="transactionGuid">The unique identifier for a &#x60;transaction&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (Transaction)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Transaction>> ReadTransactionAsyncWithHttpInfo (string transactionGuid, string userGuid)
+        /// <returns>Task of ApiResponse (TransactionResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TransactionResponseBody>> ReadTransactionAsyncWithHttpInfo (string transactionGuid, string userGuid)
         {
             // verify the required parameter 'transactionGuid' is set
             if (transactionGuid == null)
@@ -777,9 +777,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Transaction>(localVarStatusCode,
+            return new ApiResponse<TransactionResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Transaction) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Transaction)));
+                (TransactionResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TransactionResponseBody)));
         }
 
     }

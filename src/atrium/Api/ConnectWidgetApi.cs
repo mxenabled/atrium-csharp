@@ -32,8 +32,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>ConnectWidget</returns>
-        ConnectWidget GetConnectWidget (string userGuid, ConnectWidgetRequestBody body);
+        /// <returns>ConnectWidgetResponseBody</returns>
+        ConnectWidgetResponseBody GetConnectWidget (string userGuid, ConnectWidgetRequestBody body);
 
         /// <summary>
         /// Embedding in a website
@@ -44,8 +44,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>ApiResponse of ConnectWidget</returns>
-        ApiResponse<ConnectWidget> GetConnectWidgetWithHttpInfo (string userGuid, ConnectWidgetRequestBody body);
+        /// <returns>ApiResponse of ConnectWidgetResponseBody</returns>
+        ApiResponse<ConnectWidgetResponseBody> GetConnectWidgetWithHttpInfo (string userGuid, ConnectWidgetRequestBody body);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -57,8 +57,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>Task of ConnectWidget</returns>
-        System.Threading.Tasks.Task<ConnectWidget> GetConnectWidgetAsync (string userGuid, ConnectWidgetRequestBody body);
+        /// <returns>Task of ConnectWidgetResponseBody</returns>
+        System.Threading.Tasks.Task<ConnectWidgetResponseBody> GetConnectWidgetAsync (string userGuid, ConnectWidgetRequestBody body);
 
         /// <summary>
         /// Embedding in a website
@@ -69,8 +69,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>Task of ApiResponse (ConnectWidget)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ConnectWidget>> GetConnectWidgetAsyncWithHttpInfo (string userGuid, ConnectWidgetRequestBody body);
+        /// <returns>Task of ApiResponse (ConnectWidgetResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ConnectWidgetResponseBody>> GetConnectWidgetAsyncWithHttpInfo (string userGuid, ConnectWidgetRequestBody body);
         #endregion Asynchronous Operations
     }
 
@@ -177,10 +177,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>ConnectWidget</returns>
-        public ConnectWidget GetConnectWidget (string userGuid, ConnectWidgetRequestBody body)
+        /// <returns>ConnectWidgetResponseBody</returns>
+        public ConnectWidgetResponseBody GetConnectWidget (string userGuid, ConnectWidgetRequestBody body)
         {
-             ApiResponse<ConnectWidget> localVarResponse = GetConnectWidgetWithHttpInfo(userGuid, body);
+             ApiResponse<ConnectWidgetResponseBody> localVarResponse = GetConnectWidgetWithHttpInfo(userGuid, body);
              return localVarResponse.Data;
         }
 
@@ -190,8 +190,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>ApiResponse of ConnectWidget</returns>
-        public ApiResponse< ConnectWidget > GetConnectWidgetWithHttpInfo (string userGuid, ConnectWidgetRequestBody body)
+        /// <returns>ApiResponse of ConnectWidgetResponseBody</returns>
+        public ApiResponse< ConnectWidgetResponseBody > GetConnectWidgetWithHttpInfo (string userGuid, ConnectWidgetRequestBody body)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -256,9 +256,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ConnectWidget>(localVarStatusCode,
+            return new ApiResponse<ConnectWidgetResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConnectWidget) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConnectWidget)));
+                (ConnectWidgetResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConnectWidgetResponseBody)));
         }
 
         /// <summary>
@@ -267,10 +267,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>Task of ConnectWidget</returns>
-        public async System.Threading.Tasks.Task<ConnectWidget> GetConnectWidgetAsync (string userGuid, ConnectWidgetRequestBody body)
+        /// <returns>Task of ConnectWidgetResponseBody</returns>
+        public async System.Threading.Tasks.Task<ConnectWidgetResponseBody> GetConnectWidgetAsync (string userGuid, ConnectWidgetRequestBody body)
         {
-             ApiResponse<ConnectWidget> localVarResponse = await GetConnectWidgetAsyncWithHttpInfo(userGuid, body);
+             ApiResponse<ConnectWidgetResponseBody> localVarResponse = await GetConnectWidgetAsyncWithHttpInfo(userGuid, body);
              return localVarResponse.Data;
 
         }
@@ -281,8 +281,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)</param>
-        /// <returns>Task of ApiResponse (ConnectWidget)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ConnectWidget>> GetConnectWidgetAsyncWithHttpInfo (string userGuid, ConnectWidgetRequestBody body)
+        /// <returns>Task of ApiResponse (ConnectWidgetResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ConnectWidgetResponseBody>> GetConnectWidgetAsyncWithHttpInfo (string userGuid, ConnectWidgetRequestBody body)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -347,9 +347,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<ConnectWidget>(localVarStatusCode,
+            return new ApiResponse<ConnectWidgetResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (ConnectWidget) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConnectWidget)));
+                (ConnectWidgetResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConnectWidgetResponseBody)));
         }
 
     }

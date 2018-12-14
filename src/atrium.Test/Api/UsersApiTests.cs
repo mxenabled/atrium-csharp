@@ -71,7 +71,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //UserCreateRequestBody body = null;
             //var response = instance.CreateUser(body);
-            //Assert.IsInstanceOf<User> (response, "response is User");
+            //Assert.IsInstanceOf<UserResponseBody> (response, "response is UserResponseBody");
         }
         
         /// <summary>
@@ -96,7 +96,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListUsers(page, recordsPerPage);
-            //Assert.IsInstanceOf<Users> (response, "response is Users");
+            //Assert.IsInstanceOf<UsersResponseBody> (response, "response is UsersResponseBody");
         }
         
         /// <summary>
@@ -108,7 +108,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
             //var response = instance.ReadUser(userGuid);
-            //Assert.IsInstanceOf<User> (response, "response is User");
+            //Assert.IsInstanceOf<UserResponseBody> (response, "response is UserResponseBody");
         }
         
         /// <summary>
@@ -121,7 +121,7 @@ namespace Atrium.Test
             //string userGuid = null;
             //UserUpdateRequestBody body = null;
             //var response = instance.UpdateUser(userGuid, body);
-            //Assert.IsInstanceOf<User> (response, "response is User");
+            //Assert.IsInstanceOf<UserResponseBody> (response, "response is UserResponseBody");
         }
         
     }

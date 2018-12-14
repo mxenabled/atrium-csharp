@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="createuser"></a>
 # **CreateUser**
-> User CreateUser (UserCreateRequestBody body)
+> UserResponseBody CreateUser (UserCreateRequestBody body)
 
 Create user
 
@@ -43,7 +43,7 @@ namespace Example
             try
             {
                 // Create user
-                User result = apiInstance.CreateUser(body);
+                UserResponseBody result = apiInstance.CreateUser(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserResponseBody**](UserResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -126,7 +126,7 @@ void (empty response body)
 
 <a name="listusers"></a>
 # **ListUsers**
-> Users ListUsers (int? page = null, int? recordsPerPage = null)
+> UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null)
 
 List users
 
@@ -159,7 +159,7 @@ namespace Example
             try
             {
                 // List users
-                Users result = apiInstance.ListUsers(page, recordsPerPage);
+                UsersResponseBody result = apiInstance.ListUsers(page, recordsPerPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,13 +180,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Users**](Users.md)
+[**UsersResponseBody**](UsersResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="readuser"></a>
 # **ReadUser**
-> User ReadUser (string userGuid)
+> UserResponseBody ReadUser (string userGuid)
 
 Read user
 
@@ -218,7 +218,7 @@ namespace Example
             try
             {
                 // Read user
-                User result = apiInstance.ReadUser(userGuid);
+                UserResponseBody result = apiInstance.ReadUser(userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -238,13 +238,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserResponseBody**](UserResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="updateuser"></a>
 # **UpdateUser**
-> User UpdateUser (string userGuid, UserUpdateRequestBody body = null)
+> UserResponseBody UpdateUser (string userGuid, UserUpdateRequestBody body = null)
 
 Update user
 
@@ -277,7 +277,7 @@ namespace Example
             try
             {
                 // Update user
-                User result = apiInstance.UpdateUser(userGuid, body);
+                UserResponseBody result = apiInstance.UpdateUser(userGuid, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -298,7 +298,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserResponseBody**](UserResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

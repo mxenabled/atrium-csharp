@@ -65,12 +65,92 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property '_Member'
+        /// Test the property 'AggregatedAt'
         /// </summary>
         [Test]
-        public void _MemberTest()
+        public void AggregatedAtTest()
         {
-            // TODO unit test for the property '_Member'
+            // TODO unit test for the property 'AggregatedAt'
+        }
+        /// <summary>
+        /// Test the property 'ConnectionStatus'
+        /// </summary>
+        [Test]
+        public void ConnectionStatusTest()
+        {
+            // TODO unit test for the property 'ConnectionStatus'
+        }
+        /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Test]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'Identifier'
+        /// </summary>
+        [Test]
+        public void IdentifierTest()
+        {
+            // TODO unit test for the property 'Identifier'
+        }
+        /// <summary>
+        /// Test the property 'InstitutionCode'
+        /// </summary>
+        [Test]
+        public void InstitutionCodeTest()
+        {
+            // TODO unit test for the property 'InstitutionCode'
+        }
+        /// <summary>
+        /// Test the property 'IsBeingAggregated'
+        /// </summary>
+        [Test]
+        public void IsBeingAggregatedTest()
+        {
+            // TODO unit test for the property 'IsBeingAggregated'
+        }
+        /// <summary>
+        /// Test the property 'Metadata'
+        /// </summary>
+        [Test]
+        public void MetadataTest()
+        {
+            // TODO unit test for the property 'Metadata'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Test]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+        /// <summary>
+        /// Test the property 'SuccessfullyAggregatedAt'
+        /// </summary>
+        [Test]
+        public void SuccessfullyAggregatedAtTest()
+        {
+            // TODO unit test for the property 'SuccessfullyAggregatedAt'
+        }
+        /// <summary>
+        /// Test the property 'UserGuid'
+        /// </summary>
+        [Test]
+        public void UserGuidTest()
+        {
+            // TODO unit test for the property 'UserGuid'
         }
 
     }

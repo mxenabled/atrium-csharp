@@ -33,8 +33,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Institutions</returns>
-        Institutions ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null);
+        /// <returns>InstitutionsResponseBody</returns>
+        InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List institutions
@@ -46,8 +46,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>ApiResponse of Institutions</returns>
-        ApiResponse<Institutions> ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
+        /// <returns>ApiResponse of InstitutionsResponseBody</returns>
+        ApiResponse<InstitutionsResponseBody> ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read institution
         /// </summary>
@@ -56,8 +56,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Institution</returns>
-        Institution ReadInstitution (string institutionCode);
+        /// <returns>InstitutionResponseBody</returns>
+        InstitutionResponseBody ReadInstitution (string institutionCode);
 
         /// <summary>
         /// Read institution
@@ -67,8 +67,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>ApiResponse of Institution</returns>
-        ApiResponse<Institution> ReadInstitutionWithHttpInfo (string institutionCode);
+        /// <returns>ApiResponse of InstitutionResponseBody</returns>
+        ApiResponse<InstitutionResponseBody> ReadInstitutionWithHttpInfo (string institutionCode);
         /// <summary>
         /// Read institution credentials
         /// </summary>
@@ -77,8 +77,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Credentials</returns>
-        Credentials ReadInstitutionCredentials (string institutionCode);
+        /// <returns>CredentialsResponseBody</returns>
+        CredentialsResponseBody ReadInstitutionCredentials (string institutionCode);
 
         /// <summary>
         /// Read institution credentials
@@ -88,8 +88,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>ApiResponse of Credentials</returns>
-        ApiResponse<Credentials> ReadInstitutionCredentialsWithHttpInfo (string institutionCode);
+        /// <returns>ApiResponse of CredentialsResponseBody</returns>
+        ApiResponse<CredentialsResponseBody> ReadInstitutionCredentialsWithHttpInfo (string institutionCode);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -102,8 +102,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of Institutions</returns>
-        System.Threading.Tasks.Task<Institutions> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null);
+        /// <returns>Task of InstitutionsResponseBody</returns>
+        System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List institutions
@@ -115,8 +115,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of ApiResponse (Institutions)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Institutions>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
+        /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read institution
         /// </summary>
@@ -125,8 +125,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of Institution</returns>
-        System.Threading.Tasks.Task<Institution> ReadInstitutionAsync (string institutionCode);
+        /// <returns>Task of InstitutionResponseBody</returns>
+        System.Threading.Tasks.Task<InstitutionResponseBody> ReadInstitutionAsync (string institutionCode);
 
         /// <summary>
         /// Read institution
@@ -136,8 +136,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of ApiResponse (Institution)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Institution>> ReadInstitutionAsyncWithHttpInfo (string institutionCode);
+        /// <returns>Task of ApiResponse (InstitutionResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InstitutionResponseBody>> ReadInstitutionAsyncWithHttpInfo (string institutionCode);
         /// <summary>
         /// Read institution credentials
         /// </summary>
@@ -146,8 +146,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of Credentials</returns>
-        System.Threading.Tasks.Task<Credentials> ReadInstitutionCredentialsAsync (string institutionCode);
+        /// <returns>Task of CredentialsResponseBody</returns>
+        System.Threading.Tasks.Task<CredentialsResponseBody> ReadInstitutionCredentialsAsync (string institutionCode);
 
         /// <summary>
         /// Read institution credentials
@@ -157,8 +157,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of ApiResponse (Credentials)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Credentials>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode);
+        /// <returns>Task of ApiResponse (CredentialsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CredentialsResponseBody>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode);
         #endregion Asynchronous Operations
     }
 
@@ -266,10 +266,10 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Institutions</returns>
-        public Institutions ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
+        /// <returns>InstitutionsResponseBody</returns>
+        public InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<Institutions> localVarResponse = ListInstitutionsWithHttpInfo(name, page, recordsPerPage);
+             ApiResponse<InstitutionsResponseBody> localVarResponse = ListInstitutionsWithHttpInfo(name, page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -280,8 +280,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>ApiResponse of Institutions</returns>
-        public ApiResponse< Institutions > ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
+        /// <returns>ApiResponse of InstitutionsResponseBody</returns>
+        public ApiResponse< InstitutionsResponseBody > ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/institutions";
@@ -333,9 +333,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Institutions>(localVarStatusCode,
+            return new ApiResponse<InstitutionsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Institutions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Institutions)));
+                (InstitutionsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstitutionsResponseBody)));
         }
 
         /// <summary>
@@ -345,10 +345,10 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of Institutions</returns>
-        public async System.Threading.Tasks.Task<Institutions> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null)
+        /// <returns>Task of InstitutionsResponseBody</returns>
+        public async System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<Institutions> localVarResponse = await ListInstitutionsAsyncWithHttpInfo(name, page, recordsPerPage);
+             ApiResponse<InstitutionsResponseBody> localVarResponse = await ListInstitutionsAsyncWithHttpInfo(name, page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -360,8 +360,8 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of ApiResponse (Institutions)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Institutions>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
+        /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/institutions";
@@ -413,9 +413,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Institutions>(localVarStatusCode,
+            return new ApiResponse<InstitutionsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Institutions) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Institutions)));
+                (InstitutionsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstitutionsResponseBody)));
         }
 
         /// <summary>
@@ -423,10 +423,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Institution</returns>
-        public Institution ReadInstitution (string institutionCode)
+        /// <returns>InstitutionResponseBody</returns>
+        public InstitutionResponseBody ReadInstitution (string institutionCode)
         {
-             ApiResponse<Institution> localVarResponse = ReadInstitutionWithHttpInfo(institutionCode);
+             ApiResponse<InstitutionResponseBody> localVarResponse = ReadInstitutionWithHttpInfo(institutionCode);
              return localVarResponse.Data;
         }
 
@@ -435,8 +435,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>ApiResponse of Institution</returns>
-        public ApiResponse< Institution > ReadInstitutionWithHttpInfo (string institutionCode)
+        /// <returns>ApiResponse of InstitutionResponseBody</returns>
+        public ApiResponse< InstitutionResponseBody > ReadInstitutionWithHttpInfo (string institutionCode)
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
@@ -489,9 +489,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Institution>(localVarStatusCode,
+            return new ApiResponse<InstitutionResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Institution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Institution)));
+                (InstitutionResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstitutionResponseBody)));
         }
 
         /// <summary>
@@ -499,10 +499,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of Institution</returns>
-        public async System.Threading.Tasks.Task<Institution> ReadInstitutionAsync (string institutionCode)
+        /// <returns>Task of InstitutionResponseBody</returns>
+        public async System.Threading.Tasks.Task<InstitutionResponseBody> ReadInstitutionAsync (string institutionCode)
         {
-             ApiResponse<Institution> localVarResponse = await ReadInstitutionAsyncWithHttpInfo(institutionCode);
+             ApiResponse<InstitutionResponseBody> localVarResponse = await ReadInstitutionAsyncWithHttpInfo(institutionCode);
              return localVarResponse.Data;
 
         }
@@ -512,8 +512,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of ApiResponse (Institution)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Institution>> ReadInstitutionAsyncWithHttpInfo (string institutionCode)
+        /// <returns>Task of ApiResponse (InstitutionResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InstitutionResponseBody>> ReadInstitutionAsyncWithHttpInfo (string institutionCode)
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
@@ -566,9 +566,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Institution>(localVarStatusCode,
+            return new ApiResponse<InstitutionResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Institution) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Institution)));
+                (InstitutionResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstitutionResponseBody)));
         }
 
         /// <summary>
@@ -576,10 +576,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Credentials</returns>
-        public Credentials ReadInstitutionCredentials (string institutionCode)
+        /// <returns>CredentialsResponseBody</returns>
+        public CredentialsResponseBody ReadInstitutionCredentials (string institutionCode)
         {
-             ApiResponse<Credentials> localVarResponse = ReadInstitutionCredentialsWithHttpInfo(institutionCode);
+             ApiResponse<CredentialsResponseBody> localVarResponse = ReadInstitutionCredentialsWithHttpInfo(institutionCode);
              return localVarResponse.Data;
         }
 
@@ -588,8 +588,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>ApiResponse of Credentials</returns>
-        public ApiResponse< Credentials > ReadInstitutionCredentialsWithHttpInfo (string institutionCode)
+        /// <returns>ApiResponse of CredentialsResponseBody</returns>
+        public ApiResponse< CredentialsResponseBody > ReadInstitutionCredentialsWithHttpInfo (string institutionCode)
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
@@ -642,9 +642,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Credentials>(localVarStatusCode,
+            return new ApiResponse<CredentialsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Credentials) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Credentials)));
+                (CredentialsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredentialsResponseBody)));
         }
 
         /// <summary>
@@ -652,10 +652,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of Credentials</returns>
-        public async System.Threading.Tasks.Task<Credentials> ReadInstitutionCredentialsAsync (string institutionCode)
+        /// <returns>Task of CredentialsResponseBody</returns>
+        public async System.Threading.Tasks.Task<CredentialsResponseBody> ReadInstitutionCredentialsAsync (string institutionCode)
         {
-             ApiResponse<Credentials> localVarResponse = await ReadInstitutionCredentialsAsyncWithHttpInfo(institutionCode);
+             ApiResponse<CredentialsResponseBody> localVarResponse = await ReadInstitutionCredentialsAsyncWithHttpInfo(institutionCode);
              return localVarResponse.Data;
 
         }
@@ -665,8 +665,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="institutionCode">The institution_code of the institution.</param>
-        /// <returns>Task of ApiResponse (Credentials)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Credentials>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode)
+        /// <returns>Task of ApiResponse (CredentialsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CredentialsResponseBody>> ReadInstitutionCredentialsAsyncWithHttpInfo (string institutionCode)
         {
             // verify the required parameter 'institutionCode' is set
             if (institutionCode == null)
@@ -719,9 +719,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Credentials>(localVarStatusCode,
+            return new ApiResponse<CredentialsResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Credentials) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Credentials)));
+                (CredentialsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredentialsResponseBody)));
         }
 
     }

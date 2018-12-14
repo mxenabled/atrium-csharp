@@ -32,17 +32,22 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConnectWidget" /> class.
         /// </summary>
-        /// <param name="user">user.</param>
-        public ConnectWidget(ConnectWidgetAttributes user = default(ConnectWidgetAttributes))
+        [JsonConstructorAttribute]
+        public ConnectWidget()
         {
-            this.User = user;
         }
         
         /// <summary>
-        /// Gets or Sets User
+        /// Gets or Sets ConnectWidgetUrl
         /// </summary>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public ConnectWidgetAttributes User { get; set; }
+        [DataMember(Name="connect_widget_url", EmitDefaultValue=false)]
+        public string ConnectWidgetUrl { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Guid
+        /// </summary>
+        [DataMember(Name="guid", EmitDefaultValue=false)]
+        public string Guid { get; private set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +57,8 @@ namespace Atrium.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConnectWidget {\n");
-            sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  ConnectWidgetUrl: ").Append(ConnectWidgetUrl).Append("\n");
+            sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +94,14 @@ namespace Atrium.Model
 
             return 
                 (
-                    this.User == input.User ||
-                    (this.User != null &&
-                    this.User.Equals(input.User))
+                    this.ConnectWidgetUrl == input.ConnectWidgetUrl ||
+                    (this.ConnectWidgetUrl != null &&
+                    this.ConnectWidgetUrl.Equals(input.ConnectWidgetUrl))
+                ) && 
+                (
+                    this.Guid == input.Guid ||
+                    (this.Guid != null &&
+                    this.Guid.Equals(input.Guid))
                 );
         }
 
@@ -103,8 +114,10 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.User != null)
-                    hashCode = hashCode * 59 + this.User.GetHashCode();
+                if (this.ConnectWidgetUrl != null)
+                    hashCode = hashCode * 59 + this.ConnectWidgetUrl.GetHashCode();
+                if (this.Guid != null)
+                    hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 return hashCode;
             }
         }

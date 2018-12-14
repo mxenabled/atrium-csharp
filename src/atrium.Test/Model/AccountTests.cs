@@ -65,12 +65,228 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property '_Account'
+        /// Test the property 'Apr'
         /// </summary>
         [Test]
-        public void _AccountTest()
+        public void AprTest()
         {
-            // TODO unit test for the property '_Account'
+            // TODO unit test for the property 'Apr'
+        }
+        /// <summary>
+        /// Test the property 'Apy'
+        /// </summary>
+        [Test]
+        public void ApyTest()
+        {
+            // TODO unit test for the property 'Apy'
+        }
+        /// <summary>
+        /// Test the property 'AvailableBalance'
+        /// </summary>
+        [Test]
+        public void AvailableBalanceTest()
+        {
+            // TODO unit test for the property 'AvailableBalance'
+        }
+        /// <summary>
+        /// Test the property 'AvailableCredit'
+        /// </summary>
+        [Test]
+        public void AvailableCreditTest()
+        {
+            // TODO unit test for the property 'AvailableCredit'
+        }
+        /// <summary>
+        /// Test the property 'Balance'
+        /// </summary>
+        [Test]
+        public void BalanceTest()
+        {
+            // TODO unit test for the property 'Balance'
+        }
+        /// <summary>
+        /// Test the property 'CreatedAt'
+        /// </summary>
+        [Test]
+        public void CreatedAtTest()
+        {
+            // TODO unit test for the property 'CreatedAt'
+        }
+        /// <summary>
+        /// Test the property 'CreditLimit'
+        /// </summary>
+        [Test]
+        public void CreditLimitTest()
+        {
+            // TODO unit test for the property 'CreditLimit'
+        }
+        /// <summary>
+        /// Test the property 'CurrencyCode'
+        /// </summary>
+        [Test]
+        public void CurrencyCodeTest()
+        {
+            // TODO unit test for the property 'CurrencyCode'
+        }
+        /// <summary>
+        /// Test the property 'DayPaymentIsDue'
+        /// </summary>
+        [Test]
+        public void DayPaymentIsDueTest()
+        {
+            // TODO unit test for the property 'DayPaymentIsDue'
+        }
+        /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Test]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'InstitutionCode'
+        /// </summary>
+        [Test]
+        public void InstitutionCodeTest()
+        {
+            // TODO unit test for the property 'InstitutionCode'
+        }
+        /// <summary>
+        /// Test the property 'InterestRate'
+        /// </summary>
+        [Test]
+        public void InterestRateTest()
+        {
+            // TODO unit test for the property 'InterestRate'
+        }
+        /// <summary>
+        /// Test the property 'IsClosed'
+        /// </summary>
+        [Test]
+        public void IsClosedTest()
+        {
+            // TODO unit test for the property 'IsClosed'
+        }
+        /// <summary>
+        /// Test the property 'LastPayment'
+        /// </summary>
+        [Test]
+        public void LastPaymentTest()
+        {
+            // TODO unit test for the property 'LastPayment'
+        }
+        /// <summary>
+        /// Test the property 'MaturesOn'
+        /// </summary>
+        [Test]
+        public void MaturesOnTest()
+        {
+            // TODO unit test for the property 'MaturesOn'
+        }
+        /// <summary>
+        /// Test the property 'MemberGuid'
+        /// </summary>
+        [Test]
+        public void MemberGuidTest()
+        {
+            // TODO unit test for the property 'MemberGuid'
+        }
+        /// <summary>
+        /// Test the property 'MinimumBalance'
+        /// </summary>
+        [Test]
+        public void MinimumBalanceTest()
+        {
+            // TODO unit test for the property 'MinimumBalance'
+        }
+        /// <summary>
+        /// Test the property 'MinimumPayment'
+        /// </summary>
+        [Test]
+        public void MinimumPaymentTest()
+        {
+            // TODO unit test for the property 'MinimumPayment'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'OriginalBalance'
+        /// </summary>
+        [Test]
+        public void OriginalBalanceTest()
+        {
+            // TODO unit test for the property 'OriginalBalance'
+        }
+        /// <summary>
+        /// Test the property 'PaymentDueAt'
+        /// </summary>
+        [Test]
+        public void PaymentDueAtTest()
+        {
+            // TODO unit test for the property 'PaymentDueAt'
+        }
+        /// <summary>
+        /// Test the property 'PayoffBalance'
+        /// </summary>
+        [Test]
+        public void PayoffBalanceTest()
+        {
+            // TODO unit test for the property 'PayoffBalance'
+        }
+        /// <summary>
+        /// Test the property 'StartedOn'
+        /// </summary>
+        [Test]
+        public void StartedOnTest()
+        {
+            // TODO unit test for the property 'StartedOn'
+        }
+        /// <summary>
+        /// Test the property 'Subtype'
+        /// </summary>
+        [Test]
+        public void SubtypeTest()
+        {
+            // TODO unit test for the property 'Subtype'
+        }
+        /// <summary>
+        /// Test the property 'TotalAccountValue'
+        /// </summary>
+        [Test]
+        public void TotalAccountValueTest()
+        {
+            // TODO unit test for the property 'TotalAccountValue'
+        }
+        /// <summary>
+        /// Test the property 'Type'
+        /// </summary>
+        [Test]
+        public void TypeTest()
+        {
+            // TODO unit test for the property 'Type'
+        }
+        /// <summary>
+        /// Test the property 'UpdatedAt'
+        /// </summary>
+        [Test]
+        public void UpdatedAtTest()
+        {
+            // TODO unit test for the property 'UpdatedAt'
+        }
+        /// <summary>
+        /// Test the property 'UserGuid'
+        /// </summary>
+        [Test]
+        public void UserGuidTest()
+        {
+            // TODO unit test for the property 'UserGuid'
         }
 
     }

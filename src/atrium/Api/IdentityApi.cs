@@ -32,8 +32,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Member</returns>
-        Member IdentifyMember (string memberGuid, string userGuid);
+        /// <returns>MemberResponseBody</returns>
+        MemberResponseBody IdentifyMember (string memberGuid, string userGuid);
 
         /// <summary>
         /// Identify
@@ -44,8 +44,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of Member</returns>
-        ApiResponse<Member> IdentifyMemberWithHttpInfo (string memberGuid, string userGuid);
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        ApiResponse<MemberResponseBody> IdentifyMemberWithHttpInfo (string memberGuid, string userGuid);
         /// <summary>
         /// List member account owners
         /// </summary>
@@ -55,8 +55,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>AccountOwners</returns>
-        AccountOwners ListAccountOwners (string memberGuid, string userGuid);
+        /// <returns>AccountOwnersResponseBody</returns>
+        AccountOwnersResponseBody ListAccountOwners (string memberGuid, string userGuid);
 
         /// <summary>
         /// List member account owners
@@ -67,8 +67,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of AccountOwners</returns>
-        ApiResponse<AccountOwners> ListAccountOwnersWithHttpInfo (string memberGuid, string userGuid);
+        /// <returns>ApiResponse of AccountOwnersResponseBody</returns>
+        ApiResponse<AccountOwnersResponseBody> ListAccountOwnersWithHttpInfo (string memberGuid, string userGuid);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -80,8 +80,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of Member</returns>
-        System.Threading.Tasks.Task<Member> IdentifyMemberAsync (string memberGuid, string userGuid);
+        /// <returns>Task of MemberResponseBody</returns>
+        System.Threading.Tasks.Task<MemberResponseBody> IdentifyMemberAsync (string memberGuid, string userGuid);
 
         /// <summary>
         /// Identify
@@ -92,8 +92,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (Member)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Member>> IdentifyMemberAsyncWithHttpInfo (string memberGuid, string userGuid);
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> IdentifyMemberAsyncWithHttpInfo (string memberGuid, string userGuid);
         /// <summary>
         /// List member account owners
         /// </summary>
@@ -103,8 +103,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of AccountOwners</returns>
-        System.Threading.Tasks.Task<AccountOwners> ListAccountOwnersAsync (string memberGuid, string userGuid);
+        /// <returns>Task of AccountOwnersResponseBody</returns>
+        System.Threading.Tasks.Task<AccountOwnersResponseBody> ListAccountOwnersAsync (string memberGuid, string userGuid);
 
         /// <summary>
         /// List member account owners
@@ -115,8 +115,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (AccountOwners)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AccountOwners>> ListAccountOwnersAsyncWithHttpInfo (string memberGuid, string userGuid);
+        /// <returns>Task of ApiResponse (AccountOwnersResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AccountOwnersResponseBody>> ListAccountOwnersAsyncWithHttpInfo (string memberGuid, string userGuid);
         #endregion Asynchronous Operations
     }
 
@@ -223,10 +223,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Member</returns>
-        public Member IdentifyMember (string memberGuid, string userGuid)
+        /// <returns>MemberResponseBody</returns>
+        public MemberResponseBody IdentifyMember (string memberGuid, string userGuid)
         {
-             ApiResponse<Member> localVarResponse = IdentifyMemberWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<MemberResponseBody> localVarResponse = IdentifyMemberWithHttpInfo(memberGuid, userGuid);
              return localVarResponse.Data;
         }
 
@@ -236,8 +236,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of Member</returns>
-        public ApiResponse< Member > IdentifyMemberWithHttpInfo (string memberGuid, string userGuid)
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        public ApiResponse< MemberResponseBody > IdentifyMemberWithHttpInfo (string memberGuid, string userGuid)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -295,9 +295,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Member>(localVarStatusCode,
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Member) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Member)));
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
         }
 
         /// <summary>
@@ -306,10 +306,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of Member</returns>
-        public async System.Threading.Tasks.Task<Member> IdentifyMemberAsync (string memberGuid, string userGuid)
+        /// <returns>Task of MemberResponseBody</returns>
+        public async System.Threading.Tasks.Task<MemberResponseBody> IdentifyMemberAsync (string memberGuid, string userGuid)
         {
-             ApiResponse<Member> localVarResponse = await IdentifyMemberAsyncWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<MemberResponseBody> localVarResponse = await IdentifyMemberAsyncWithHttpInfo(memberGuid, userGuid);
              return localVarResponse.Data;
 
         }
@@ -320,8 +320,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (Member)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Member>> IdentifyMemberAsyncWithHttpInfo (string memberGuid, string userGuid)
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> IdentifyMemberAsyncWithHttpInfo (string memberGuid, string userGuid)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -379,9 +379,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Member>(localVarStatusCode,
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Member) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Member)));
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
         }
 
         /// <summary>
@@ -390,10 +390,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>AccountOwners</returns>
-        public AccountOwners ListAccountOwners (string memberGuid, string userGuid)
+        /// <returns>AccountOwnersResponseBody</returns>
+        public AccountOwnersResponseBody ListAccountOwners (string memberGuid, string userGuid)
         {
-             ApiResponse<AccountOwners> localVarResponse = ListAccountOwnersWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<AccountOwnersResponseBody> localVarResponse = ListAccountOwnersWithHttpInfo(memberGuid, userGuid);
              return localVarResponse.Data;
         }
 
@@ -403,8 +403,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of AccountOwners</returns>
-        public ApiResponse< AccountOwners > ListAccountOwnersWithHttpInfo (string memberGuid, string userGuid)
+        /// <returns>ApiResponse of AccountOwnersResponseBody</returns>
+        public ApiResponse< AccountOwnersResponseBody > ListAccountOwnersWithHttpInfo (string memberGuid, string userGuid)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -461,9 +461,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AccountOwners>(localVarStatusCode,
+            return new ApiResponse<AccountOwnersResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AccountOwners) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountOwners)));
+                (AccountOwnersResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountOwnersResponseBody)));
         }
 
         /// <summary>
@@ -472,10 +472,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of AccountOwners</returns>
-        public async System.Threading.Tasks.Task<AccountOwners> ListAccountOwnersAsync (string memberGuid, string userGuid)
+        /// <returns>Task of AccountOwnersResponseBody</returns>
+        public async System.Threading.Tasks.Task<AccountOwnersResponseBody> ListAccountOwnersAsync (string memberGuid, string userGuid)
         {
-             ApiResponse<AccountOwners> localVarResponse = await ListAccountOwnersAsyncWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<AccountOwnersResponseBody> localVarResponse = await ListAccountOwnersAsyncWithHttpInfo(memberGuid, userGuid);
              return localVarResponse.Data;
 
         }
@@ -486,8 +486,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (AccountOwners)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AccountOwners>> ListAccountOwnersAsyncWithHttpInfo (string memberGuid, string userGuid)
+        /// <returns>Task of ApiResponse (AccountOwnersResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AccountOwnersResponseBody>> ListAccountOwnersAsyncWithHttpInfo (string memberGuid, string userGuid)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -544,9 +544,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<AccountOwners>(localVarStatusCode,
+            return new ApiResponse<AccountOwnersResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (AccountOwners) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountOwners)));
+                (AccountOwnersResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AccountOwnersResponseBody)));
         }
 
     }

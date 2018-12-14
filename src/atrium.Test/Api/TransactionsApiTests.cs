@@ -71,7 +71,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //TransactionsCleanseAndCategorizeRequestBody body = null;
             //var response = instance.CleanseAndCategorizeTransactions(body);
-            //Assert.IsInstanceOf<TransactionsCleanseAndCategorize> (response, "response is TransactionsCleanseAndCategorize");
+            //Assert.IsInstanceOf<TransactionsCleanseAndCategorizeResponseBody> (response, "response is TransactionsCleanseAndCategorizeResponseBody");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace Atrium.Test
             //int? recordsPerPage = null;
             //string toDate = null;
             //var response = instance.ListUserTransactions(userGuid, page, fromDate, recordsPerPage, toDate);
-            //Assert.IsInstanceOf<Transactions> (response, "response is Transactions");
+            //Assert.IsInstanceOf<TransactionsResponseBody> (response, "response is TransactionsResponseBody");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace Atrium.Test
             //string transactionGuid = null;
             //string userGuid = null;
             //var response = instance.ReadTransaction(transactionGuid, userGuid);
-            //Assert.IsInstanceOf<Transaction> (response, "response is Transaction");
+            //Assert.IsInstanceOf<TransactionResponseBody> (response, "response is TransactionResponseBody");
         }
         
     }

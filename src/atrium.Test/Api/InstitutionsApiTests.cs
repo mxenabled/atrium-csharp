@@ -73,7 +73,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListInstitutions(name, page, recordsPerPage);
-            //Assert.IsInstanceOf<Institutions> (response, "response is Institutions");
+            //Assert.IsInstanceOf<InstitutionsResponseBody> (response, "response is InstitutionsResponseBody");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string institutionCode = null;
             //var response = instance.ReadInstitution(institutionCode);
-            //Assert.IsInstanceOf<Institution> (response, "response is Institution");
+            //Assert.IsInstanceOf<InstitutionResponseBody> (response, "response is InstitutionResponseBody");
         }
         
         /// <summary>
@@ -97,7 +97,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string institutionCode = null;
             //var response = instance.ReadInstitutionCredentials(institutionCode);
-            //Assert.IsInstanceOf<Credentials> (response, "response is Credentials");
+            //Assert.IsInstanceOf<CredentialsResponseBody> (response, "response is CredentialsResponseBody");
         }
         
     }

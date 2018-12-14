@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 <a name="identifymember"></a>
 # **IdentifyMember**
-> Member IdentifyMember (string memberGuid, string userGuid)
+> MemberResponseBody IdentifyMember (string memberGuid, string userGuid)
 
 Identify
 
@@ -41,7 +41,7 @@ namespace Example
             try
             {
                 // Identify
-                Member result = apiInstance.IdentifyMember(memberGuid, userGuid);
+                MemberResponseBody result = apiInstance.IdentifyMember(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -62,13 +62,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listaccountowners"></a>
 # **ListAccountOwners**
-> AccountOwners ListAccountOwners (string memberGuid, string userGuid)
+> AccountOwnersResponseBody ListAccountOwners (string memberGuid, string userGuid)
 
 List member account owners
 
@@ -101,7 +101,7 @@ namespace Example
             try
             {
                 // List member account owners
-                AccountOwners result = apiInstance.ListAccountOwners(memberGuid, userGuid);
+                AccountOwnersResponseBody result = apiInstance.ListAccountOwners(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountOwners**](AccountOwners.md)
+[**AccountOwnersResponseBody**](AccountOwnersResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

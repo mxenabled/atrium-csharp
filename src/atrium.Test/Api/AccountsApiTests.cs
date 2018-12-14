@@ -76,7 +76,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
-            //Assert.IsInstanceOf<Transactions> (response, "response is Transactions");
+            //Assert.IsInstanceOf<TransactionsResponseBody> (response, "response is TransactionsResponseBody");
         }
         
         /// <summary>
@@ -90,7 +90,7 @@ namespace Atrium.Test
             //int? page = null;
             //int? recordsPerPage = null;
             //var response = instance.ListUserAccounts(userGuid, page, recordsPerPage);
-            //Assert.IsInstanceOf<Accounts> (response, "response is Accounts");
+            //Assert.IsInstanceOf<AccountsResponseBody> (response, "response is AccountsResponseBody");
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace Atrium.Test
             //string accountGuid = null;
             //string userGuid = null;
             //var response = instance.ReadAccount(accountGuid, userGuid);
-            //Assert.IsInstanceOf<Account> (response, "response is Account");
+            //Assert.IsInstanceOf<AccountResponseBody> (response, "response is AccountResponseBody");
         }
         
         /// <summary>
@@ -117,7 +117,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ReadAccountByMemberGUID(accountGuid, memberGuid, userGuid);
-            //Assert.IsInstanceOf<Account> (response, "response is Account");
+            //Assert.IsInstanceOf<AccountResponseBody> (response, "response is AccountResponseBody");
         }
         
     }

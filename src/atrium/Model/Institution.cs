@@ -32,17 +32,52 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Institution" /> class.
         /// </summary>
-        /// <param name="institution">institution.</param>
-        public Institution(InstitutionAttributes institution = default(InstitutionAttributes))
+        [JsonConstructorAttribute]
+        public Institution()
         {
-            this._Institution = institution;
         }
         
         /// <summary>
-        /// Gets or Sets _Institution
+        /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name="institution", EmitDefaultValue=false)]
-        public InstitutionAttributes _Institution { get; set; }
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public string Code { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets MediumLogoUrl
+        /// </summary>
+        [DataMember(Name="medium_logo_url", EmitDefaultValue=false)]
+        public string MediumLogoUrl { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets SmallLogoUrl
+        /// </summary>
+        [DataMember(Name="small_logo_url", EmitDefaultValue=false)]
+        public string SmallLogoUrl { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets SupportsAccountIdentification
+        /// </summary>
+        [DataMember(Name="supports_account_identification", EmitDefaultValue=false)]
+        public bool? SupportsAccountIdentification { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets SupportsAccountVerification
+        /// </summary>
+        [DataMember(Name="supports_account_verification", EmitDefaultValue=false)]
+        public bool? SupportsAccountVerification { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Url
+        /// </summary>
+        [DataMember(Name="url", EmitDefaultValue=false)]
+        public string Url { get; private set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -52,7 +87,13 @@ namespace Atrium.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Institution {\n");
-            sb.Append("  _Institution: ").Append(_Institution).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  MediumLogoUrl: ").Append(MediumLogoUrl).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SmallLogoUrl: ").Append(SmallLogoUrl).Append("\n");
+            sb.Append("  SupportsAccountIdentification: ").Append(SupportsAccountIdentification).Append("\n");
+            sb.Append("  SupportsAccountVerification: ").Append(SupportsAccountVerification).Append("\n");
+            sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -88,9 +129,39 @@ namespace Atrium.Model
 
             return 
                 (
-                    this._Institution == input._Institution ||
-                    (this._Institution != null &&
-                    this._Institution.Equals(input._Institution))
+                    this.Code == input.Code ||
+                    (this.Code != null &&
+                    this.Code.Equals(input.Code))
+                ) && 
+                (
+                    this.MediumLogoUrl == input.MediumLogoUrl ||
+                    (this.MediumLogoUrl != null &&
+                    this.MediumLogoUrl.Equals(input.MediumLogoUrl))
+                ) && 
+                (
+                    this.Name == input.Name ||
+                    (this.Name != null &&
+                    this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.SmallLogoUrl == input.SmallLogoUrl ||
+                    (this.SmallLogoUrl != null &&
+                    this.SmallLogoUrl.Equals(input.SmallLogoUrl))
+                ) && 
+                (
+                    this.SupportsAccountIdentification == input.SupportsAccountIdentification ||
+                    (this.SupportsAccountIdentification != null &&
+                    this.SupportsAccountIdentification.Equals(input.SupportsAccountIdentification))
+                ) && 
+                (
+                    this.SupportsAccountVerification == input.SupportsAccountVerification ||
+                    (this.SupportsAccountVerification != null &&
+                    this.SupportsAccountVerification.Equals(input.SupportsAccountVerification))
+                ) && 
+                (
+                    this.Url == input.Url ||
+                    (this.Url != null &&
+                    this.Url.Equals(input.Url))
                 );
         }
 
@@ -103,8 +174,20 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this._Institution != null)
-                    hashCode = hashCode * 59 + this._Institution.GetHashCode();
+                if (this.Code != null)
+                    hashCode = hashCode * 59 + this.Code.GetHashCode();
+                if (this.MediumLogoUrl != null)
+                    hashCode = hashCode * 59 + this.MediumLogoUrl.GetHashCode();
+                if (this.Name != null)
+                    hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.SmallLogoUrl != null)
+                    hashCode = hashCode * 59 + this.SmallLogoUrl.GetHashCode();
+                if (this.SupportsAccountIdentification != null)
+                    hashCode = hashCode * 59 + this.SupportsAccountIdentification.GetHashCode();
+                if (this.SupportsAccountVerification != null)
+                    hashCode = hashCode * 59 + this.SupportsAccountVerification.GetHashCode();
+                if (this.Url != null)
+                    hashCode = hashCode * 59 + this.Url.GetHashCode();
                 return hashCode;
             }
         }

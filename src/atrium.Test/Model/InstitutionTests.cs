@@ -65,12 +65,60 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property '_Institution'
+        /// Test the property 'Code'
         /// </summary>
         [Test]
-        public void _InstitutionTest()
+        public void CodeTest()
         {
-            // TODO unit test for the property '_Institution'
+            // TODO unit test for the property 'Code'
+        }
+        /// <summary>
+        /// Test the property 'MediumLogoUrl'
+        /// </summary>
+        [Test]
+        public void MediumLogoUrlTest()
+        {
+            // TODO unit test for the property 'MediumLogoUrl'
+        }
+        /// <summary>
+        /// Test the property 'Name'
+        /// </summary>
+        [Test]
+        public void NameTest()
+        {
+            // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'SmallLogoUrl'
+        /// </summary>
+        [Test]
+        public void SmallLogoUrlTest()
+        {
+            // TODO unit test for the property 'SmallLogoUrl'
+        }
+        /// <summary>
+        /// Test the property 'SupportsAccountIdentification'
+        /// </summary>
+        [Test]
+        public void SupportsAccountIdentificationTest()
+        {
+            // TODO unit test for the property 'SupportsAccountIdentification'
+        }
+        /// <summary>
+        /// Test the property 'SupportsAccountVerification'
+        /// </summary>
+        [Test]
+        public void SupportsAccountVerificationTest()
+        {
+            // TODO unit test for the property 'SupportsAccountVerification'
+        }
+        /// <summary>
+        /// Test the property 'Url'
+        /// </summary>
+        [Test]
+        public void UrlTest()
+        {
+            // TODO unit test for the property 'Url'
         }
 
     }

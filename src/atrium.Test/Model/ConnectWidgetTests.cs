@@ -65,12 +65,20 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property 'User'
+        /// Test the property 'ConnectWidgetUrl'
         /// </summary>
         [Test]
-        public void UserTest()
+        public void ConnectWidgetUrlTest()
         {
-            // TODO unit test for the property 'User'
+            // TODO unit test for the property 'ConnectWidgetUrl'
+        }
+        /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Test]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
         }
 
     }

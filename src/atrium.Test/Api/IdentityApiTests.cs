@@ -72,7 +72,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.IdentifyMember(memberGuid, userGuid);
-            //Assert.IsInstanceOf<Member> (response, "response is Member");
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace Atrium.Test
             //string memberGuid = null;
             //string userGuid = null;
             //var response = instance.ListAccountOwners(memberGuid, userGuid);
-            //Assert.IsInstanceOf<AccountOwners> (response, "response is AccountOwners");
+            //Assert.IsInstanceOf<AccountOwnersResponseBody> (response, "response is AccountOwnersResponseBody");
         }
         
     }

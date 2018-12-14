@@ -7,7 +7,7 @@ Method | HTTP request | Description
 
 <a name="getconnectwidget"></a>
 # **GetConnectWidget**
-> ConnectWidget GetConnectWidget (string userGuid, ConnectWidgetRequestBody body)
+> ConnectWidgetResponseBody GetConnectWidget (string userGuid, ConnectWidgetRequestBody body)
 
 Embedding in a website
 
@@ -40,7 +40,7 @@ namespace Example
             try
             {
                 // Embedding in a website
-                ConnectWidget result = apiInstance.GetConnectWidget(userGuid, body);
+                ConnectWidgetResponseBody result = apiInstance.GetConnectWidget(userGuid, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**ConnectWidget**](ConnectWidget.md)
+[**ConnectWidgetResponseBody**](ConnectWidgetResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

@@ -65,12 +65,76 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property 'Member'
+        /// Test the property 'AggregatedAt'
         /// </summary>
         [Test]
-        public void MemberTest()
+        public void AggregatedAtTest()
         {
-            // TODO unit test for the property 'Member'
+            // TODO unit test for the property 'AggregatedAt'
+        }
+        /// <summary>
+        /// Test the property 'Challenges'
+        /// </summary>
+        [Test]
+        public void ChallengesTest()
+        {
+            // TODO unit test for the property 'Challenges'
+        }
+        /// <summary>
+        /// Test the property 'ConnectionStatus'
+        /// </summary>
+        [Test]
+        public void ConnectionStatusTest()
+        {
+            // TODO unit test for the property 'ConnectionStatus'
+        }
+        /// <summary>
+        /// Test the property 'Guid'
+        /// </summary>
+        [Test]
+        public void GuidTest()
+        {
+            // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'HasProcessedAccounts'
+        /// </summary>
+        [Test]
+        public void HasProcessedAccountsTest()
+        {
+            // TODO unit test for the property 'HasProcessedAccounts'
+        }
+        /// <summary>
+        /// Test the property 'HasProcessedTransactions'
+        /// </summary>
+        [Test]
+        public void HasProcessedTransactionsTest()
+        {
+            // TODO unit test for the property 'HasProcessedTransactions'
+        }
+        /// <summary>
+        /// Test the property 'IsBeingAggregated'
+        /// </summary>
+        [Test]
+        public void IsBeingAggregatedTest()
+        {
+            // TODO unit test for the property 'IsBeingAggregated'
+        }
+        /// <summary>
+        /// Test the property 'Status'
+        /// </summary>
+        [Test]
+        public void StatusTest()
+        {
+            // TODO unit test for the property 'Status'
+        }
+        /// <summary>
+        /// Test the property 'SuccessfullyAggregatedAt'
+        /// </summary>
+        [Test]
+        public void SuccessfullyAggregatedAtTest()
+        {
+            // TODO unit test for the property 'SuccessfullyAggregatedAt'
         }
 
     }

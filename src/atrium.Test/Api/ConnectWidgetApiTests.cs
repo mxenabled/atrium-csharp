@@ -72,7 +72,7 @@ namespace Atrium.Test
             //string userGuid = null;
             //ConnectWidgetRequestBody body = null;
             //var response = instance.GetConnectWidget(userGuid, body);
-            //Assert.IsInstanceOf<ConnectWidget> (response, "response is ConnectWidget");
+            //Assert.IsInstanceOf<ConnectWidgetResponseBody> (response, "response is ConnectWidgetResponseBody");
         }
         
     }

@@ -31,8 +31,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>User</returns>
-        User CreateUser (UserCreateRequestBody body);
+        /// <returns>UserResponseBody</returns>
+        UserResponseBody CreateUser (UserCreateRequestBody body);
 
         /// <summary>
         /// Create user
@@ -42,8 +42,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> CreateUserWithHttpInfo (UserCreateRequestBody body);
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        ApiResponse<UserResponseBody> CreateUserWithHttpInfo (UserCreateRequestBody body);
         /// <summary>
         /// Delete user
         /// </summary>
@@ -74,8 +74,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Users</returns>
-        Users ListUsers (int? page = null, int? recordsPerPage = null);
+        /// <returns>UsersResponseBody</returns>
+        UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List users
@@ -86,8 +86,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>ApiResponse of Users</returns>
-        ApiResponse<Users> ListUsersWithHttpInfo (int? page = null, int? recordsPerPage = null);
+        /// <returns>ApiResponse of UsersResponseBody</returns>
+        ApiResponse<UsersResponseBody> ListUsersWithHttpInfo (int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read user
         /// </summary>
@@ -96,8 +96,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>User</returns>
-        User ReadUser (string userGuid);
+        /// <returns>UserResponseBody</returns>
+        UserResponseBody ReadUser (string userGuid);
 
         /// <summary>
         /// Read user
@@ -107,8 +107,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> ReadUserWithHttpInfo (string userGuid);
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        ApiResponse<UserResponseBody> ReadUserWithHttpInfo (string userGuid);
         /// <summary>
         /// Update user
         /// </summary>
@@ -118,8 +118,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>User</returns>
-        User UpdateUser (string userGuid, UserUpdateRequestBody body = null);
+        /// <returns>UserResponseBody</returns>
+        UserResponseBody UpdateUser (string userGuid, UserUpdateRequestBody body = null);
 
         /// <summary>
         /// Update user
@@ -130,8 +130,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> UpdateUserWithHttpInfo (string userGuid, UserUpdateRequestBody body = null);
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        ApiResponse<UserResponseBody> UpdateUserWithHttpInfo (string userGuid, UserUpdateRequestBody body = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -142,8 +142,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> CreateUserAsync (UserCreateRequestBody body);
+        /// <returns>Task of UserResponseBody</returns>
+        System.Threading.Tasks.Task<UserResponseBody> CreateUserAsync (UserCreateRequestBody body);
 
         /// <summary>
         /// Create user
@@ -153,8 +153,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body);
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body);
         /// <summary>
         /// Delete user
         /// </summary>
@@ -185,8 +185,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of Users</returns>
-        System.Threading.Tasks.Task<Users> ListUsersAsync (int? page = null, int? recordsPerPage = null);
+        /// <returns>Task of UsersResponseBody</returns>
+        System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync (int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List users
@@ -197,8 +197,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of ApiResponse (Users)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Users>> ListUsersAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null);
+        /// <returns>Task of ApiResponse (UsersResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UsersResponseBody>> ListUsersAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read user
         /// </summary>
@@ -207,8 +207,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> ReadUserAsync (string userGuid);
+        /// <returns>Task of UserResponseBody</returns>
+        System.Threading.Tasks.Task<UserResponseBody> ReadUserAsync (string userGuid);
 
         /// <summary>
         /// Read user
@@ -218,8 +218,8 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> ReadUserAsyncWithHttpInfo (string userGuid);
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> ReadUserAsyncWithHttpInfo (string userGuid);
         /// <summary>
         /// Update user
         /// </summary>
@@ -229,8 +229,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> UpdateUserAsync (string userGuid, UserUpdateRequestBody body = null);
+        /// <returns>Task of UserResponseBody</returns>
+        System.Threading.Tasks.Task<UserResponseBody> UpdateUserAsync (string userGuid, UserUpdateRequestBody body = null);
 
         /// <summary>
         /// Update user
@@ -241,8 +241,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> UpdateUserAsyncWithHttpInfo (string userGuid, UserUpdateRequestBody body = null);
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> UpdateUserAsyncWithHttpInfo (string userGuid, UserUpdateRequestBody body = null);
         #endregion Asynchronous Operations
     }
 
@@ -348,10 +348,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>User</returns>
-        public User CreateUser (UserCreateRequestBody body)
+        /// <returns>UserResponseBody</returns>
+        public UserResponseBody CreateUser (UserCreateRequestBody body)
         {
-             ApiResponse<User> localVarResponse = CreateUserWithHttpInfo(body);
+             ApiResponse<UserResponseBody> localVarResponse = CreateUserWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -360,8 +360,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > CreateUserWithHttpInfo (UserCreateRequestBody body)
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        public ApiResponse< UserResponseBody > CreateUserWithHttpInfo (UserCreateRequestBody body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -422,9 +422,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
         /// <summary>
@@ -432,10 +432,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> CreateUserAsync (UserCreateRequestBody body)
+        /// <returns>Task of UserResponseBody</returns>
+        public async System.Threading.Tasks.Task<UserResponseBody> CreateUserAsync (UserCreateRequestBody body)
         {
-             ApiResponse<User> localVarResponse = await CreateUserAsyncWithHttpInfo(body);
+             ApiResponse<UserResponseBody> localVarResponse = await CreateUserAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -445,8 +445,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">User object to be created with optional parameters (identifier, is_disabled, metadata)</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body)
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> CreateUserAsyncWithHttpInfo (UserCreateRequestBody body)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -507,9 +507,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
         /// <summary>
@@ -669,10 +669,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Users</returns>
-        public Users ListUsers (int? page = null, int? recordsPerPage = null)
+        /// <returns>UsersResponseBody</returns>
+        public UsersResponseBody ListUsers (int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<Users> localVarResponse = ListUsersWithHttpInfo(page, recordsPerPage);
+             ApiResponse<UsersResponseBody> localVarResponse = ListUsersWithHttpInfo(page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -682,8 +682,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>ApiResponse of Users</returns>
-        public ApiResponse< Users > ListUsersWithHttpInfo (int? page = null, int? recordsPerPage = null)
+        /// <returns>ApiResponse of UsersResponseBody</returns>
+        public ApiResponse< UsersResponseBody > ListUsersWithHttpInfo (int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/users";
@@ -734,9 +734,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Users>(localVarStatusCode,
+            return new ApiResponse<UsersResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Users) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Users)));
+                (UsersResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersResponseBody)));
         }
 
         /// <summary>
@@ -745,10 +745,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of Users</returns>
-        public async System.Threading.Tasks.Task<Users> ListUsersAsync (int? page = null, int? recordsPerPage = null)
+        /// <returns>Task of UsersResponseBody</returns>
+        public async System.Threading.Tasks.Task<UsersResponseBody> ListUsersAsync (int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<Users> localVarResponse = await ListUsersAsyncWithHttpInfo(page, recordsPerPage);
+             ApiResponse<UsersResponseBody> localVarResponse = await ListUsersAsyncWithHttpInfo(page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -759,8 +759,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
-        /// <returns>Task of ApiResponse (Users)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Users>> ListUsersAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null)
+        /// <returns>Task of ApiResponse (UsersResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UsersResponseBody>> ListUsersAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/users";
@@ -811,9 +811,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<Users>(localVarStatusCode,
+            return new ApiResponse<UsersResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (Users) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Users)));
+                (UsersResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersResponseBody)));
         }
 
         /// <summary>
@@ -821,10 +821,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>User</returns>
-        public User ReadUser (string userGuid)
+        /// <returns>UserResponseBody</returns>
+        public UserResponseBody ReadUser (string userGuid)
         {
-             ApiResponse<User> localVarResponse = ReadUserWithHttpInfo(userGuid);
+             ApiResponse<UserResponseBody> localVarResponse = ReadUserWithHttpInfo(userGuid);
              return localVarResponse.Data;
         }
 
@@ -833,8 +833,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > ReadUserWithHttpInfo (string userGuid)
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        public ApiResponse< UserResponseBody > ReadUserWithHttpInfo (string userGuid)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -887,9 +887,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
         /// <summary>
@@ -897,10 +897,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> ReadUserAsync (string userGuid)
+        /// <returns>Task of UserResponseBody</returns>
+        public async System.Threading.Tasks.Task<UserResponseBody> ReadUserAsync (string userGuid)
         {
-             ApiResponse<User> localVarResponse = await ReadUserAsyncWithHttpInfo(userGuid);
+             ApiResponse<UserResponseBody> localVarResponse = await ReadUserAsyncWithHttpInfo(userGuid);
              return localVarResponse.Data;
 
         }
@@ -910,8 +910,8 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> ReadUserAsyncWithHttpInfo (string userGuid)
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> ReadUserAsyncWithHttpInfo (string userGuid)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -964,9 +964,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
         /// <summary>
@@ -975,10 +975,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>User</returns>
-        public User UpdateUser (string userGuid, UserUpdateRequestBody body = null)
+        /// <returns>UserResponseBody</returns>
+        public UserResponseBody UpdateUser (string userGuid, UserUpdateRequestBody body = null)
         {
-             ApiResponse<User> localVarResponse = UpdateUserWithHttpInfo(userGuid, body);
+             ApiResponse<UserResponseBody> localVarResponse = UpdateUserWithHttpInfo(userGuid, body);
              return localVarResponse.Data;
         }
 
@@ -988,8 +988,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > UpdateUserWithHttpInfo (string userGuid, UserUpdateRequestBody body = null)
+        /// <returns>ApiResponse of UserResponseBody</returns>
+        public ApiResponse< UserResponseBody > UpdateUserWithHttpInfo (string userGuid, UserUpdateRequestBody body = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -1051,9 +1051,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
         /// <summary>
@@ -1062,10 +1062,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> UpdateUserAsync (string userGuid, UserUpdateRequestBody body = null)
+        /// <returns>Task of UserResponseBody</returns>
+        public async System.Threading.Tasks.Task<UserResponseBody> UpdateUserAsync (string userGuid, UserUpdateRequestBody body = null)
         {
-             ApiResponse<User> localVarResponse = await UpdateUserAsyncWithHttpInfo(userGuid, body);
+             ApiResponse<UserResponseBody> localVarResponse = await UpdateUserAsyncWithHttpInfo(userGuid, body);
              return localVarResponse.Data;
 
         }
@@ -1076,8 +1076,8 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <param name="body">User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional)</param>
-        /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> UpdateUserAsyncWithHttpInfo (string userGuid, UserUpdateRequestBody body = null)
+        /// <returns>Task of ApiResponse (UserResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserResponseBody>> UpdateUserAsyncWithHttpInfo (string userGuid, UserUpdateRequestBody body = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -1139,9 +1139,9 @@ namespace Atrium.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<User>(localVarStatusCode,
+            return new ApiResponse<UserResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (User) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(User)));
+                (UserResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserResponseBody)));
         }
 
     }

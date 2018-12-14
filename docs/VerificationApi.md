@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listaccountnumbers"></a>
 # **ListAccountNumbers**
-> AccountNumbers ListAccountNumbers (string memberGuid, string userGuid)
+> AccountNumbersResponseBody ListAccountNumbers (string memberGuid, string userGuid)
 
 Read account numbers
 
@@ -42,7 +42,7 @@ namespace Example
             try
             {
                 // Read account numbers
-                AccountNumbers result = apiInstance.ListAccountNumbers(memberGuid, userGuid);
+                AccountNumbersResponseBody result = apiInstance.ListAccountNumbers(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -63,13 +63,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountNumbers**](AccountNumbers.md)
+[**AccountNumbersResponseBody**](AccountNumbersResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="listaccountnumbersbyaccount"></a>
 # **ListAccountNumbersByAccount**
-> AccountNumbers ListAccountNumbersByAccount (string accountGuid, string userGuid)
+> AccountNumbersResponseBody ListAccountNumbersByAccount (string accountGuid, string userGuid)
 
 Read account numbers by account GUID
 
@@ -102,7 +102,7 @@ namespace Example
             try
             {
                 // Read account numbers by account GUID
-                AccountNumbers result = apiInstance.ListAccountNumbersByAccount(accountGuid, userGuid);
+                AccountNumbersResponseBody result = apiInstance.ListAccountNumbersByAccount(accountGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -123,13 +123,13 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**AccountNumbers**](AccountNumbers.md)
+[**AccountNumbersResponseBody**](AccountNumbersResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="verifymember"></a>
 # **VerifyMember**
-> Member VerifyMember (string memberGuid, string userGuid)
+> MemberResponseBody VerifyMember (string memberGuid, string userGuid)
 
 Verify
 
@@ -162,7 +162,7 @@ namespace Example
             try
             {
                 // Verify
-                Member result = apiInstance.VerifyMember(memberGuid, userGuid);
+                MemberResponseBody result = apiInstance.VerifyMember(memberGuid, userGuid);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -183,7 +183,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Member**](Member.md)
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
