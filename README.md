@@ -40,9 +40,7 @@ Please see `docs` directory for additional endpoint examples
 
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -50,31 +48,25 @@ namespace Example
     public class Example
     {
         public void main()
-        {
+        { 
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
-
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new AccountsApi();
-            var accountGuid = accountGuid_example;  // string | The unique identifier for an `account`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var fromDate = fromDate_example;  // string | Filter transactions from this date. (optional) 
-            var toDate = toDate_example;  // string | Filter transactions to this date. (optional) 
-            var page = 12;  // int? | Specify current page. (optional) 
+            var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var fromDate = "2016-09-20";  // string | Filter transactions from this date. (optional) 
+            var toDate = "2016-10-20";  // string | Filter transactions to this date. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List account transactions
-                TransactionsResponseBody result = apiInstance.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
-                Debug.WriteLine(result);
+                TransactionsResponseBody response = client.accounts.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ListAccountTransactions: " + e.Message );
+                Console.WriteLine("Exception when calling AccountsApi.ListAccountTransactions: " + e.Message );
             }
 
         }

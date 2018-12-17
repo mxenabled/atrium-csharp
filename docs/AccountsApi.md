@@ -19,9 +19,7 @@ This endpoint allows you to see every transaction that belongs to a specific acc
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -30,29 +28,24 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new AccountsApi();
-            var accountGuid = accountGuid_example;  // string | The unique identifier for an `account`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var fromDate = fromDate_example;  // string | Filter transactions from this date. (optional) 
-            var toDate = toDate_example;  // string | Filter transactions to this date. (optional) 
-            var page = 12;  // int? | Specify current page. (optional) 
+            var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var fromDate = "2016-09-20";  // string | Filter transactions from this date. (optional) 
+            var toDate = "2016-10-20";  // string | Filter transactions to this date. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List account transactions
-                TransactionsResponseBody result = apiInstance.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
-                Debug.WriteLine(result);
+                TransactionsResponseBody response = client.accounts.ListAccountTransactions(accountGuid, userGuid, fromDate, toDate, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ListAccountTransactions: " + e.Message );
+                Console.WriteLine("Exception when calling AccountsApi.ListAccountTransactions: " + e.Message );
             }
         }
     }
@@ -87,9 +80,7 @@ Use this endpoint to view information about every account that belongs to a user
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -98,26 +89,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new AccountsApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var page = 12;  // int? | Specify current page. (optional) 
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List accounts for a user
-                AccountsResponseBody result = apiInstance.ListUserAccounts(userGuid, page, recordsPerPage);
-                Debug.WriteLine(result);
+                AccountsResponseBody response = client.accounts.ListUserAccounts(userGuid, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ListUserAccounts: " + e.Message );
+                Console.WriteLine("Exception when calling AccountsApi.ListUserAccounts: " + e.Message );
             }
         }
     }
@@ -149,9 +135,7 @@ Reading an account allows you to get information about a specific account that b
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -160,25 +144,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new AccountsApi();
-            var accountGuid = accountGuid_example;  // string | The unique identifier for an `account`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read an account
-                AccountResponseBody result = apiInstance.ReadAccount(accountGuid, userGuid);
-                Debug.WriteLine(result);
+                AccountResponseBody response = client.accounts.ReadAccount(accountGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ReadAccount: " + e.Message );
+                Console.WriteLine("Exception when calling AccountsApi.ReadAccount: " + e.Message );
             }
         }
     }
@@ -209,9 +188,7 @@ Reading an account allows you to get information about a specific account that b
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -220,26 +197,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new AccountsApi();
-            var accountGuid = accountGuid_example;  // string | The unique identifier for an `account`.
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read an account
-                AccountResponseBody result = apiInstance.ReadAccountByMemberGUID(accountGuid, memberGuid, userGuid);
-                Debug.WriteLine(result);
+                AccountResponseBody response = client.accounts.ReadAccountByMemberGUID(accountGuid, memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AccountsApi.ReadAccountByMemberGUID: " + e.Message );
+                Console.WriteLine("Exception when calling AccountsApi.ReadAccountByMemberGUID: " + e.Message );
             }
         }
     }

@@ -17,9 +17,7 @@ The identify endpoint begins an identification process for an already-existing m
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -28,25 +26,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new IdentityApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Identify
-                MemberResponseBody result = apiInstance.IdentifyMember(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.identity.IdentifyMember(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling IdentityApi.IdentifyMember: " + e.Message );
+                Console.WriteLine("Exception when calling IdentityApi.IdentifyMember: " + e.Message );
             }
         }
     }
@@ -77,9 +70,7 @@ This endpoint returns an array with information about every account associated w
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -88,25 +79,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new IdentityApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // List member account owners
-                AccountOwnersResponseBody result = apiInstance.ListAccountOwners(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                AccountOwnersResponseBody response = client.identity.ListAccountOwners(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling IdentityApi.ListAccountOwners: " + e.Message );
+                Console.WriteLine("Exception when calling IdentityApi.ListAccountOwners: " + e.Message );
             }
         }
     }

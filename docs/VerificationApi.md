@@ -18,9 +18,7 @@ Use this endpoint to check whether account and routing numbers are available for
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -29,25 +27,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new VerificationApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read account numbers
-                AccountNumbersResponseBody result = apiInstance.ListAccountNumbers(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                AccountNumbersResponseBody response = client.verification.ListAccountNumbers(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VerificationApi.ListAccountNumbers: " + e.Message );
+                Console.WriteLine("Exception when calling VerificationApi.ListAccountNumbers: " + e.Message );
             }
         }
     }
@@ -78,9 +71,7 @@ Use this endpoint to check whether account and routing numbers are available for
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -89,25 +80,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new VerificationApi();
-            var accountGuid = accountGuid_example;  // string | The unique identifier for an `account`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read account numbers by account GUID
-                AccountNumbersResponseBody result = apiInstance.ListAccountNumbersByAccount(accountGuid, userGuid);
-                Debug.WriteLine(result);
+                AccountNumbersResponseBody response = client.verification.ListAccountNumbersByAccount(accountGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VerificationApi.ListAccountNumbersByAccount: " + e.Message );
+                Console.WriteLine("Exception when calling VerificationApi.ListAccountNumbersByAccount: " + e.Message );
             }
         }
     }
@@ -138,9 +124,7 @@ The verify endpoint begins a verification process for a member.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -149,25 +133,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new VerificationApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Verify
-                MemberResponseBody result = apiInstance.VerifyMember(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.verification.VerifyMember(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling VerificationApi.VerifyMember: " + e.Message );
+                Console.WriteLine("Exception when calling VerificationApi.VerifyMember: " + e.Message );
             }
         }
     }

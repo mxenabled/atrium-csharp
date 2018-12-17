@@ -27,9 +27,7 @@ Calling this endpoint initiates an aggregation event for the member. This brings
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -38,25 +36,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Aggregate member
-                MemberResponseBody result = apiInstance.AggregateMember(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.members.AggregateMember(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.AggregateMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.AggregateMember: " + e.Message );
             }
         }
     }
@@ -87,9 +80,7 @@ This endpoint allows you to create a new member. Members are created with the re
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -98,25 +89,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new MemberCreateRequestBody(); // MemberCreateRequestBody | Member object to be created with optional parameters (identifier and metadata) and required parameters (credentials and institution_code)
 
             try
             {
                 // Create member
-                MemberResponseBody result = apiInstance.CreateMember(userGuid, body);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.members.CreateMember(userGuid, body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.CreateMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.CreateMember: " + e.Message );
             }
         }
     }
@@ -147,9 +133,7 @@ Accessing this endpoint will permanently delete a member.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -158,24 +142,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Delete member
-                apiInstance.DeleteMember(memberGuid, userGuid);
+                client.members.DeleteMember(memberGuid, userGuid);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.DeleteMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.DeleteMember: " + e.Message );
             }
         }
     }
@@ -206,9 +185,7 @@ This endpoint returns an array with information about every account associated w
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -217,27 +194,22 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var page = 12;  // int? | Specify current page. (optional) 
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List member accounts
-                AccountsResponseBody result = apiInstance.ListMemberAccounts(memberGuid, userGuid, page, recordsPerPage);
-                Debug.WriteLine(result);
+                AccountsResponseBody response = client.members.ListMemberAccounts(memberGuid, userGuid, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ListMemberAccounts: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ListMemberAccounts: " + e.Message );
             }
         }
     }
@@ -270,9 +242,7 @@ This endpoint returns an array which contains information on every non-MFA crede
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -281,25 +251,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // List member credentials
-                CredentialsResponseBody result = apiInstance.ListMemberCredentials(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                CredentialsResponseBody response = client.members.ListMemberCredentials(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ListMemberCredentials: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ListMemberCredentials: " + e.Message );
             }
         }
     }
@@ -330,9 +295,7 @@ Use this endpoint for information on what multi-factor authentication challenges
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -341,25 +304,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // List member MFA challenges
-                ChallengesResponseBody result = apiInstance.ListMemberMFAChallenges(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                ChallengesResponseBody response = client.members.ListMemberMFAChallenges(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ListMemberMFAChallenges: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ListMemberMFAChallenges: " + e.Message );
             }
         }
     }
@@ -390,9 +348,7 @@ Use this endpoint to get all transactions from all accounts associated with a sp
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -401,29 +357,24 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var fromDate = fromDate_example;  // string | Filter transactions from this date. (optional) 
-            var toDate = toDate_example;  // string | Filter transactions to this date. (optional) 
-            var page = 12;  // int? | Specify current page. (optional) 
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var fromDate = "2016-09-20";  // string | Filter transactions from this date. (optional) 
+            var toDate = "2016-10-20";  // string | Filter transactions to this date. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List member transactions
-                TransactionsResponseBody result = apiInstance.ListMemberTransactions(memberGuid, userGuid, fromDate, toDate, page, recordsPerPage);
-                Debug.WriteLine(result);
+                TransactionsResponseBody response = client.members.ListMemberTransactions(memberGuid, userGuid, fromDate, toDate, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ListMemberTransactions: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ListMemberTransactions: " + e.Message );
             }
         }
     }
@@ -458,9 +409,7 @@ This endpoint returns an array which contains information on every member associ
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -469,26 +418,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var page = 12;  // int? | Specify current page. (optional) 
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List members
-                MembersResponseBody result = apiInstance.ListMembers(userGuid, page, recordsPerPage);
-                Debug.WriteLine(result);
+                MembersResponseBody response = client.members.ListMembers(userGuid, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ListMembers: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ListMembers: " + e.Message );
             }
         }
     }
@@ -520,9 +464,7 @@ Use this endpoint to read the attributes of a specific member.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -531,25 +473,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read member
-                MemberResponseBody result = apiInstance.ReadMember(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.members.ReadMember(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ReadMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ReadMember: " + e.Message );
             }
         }
     }
@@ -580,9 +517,7 @@ This endpoint provides the status of the member's most recent aggregation event.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -591,25 +526,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read member connection status
-                MemberConnectionStatusResponseBody result = apiInstance.ReadMemberStatus(memberGuid, userGuid);
-                Debug.WriteLine(result);
+                MemberConnectionStatusResponseBody response = client.members.ReadMemberStatus(memberGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ReadMemberStatus: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ReadMemberStatus: " + e.Message );
             }
         }
     }
@@ -640,9 +570,7 @@ This endpoint answers the challenges needed when a member has been challenged by
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -651,26 +579,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new MemberResumeRequestBody(); // MemberResumeRequestBody | Member object with MFA challenge answers
 
             try
             {
                 // Resume aggregation from MFA
-                MemberResponseBody result = apiInstance.ResumeMember(memberGuid, userGuid, body);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.members.ResumeMember(memberGuid, userGuid, body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.ResumeMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.ResumeMember: " + e.Message );
             }
         }
     }
@@ -702,9 +625,7 @@ Use this endpoint to update a member's attributes. Only the credentials, identif
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -713,26 +634,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new MembersApi();
-            var memberGuid = memberGuid_example;  // string | The unique identifier for a `member`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new MemberUpdateRequestBody(); // MemberUpdateRequestBody | Member object to be updated with optional parameters (credentials, identifier, metadata) (optional) 
 
             try
             {
                 // Update member
-                MemberResponseBody result = apiInstance.UpdateMember(memberGuid, userGuid, body);
-                Debug.WriteLine(result);
+                MemberResponseBody response = client.members.UpdateMember(memberGuid, userGuid, body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MembersApi.UpdateMember: " + e.Message );
+                Console.WriteLine("Exception when calling MembersApi.UpdateMember: " + e.Message );
             }
         }
     }

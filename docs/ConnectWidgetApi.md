@@ -16,9 +16,7 @@ This endpoint will return a URL for an embeddable version of MX Connect.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -27,25 +25,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new ConnectWidgetApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new ConnectWidgetRequestBody(); // ConnectWidgetRequestBody | Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)
 
             try
             {
                 // Embedding in a website
-                ConnectWidgetResponseBody result = apiInstance.GetConnectWidget(userGuid, body);
-                Debug.WriteLine(result);
+                ConnectWidgetResponseBody response = client.connectWidget.GetConnectWidget(userGuid, body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ConnectWidgetApi.GetConnectWidget: " + e.Message );
+                Console.WriteLine("Exception when calling ConnectWidgetApi.GetConnectWidget: " + e.Message );
             }
         }
     }

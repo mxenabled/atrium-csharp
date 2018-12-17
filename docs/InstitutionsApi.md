@@ -18,9 +18,7 @@ This endpoint allows you to see what institutions are available for connection. 
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -29,26 +27,21 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new InstitutionsApi();
             var name = name_example;  // string | This will list only institutions in which the appended string appears. (optional) 
-            var page = 12;  // int? | Specify current page. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List institutions
-                InstitutionsResponseBody result = apiInstance.ListInstitutions(name, page, recordsPerPage);
-                Debug.WriteLine(result);
+                InstitutionsResponseBody response = client.institutions.ListInstitutions(name, page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling InstitutionsApi.ListInstitutions: " + e.Message );
+                Console.WriteLine("Exception when calling InstitutionsApi.ListInstitutions: " + e.Message );
             }
         }
     }
@@ -80,9 +73,7 @@ This endpoint allows you to see information for a specific institution.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -91,24 +82,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new InstitutionsApi();
-            var institutionCode = institutionCode_example;  // string | The institution_code of the institution.
+            var institutionCode = "example_institution_code";  // string | The institution_code of the institution.
 
             try
             {
                 // Read institution
-                InstitutionResponseBody result = apiInstance.ReadInstitution(institutionCode);
-                Debug.WriteLine(result);
+                InstitutionResponseBody response = client.institutions.ReadInstitution(institutionCode);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling InstitutionsApi.ReadInstitution: " + e.Message );
+                Console.WriteLine("Exception when calling InstitutionsApi.ReadInstitution: " + e.Message );
             }
         }
     }
@@ -138,9 +124,7 @@ Use this endpoint to see which credentials will be needed to create a member for
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -149,24 +133,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new InstitutionsApi();
-            var institutionCode = institutionCode_example;  // string | The institution_code of the institution.
+            var institutionCode = "example_institution_code";  // string | The institution_code of the institution.
 
             try
             {
                 // Read institution credentials
-                CredentialsResponseBody result = apiInstance.ReadInstitutionCredentials(institutionCode);
-                Debug.WriteLine(result);
+                CredentialsResponseBody response = client.institutions.ReadInstitutionCredentials(institutionCode);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling InstitutionsApi.ReadInstitutionCredentials: " + e.Message );
+                Console.WriteLine("Exception when calling InstitutionsApi.ReadInstitutionCredentials: " + e.Message );
             }
         }
     }

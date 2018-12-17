@@ -20,9 +20,7 @@ Call this endpoint to create a new user. Atrium will respond with the newly-crea
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -31,24 +29,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new UsersApi();
             var body = new UserCreateRequestBody(); // UserCreateRequestBody | User object to be created with optional parameters (identifier, is_disabled, metadata)
 
             try
             {
                 // Create user
-                UserResponseBody result = apiInstance.CreateUser(body);
-                Debug.WriteLine(result);
+                UserResponseBody response = client.users.CreateUser(body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.CreateUser: " + e.Message );
+                Console.WriteLine("Exception when calling UsersApi.CreateUser: " + e.Message );
             }
         }
     }
@@ -78,9 +71,7 @@ Calling this endpoint will permanently delete a user from Atrium. If successful,
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -89,23 +80,18 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new UsersApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Delete user
-                apiInstance.DeleteUser(userGuid);
+                client.users.DeleteUser(userGuid);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.DeleteUser: " + e.Message );
+                Console.WriteLine("Exception when calling UsersApi.DeleteUser: " + e.Message );
             }
         }
     }
@@ -135,9 +121,7 @@ Use this endpoint to list every user you've created in Atrium.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -146,25 +130,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new UsersApi();
-            var page = 12;  // int? | Specify current page. (optional) 
+            var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List users
-                UsersResponseBody result = apiInstance.ListUsers(page, recordsPerPage);
-                Debug.WriteLine(result);
+                UsersResponseBody response = client.users.ListUsers(page, recordsPerPage);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.ListUsers: " + e.Message );
+                Console.WriteLine("Exception when calling UsersApi.ListUsers: " + e.Message );
             }
         }
     }
@@ -195,9 +174,7 @@ Use this endpoint to read the attributes of a specific user.
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -206,24 +183,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new UsersApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read user
-                UserResponseBody result = apiInstance.ReadUser(userGuid);
-                Debug.WriteLine(result);
+                UserResponseBody response = client.users.ReadUser(userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.ReadUser: " + e.Message );
+                Console.WriteLine("Exception when calling UsersApi.ReadUser: " + e.Message );
             }
         }
     }
@@ -253,9 +225,7 @@ Use this endpoint to update the attributes of a specific user. Atrium will respo
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -264,25 +234,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new UsersApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new UserUpdateRequestBody(); // UserUpdateRequestBody | User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional) 
 
             try
             {
                 // Update user
-                UserResponseBody result = apiInstance.UpdateUser(userGuid, body);
-                Debug.WriteLine(result);
+                UserResponseBody response = client.users.UpdateUser(userGuid, body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling UsersApi.UpdateUser: " + e.Message );
+                Console.WriteLine("Exception when calling UsersApi.UpdateUser: " + e.Message );
             }
         }
     }

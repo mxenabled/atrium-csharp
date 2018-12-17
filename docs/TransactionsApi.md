@@ -18,9 +18,7 @@ Use this endpoint to categorize, cleanse, and classify transactions. These trans
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -29,24 +27,19 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new TransactionsApi();
             var body = new TransactionsCleanseAndCategorizeRequestBody(); // TransactionsCleanseAndCategorizeRequestBody | User object to be created with optional parameters (amount, type) amd required parameters (description, identifier)
 
             try
             {
                 // Categorize transactions
-                TransactionsCleanseAndCategorizeResponseBody result = apiInstance.CleanseAndCategorizeTransactions(body);
-                Debug.WriteLine(result);
+                TransactionsCleanseAndCategorizeResponseBody response = client.transactions.CleanseAndCategorizeTransactions(body);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TransactionsApi.CleanseAndCategorizeTransactions: " + e.Message );
+                Console.WriteLine("Exception when calling TransactionsApi.CleanseAndCategorizeTransactions: " + e.Message );
             }
         }
     }
@@ -76,9 +69,7 @@ Use this endpoint to get all transactions that belong to a specific user, across
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -87,28 +78,23 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new TransactionsApi();
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
-            var page = 12;  // int? | Specify current page. (optional) 
-            var fromDate = fromDate_example;  // string | Filter transactions from this date. (optional) 
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var fromDate = "2016-09-20";  // string | Filter transactions from this date. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
-            var toDate = toDate_example;  // string | Filter transactions to this date. (optional) 
+            var toDate = "2016-10-20";  // string | Filter transactions to this date. (optional) 
 
             try
             {
                 // List transactions for a user
-                TransactionsResponseBody result = apiInstance.ListUserTransactions(userGuid, page, fromDate, recordsPerPage, toDate);
-                Debug.WriteLine(result);
+                TransactionsResponseBody response = client.transactions.ListUserTransactions(userGuid, page, fromDate, recordsPerPage, toDate);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TransactionsApi.ListUserTransactions: " + e.Message );
+                Console.WriteLine("Exception when calling TransactionsApi.ListUserTransactions: " + e.Message );
             }
         }
     }
@@ -142,9 +128,7 @@ This endpoint allows you to view information about a specific transaction that b
 ### Example
 ```csharp
 using System;
-using System.Diagnostics;
 using Atrium.Api;
-using Atrium.Client;
 using Atrium.Model;
 
 namespace Example
@@ -153,25 +137,20 @@ namespace Example
     {
         public void main()
         {
-            // Configure API Key authorization
-            Configuration.Default.AddApiKey("MX-API-Key", "YOUR_API_KEY");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
 
-            // Configure Client ID authorization
-            Configuration.Default.AddApiKey("MX-Client-ID", "YOUR_CLIENT_ID");
-
-            var apiInstance = new TransactionsApi();
-            var transactionGuid = transactionGuid_example;  // string | The unique identifier for a `transaction`.
-            var userGuid = userGuid_example;  // string | The unique identifier for a `user`.
+            var transactionGuid = "TRN-123";  // string | The unique identifier for a `transaction`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
             try
             {
                 // Read a transaction
-                TransactionResponseBody result = apiInstance.ReadTransaction(transactionGuid, userGuid);
-                Debug.WriteLine(result);
+                TransactionResponseBody response = client.transactions.ReadTransaction(transactionGuid, userGuid);
+                Console.WriteLine(response);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TransactionsApi.ReadTransaction: " + e.Message );
+                Console.WriteLine("Exception when calling TransactionsApi.ReadTransaction: " + e.Message );
             }
         }
     }
