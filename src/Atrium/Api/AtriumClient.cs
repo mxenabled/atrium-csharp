@@ -10,6 +10,7 @@ namespace Atrium.Api
     
     public AccountsApi accounts;
     public ConnectWidgetApi connectWidget;
+    public HoldingsApi holdings;
     public IdentityApi identity;
     public InstitutionsApi institutions;
     public MembersApi members;
@@ -24,6 +25,7 @@ namespace Atrium.Api
       
       this.accounts = new AccountsApi();
       this.connectWidget = new ConnectWidgetApi();
+      this.holdings = new HoldingsApi();
       this.identity = new IdentityApi();
       this.institutions = new InstitutionsApi();
       this.members = new MembersApi();
