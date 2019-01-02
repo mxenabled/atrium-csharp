@@ -86,6 +86,10 @@ Class | Method | HTTP request | Description
 *AccountsApi* | [**ReadAccount**](docs/AccountsApi.md#readaccount) | **GET** /users/{user_guid}/accounts/{account_guid} | Read an account
 *AccountsApi* | [**ReadAccountByMemberGUID**](docs/AccountsApi.md#readaccountbymemberguid) | **GET** /users/{user_guid}/members/{member_guid}/accounts/{account_guid} | Read an account
 *ConnectWidgetApi* | [**GetConnectWidget**](docs/ConnectWidgetApi.md#getconnectwidget) | **POST** /users/{user_guid}/connect_widget_url | Embedding in a website
+*HoldingsApi* | [**ListHoldings**](docs/HoldingsApi.md#listholdings) | **GET** /users/{user_guid}/holdings | List holdings
+*HoldingsApi* | [**ListHoldingsByAccount**](docs/HoldingsApi.md#listholdingsbyaccount) | **GET** /users/{user_guid}/accounts/{account_guid}/holdings | List holdings by account
+*HoldingsApi* | [**ListHoldingsByMember**](docs/HoldingsApi.md#listholdingsbymember) | **GET** /users/{user_guid}/members/{member_guid}/holdings | List holdings by member
+*HoldingsApi* | [**ReadHolding**](docs/HoldingsApi.md#readholding) | **GET** /users/{user_guid}/holdings/{holding_guid} | Read holding
 *IdentityApi* | [**IdentifyMember**](docs/IdentityApi.md#identifymember) | **POST** /users/{user_guid}/members/{member_guid}/identify | Identify
 *IdentityApi* | [**ListAccountOwners**](docs/IdentityApi.md#listaccountowners) | **GET** /users/{user_guid}/members/{member_guid}/account_owners | List member account owners
 *InstitutionsApi* | [**ListInstitutions**](docs/InstitutionsApi.md#listinstitutions) | **GET** /institutions | List institutions
@@ -103,6 +107,7 @@ Class | Method | HTTP request | Description
 *MembersApi* | [**ReadMemberStatus**](docs/MembersApi.md#readmemberstatus) | **GET** /users/{user_guid}/members/{member_guid}/status | Read member connection status
 *MembersApi* | [**ResumeMember**](docs/MembersApi.md#resumemember) | **PUT** /users/{user_guid}/members/{member_guid}/resume | Resume aggregation from MFA
 *MembersApi* | [**UpdateMember**](docs/MembersApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member
+*MerchantsApi* | [**ReadMerchant**](docs/MerchantsApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant
 *TransactionsApi* | [**CleanseAndCategorizeTransactions**](docs/TransactionsApi.md#cleanseandcategorizetransactions) | **POST** /cleanse_and_categorize | Categorize transactions
 *TransactionsApi* | [**ListUserTransactions**](docs/TransactionsApi.md#listusertransactions) | **GET** /users/{user_guid}/transactions | List transactions for a user
 *TransactionsApi* | [**ReadTransaction**](docs/TransactionsApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read a transaction
@@ -136,6 +141,9 @@ Class | Method | HTTP request | Description
  - [Model.CredentialRequest](docs/CredentialRequest.md)
  - [Model.CredentialResponse](docs/CredentialResponse.md)
  - [Model.CredentialsResponseBody](docs/CredentialsResponseBody.md)
+ - [Model.Holding](docs/Holding.md)
+ - [Model.HoldingResponseBody](docs/HoldingResponseBody.md)
+ - [Model.HoldingsResponseBody](docs/HoldingsResponseBody.md)
  - [Model.Institution](docs/Institution.md)
  - [Model.InstitutionResponseBody](docs/InstitutionResponseBody.md)
  - [Model.InstitutionsResponseBody](docs/InstitutionsResponseBody.md)
@@ -150,6 +158,8 @@ Class | Method | HTTP request | Description
  - [Model.MemberUpdateRequest](docs/MemberUpdateRequest.md)
  - [Model.MemberUpdateRequestBody](docs/MemberUpdateRequestBody.md)
  - [Model.MembersResponseBody](docs/MembersResponseBody.md)
+ - [Model.Merchant](docs/Merchant.md)
+ - [Model.MerchantResponseBody](docs/MerchantResponseBody.md)
  - [Model.Pagination](docs/Pagination.md)
  - [Model.Transaction](docs/Transaction.md)
  - [Model.TransactionCleanseAndCategorizeRequest](docs/TransactionCleanseAndCategorizeRequest.md)
