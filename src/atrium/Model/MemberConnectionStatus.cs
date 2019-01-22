@@ -60,7 +60,7 @@ namespace Atrium.Model
         /// Gets or Sets Guid
         /// </summary>
         [DataMember(Name="guid", EmitDefaultValue=false)]
-        public bool? Guid { get; private set; }
+        public string Guid { get; private set; }
 
         /// <summary>
         /// Gets or Sets HasProcessedAccounts

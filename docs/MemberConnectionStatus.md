@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **AggregatedAt** | **string** |  | [optional] 
 **Challenges** | [**List&lt;Challenge&gt;**](Challenge.md) |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 
-**Guid** | **bool?** |  | [optional] 
+**Guid** | **string** |  | [optional] 
 **HasProcessedAccounts** | **bool?** |  | [optional] 
 **HasProcessedTransactions** | **bool?** |  | [optional] 
 **IsBeingAggregated** | **bool?** |  | [optional] 

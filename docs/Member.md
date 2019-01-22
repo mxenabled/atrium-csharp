@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AggregatedAt** | **string** |  | [optional] 
 **ConnectionStatus** | **string** |  | [optional] 
-**Guid** | **bool?** |  | [optional] 
+**Guid** | **string** |  | [optional] 
 **Identifier** | **string** |  | [optional] 
 **InstitutionCode** | **string** |  | [optional] 
 **IsBeingAggregated** | **bool?** |  | [optional] 
