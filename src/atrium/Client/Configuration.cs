@@ -28,7 +28,7 @@ namespace Atrium.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "1.1.0";
+        public const string Version = "1.1.1";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -113,7 +113,7 @@ namespace Atrium.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "MX-Codegen/1.1.0/csharp";
+            UserAgent = "MX-Codegen/1.1.1/csharp";
             BasePath = "https://vestibule.mx.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -186,7 +186,7 @@ namespace Atrium.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "MX-Codegen/1.1.0/csharp"
+            string userAgent = "MX-Codegen/1.1.1/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -420,7 +420,7 @@ namespace Atrium.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: 0.1\n";
-            report += "    SDK Package Version: 1.1.0\n";
+            report += "    SDK Package Version: 1.1.1\n";
 
             return report;
         }
