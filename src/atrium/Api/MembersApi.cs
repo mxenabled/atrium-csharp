@@ -32,8 +32,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>MemberResponseBody</returns>
-        MemberResponseBody AggregateMember (string memberGuid, string userGuid);
+        MemberResponseBody AggregateMember (string memberGuid, string userGuid, string type = null);
 
         /// <summary>
         /// Aggregate member
@@ -44,8 +45,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
-        ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo (string memberGuid, string userGuid);
+        ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo (string memberGuid, string userGuid, string type = null);
         /// <summary>
         /// Create member
         /// </summary>
@@ -165,6 +167,33 @@ namespace Atrium.Api
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>ApiResponse of ChallengesResponseBody</returns>
         ApiResponse<ChallengesResponseBody> ListMemberMFAChallengesWithHttpInfo (string memberGuid, string userGuid);
+        /// <summary>
+        /// List member statements
+        /// </summary>
+        /// <remarks>
+        /// Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>StatementsResponseBody</returns>
+        StatementsResponseBody ListMemberStatements (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
+
+        /// <summary>
+        /// List member statements
+        /// </summary>
+        /// <remarks>
+        /// Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of StatementsResponseBody</returns>
+        ApiResponse<StatementsResponseBody> ListMemberStatementsWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List member transactions
         /// </summary>
@@ -328,8 +357,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>Task of MemberResponseBody</returns>
-        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync (string memberGuid, string userGuid);
+        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync (string memberGuid, string userGuid, string type = null);
 
         /// <summary>
         /// Aggregate member
@@ -340,8 +370,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberAsyncWithHttpInfo (string memberGuid, string userGuid);
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberAsyncWithHttpInfo (string memberGuid, string userGuid, string type = null);
         /// <summary>
         /// Create member
         /// </summary>
@@ -461,6 +492,33 @@ namespace Atrium.Api
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (ChallengesResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChallengesResponseBody>> ListMemberMFAChallengesAsyncWithHttpInfo (string memberGuid, string userGuid);
+        /// <summary>
+        /// List member statements
+        /// </summary>
+        /// <remarks>
+        /// Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>Task of StatementsResponseBody</returns>
+        System.Threading.Tasks.Task<StatementsResponseBody> ListMemberStatementsAsync (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
+
+        /// <summary>
+        /// List member statements
+        /// </summary>
+        /// <remarks>
+        /// Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>Task of ApiResponse (StatementsResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<StatementsResponseBody>> ListMemberStatementsAsyncWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List member transactions
         /// </summary>
@@ -719,10 +777,11 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>MemberResponseBody</returns>
-        public MemberResponseBody AggregateMember (string memberGuid, string userGuid)
+        public MemberResponseBody AggregateMember (string memberGuid, string userGuid, string type = null)
         {
-             ApiResponse<MemberResponseBody> localVarResponse = AggregateMemberWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<MemberResponseBody> localVarResponse = AggregateMemberWithHttpInfo(memberGuid, userGuid, type);
              return localVarResponse.Data;
         }
 
@@ -732,8 +791,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>ApiResponse of MemberResponseBody</returns>
-        public ApiResponse< MemberResponseBody > AggregateMemberWithHttpInfo (string memberGuid, string userGuid)
+        public ApiResponse< MemberResponseBody > AggregateMemberWithHttpInfo (string memberGuid, string userGuid, string type = null)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -752,6 +812,7 @@ namespace Atrium.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -765,6 +826,7 @@ namespace Atrium.Api
 
             if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -801,10 +863,11 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>Task of MemberResponseBody</returns>
-        public async System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync (string memberGuid, string userGuid)
+        public async System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberAsync (string memberGuid, string userGuid, string type = null)
         {
-             ApiResponse<MemberResponseBody> localVarResponse = await AggregateMemberAsyncWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<MemberResponseBody> localVarResponse = await AggregateMemberAsyncWithHttpInfo(memberGuid, userGuid, type);
              return localVarResponse.Data;
 
         }
@@ -815,8 +878,9 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="type">An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. (optional)</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberAsyncWithHttpInfo (string memberGuid, string userGuid)
+        public async System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberAsyncWithHttpInfo (string memberGuid, string userGuid, string type = null)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -835,6 +899,7 @@ namespace Atrium.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                "application/json"
             };
             String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -848,6 +913,7 @@ namespace Atrium.Api
 
             if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (type != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "type", type)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -1727,6 +1793,183 @@ namespace Atrium.Api
             return new ApiResponse<ChallengesResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (ChallengesResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChallengesResponseBody)));
+        }
+
+        /// <summary>
+        /// List member statements Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>StatementsResponseBody</returns>
+        public StatementsResponseBody ListMemberStatements (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+        {
+             ApiResponse<StatementsResponseBody> localVarResponse = ListMemberStatementsWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List member statements Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>ApiResponse of StatementsResponseBody</returns>
+        public ApiResponse< StatementsResponseBody > ListMemberStatementsWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->ListMemberStatements");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->ListMemberStatements");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/statements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListMemberStatements", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<StatementsResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StatementsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatementsResponseBody)));
+        }
+
+        /// <summary>
+        /// List member statements Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>Task of StatementsResponseBody</returns>
+        public async System.Threading.Tasks.Task<StatementsResponseBody> ListMemberStatementsAsync (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+        {
+             ApiResponse<StatementsResponseBody> localVarResponse = await ListMemberStatementsAsyncWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List member statements Certain institutions in Atrium allow developers to access account statements associated with a particular &#x60;member&#x60;. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type &#x60;statement&#x60; should be performed on the relevant &#x60;member&#x60;. 
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <returns>Task of ApiResponse (StatementsResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<StatementsResponseBody>> ListMemberStatementsAsyncWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->ListMemberStatements");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->ListMemberStatements");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/statements";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ListMemberStatements", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<StatementsResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (StatementsResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(StatementsResponseBody)));
         }
 
         /// <summary>

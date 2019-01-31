@@ -23,16 +23,16 @@ using Newtonsoft.Json;
 namespace Atrium.Test
 {
     /// <summary>
-    ///  Class for testing Institution
+    ///  Class for testing Statement
     /// </summary>
     /// <remarks>
     /// Please update the test case below to test the model.
     /// </remarks>
     [TestFixture]
-    public class InstitutionTests
+    public class StatementTests
     {
-        // TODO uncomment below to declare an instance variable for Institution
-        //private Institution instance;
+        // TODO uncomment below to declare an instance variable for Statement
+        //private Statement instance;
 
         /// <summary>
         /// Setup before each test
@@ -40,8 +40,8 @@ namespace Atrium.Test
         [SetUp]
         public void Init()
         {
-            // TODO uncomment below to create an instance of Institution
-            //instance = new Institution();
+            // TODO uncomment below to create an instance of Statement
+            //instance = new Statement();
         }
 
         /// <summary>
@@ -54,87 +54,87 @@ namespace Atrium.Test
         }
 
         /// <summary>
-        /// Test an instance of Institution
+        /// Test an instance of Statement
         /// </summary>
         [Test]
-        public void InstitutionInstanceTest()
+        public void StatementInstanceTest()
         {
-            // TODO uncomment below to test "IsInstanceOfType" Institution
-            //Assert.IsInstanceOfType<Institution> (instance, "variable 'instance' is a Institution");
+            // TODO uncomment below to test "IsInstanceOfType" Statement
+            //Assert.IsInstanceOfType<Statement> (instance, "variable 'instance' is a Statement");
         }
 
 
         /// <summary>
-        /// Test the property 'Code'
+        /// Test the property 'AccountGuid'
         /// </summary>
         [Test]
-        public void CodeTest()
+        public void AccountGuidTest()
         {
-            // TODO unit test for the property 'Code'
+            // TODO unit test for the property 'AccountGuid'
         }
         /// <summary>
-        /// Test the property 'MediumLogoUrl'
+        /// Test the property 'CreatedAt'
         /// </summary>
         [Test]
-        public void MediumLogoUrlTest()
+        public void CreatedAtTest()
         {
-            // TODO unit test for the property 'MediumLogoUrl'
+            // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
-        /// Test the property 'Name'
+        /// Test the property 'ContentHash'
         /// </summary>
         [Test]
-        public void NameTest()
+        public void ContentHashTest()
         {
-            // TODO unit test for the property 'Name'
+            // TODO unit test for the property 'ContentHash'
         }
         /// <summary>
-        /// Test the property 'SmallLogoUrl'
+        /// Test the property 'DeletedAt'
         /// </summary>
         [Test]
-        public void SmallLogoUrlTest()
+        public void DeletedAtTest()
         {
-            // TODO unit test for the property 'SmallLogoUrl'
+            // TODO unit test for the property 'DeletedAt'
         }
         /// <summary>
-        /// Test the property 'SupportsAccountIdentification'
+        /// Test the property 'Guid'
         /// </summary>
         [Test]
-        public void SupportsAccountIdentificationTest()
+        public void GuidTest()
         {
-            // TODO unit test for the property 'SupportsAccountIdentification'
+            // TODO unit test for the property 'Guid'
         }
         /// <summary>
-        /// Test the property 'SupportsAccountStatement'
+        /// Test the property 'IsDeleted'
         /// </summary>
         [Test]
-        public void SupportsAccountStatementTest()
+        public void IsDeletedTest()
         {
-            // TODO unit test for the property 'SupportsAccountStatement'
+            // TODO unit test for the property 'IsDeleted'
         }
         /// <summary>
-        /// Test the property 'SupportsAccountVerification'
+        /// Test the property 'UpdatedAt'
         /// </summary>
         [Test]
-        public void SupportsAccountVerificationTest()
+        public void UpdatedAtTest()
         {
-            // TODO unit test for the property 'SupportsAccountVerification'
+            // TODO unit test for the property 'UpdatedAt'
         }
         /// <summary>
-        /// Test the property 'SupportsTransactionHistory'
+        /// Test the property 'Uri'
         /// </summary>
         [Test]
-        public void SupportsTransactionHistoryTest()
+        public void UriTest()
         {
-            // TODO unit test for the property 'SupportsTransactionHistory'
+            // TODO unit test for the property 'Uri'
         }
         /// <summary>
-        /// Test the property 'Url'
+        /// Test the property 'UserGuid'
         /// </summary>
         [Test]
-        public void UrlTest()
+        public void UserGuidTest()
         {
-            // TODO unit test for the property 'Url'
+            // TODO unit test for the property 'UserGuid'
         }
 
     }

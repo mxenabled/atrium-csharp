@@ -71,7 +71,8 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //var response = instance.AggregateMember(memberGuid, userGuid);
+            //string type = null;
+            //var response = instance.AggregateMember(memberGuid, userGuid, type);
             //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
@@ -140,6 +141,21 @@ namespace Atrium.Test
             //string userGuid = null;
             //var response = instance.ListMemberMFAChallenges(memberGuid, userGuid);
             //Assert.IsInstanceOf<ChallengesResponseBody> (response, "response is ChallengesResponseBody");
+        }
+        
+        /// <summary>
+        /// Test ListMemberStatements
+        /// </summary>
+        [Test]
+        public void ListMemberStatementsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListMemberStatements(memberGuid, userGuid, page, recordsPerPage);
+            //Assert.IsInstanceOf<StatementsResponseBody> (response, "response is StatementsResponseBody");
         }
         
         /// <summary>

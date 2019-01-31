@@ -68,10 +68,22 @@ namespace Atrium.Model
         public bool? SupportsAccountIdentification { get; private set; }
 
         /// <summary>
+        /// Gets or Sets SupportsAccountStatement
+        /// </summary>
+        [DataMember(Name="supports_account_statement", EmitDefaultValue=false)]
+        public bool? SupportsAccountStatement { get; private set; }
+
+        /// <summary>
         /// Gets or Sets SupportsAccountVerification
         /// </summary>
         [DataMember(Name="supports_account_verification", EmitDefaultValue=false)]
         public bool? SupportsAccountVerification { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets SupportsTransactionHistory
+        /// </summary>
+        [DataMember(Name="supports_transaction_history", EmitDefaultValue=false)]
+        public bool? SupportsTransactionHistory { get; private set; }
 
         /// <summary>
         /// Gets or Sets Url
@@ -92,7 +104,9 @@ namespace Atrium.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SmallLogoUrl: ").Append(SmallLogoUrl).Append("\n");
             sb.Append("  SupportsAccountIdentification: ").Append(SupportsAccountIdentification).Append("\n");
+            sb.Append("  SupportsAccountStatement: ").Append(SupportsAccountStatement).Append("\n");
             sb.Append("  SupportsAccountVerification: ").Append(SupportsAccountVerification).Append("\n");
+            sb.Append("  SupportsTransactionHistory: ").Append(SupportsTransactionHistory).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -154,9 +168,19 @@ namespace Atrium.Model
                     this.SupportsAccountIdentification.Equals(input.SupportsAccountIdentification))
                 ) && 
                 (
+                    this.SupportsAccountStatement == input.SupportsAccountStatement ||
+                    (this.SupportsAccountStatement != null &&
+                    this.SupportsAccountStatement.Equals(input.SupportsAccountStatement))
+                ) && 
+                (
                     this.SupportsAccountVerification == input.SupportsAccountVerification ||
                     (this.SupportsAccountVerification != null &&
                     this.SupportsAccountVerification.Equals(input.SupportsAccountVerification))
+                ) && 
+                (
+                    this.SupportsTransactionHistory == input.SupportsTransactionHistory ||
+                    (this.SupportsTransactionHistory != null &&
+                    this.SupportsTransactionHistory.Equals(input.SupportsTransactionHistory))
                 ) && 
                 (
                     this.Url == input.Url ||
@@ -184,8 +208,12 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.SmallLogoUrl.GetHashCode();
                 if (this.SupportsAccountIdentification != null)
                     hashCode = hashCode * 59 + this.SupportsAccountIdentification.GetHashCode();
+                if (this.SupportsAccountStatement != null)
+                    hashCode = hashCode * 59 + this.SupportsAccountStatement.GetHashCode();
                 if (this.SupportsAccountVerification != null)
                     hashCode = hashCode * 59 + this.SupportsAccountVerification.GetHashCode();
+                if (this.SupportsTransactionHistory != null)
+                    hashCode = hashCode * 59 + this.SupportsTransactionHistory.GetHashCode();
                 if (this.Url != null)
                     hashCode = hashCode * 59 + this.Url.GetHashCode();
                 return hashCode;

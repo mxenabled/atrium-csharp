@@ -33,8 +33,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>InstitutionsResponseBody</returns>
-        InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null);
+        InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null);
 
         /// <summary>
         /// List institutions
@@ -46,8 +50,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>ApiResponse of InstitutionsResponseBody</returns>
-        ApiResponse<InstitutionsResponseBody> ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
+        ApiResponse<InstitutionsResponseBody> ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null);
         /// <summary>
         /// Read institution
         /// </summary>
@@ -102,8 +110,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>Task of InstitutionsResponseBody</returns>
-        System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null);
+        System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null);
 
         /// <summary>
         /// List institutions
@@ -115,8 +127,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null);
+        System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null);
         /// <summary>
         /// Read institution
         /// </summary>
@@ -266,10 +282,14 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>InstitutionsResponseBody</returns>
-        public InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
+        public InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
         {
-             ApiResponse<InstitutionsResponseBody> localVarResponse = ListInstitutionsWithHttpInfo(name, page, recordsPerPage);
+             ApiResponse<InstitutionsResponseBody> localVarResponse = ListInstitutionsWithHttpInfo(name, page, recordsPerPage, supportsAccountIdentification, supportsAccountStatement, supportsAccountVerification, supportsTransactionHistory);
              return localVarResponse.Data;
         }
 
@@ -280,8 +300,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>ApiResponse of InstitutionsResponseBody</returns>
-        public ApiResponse< InstitutionsResponseBody > ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
+        public ApiResponse< InstitutionsResponseBody > ListInstitutionsWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
         {
 
             var localVarPath = "/institutions";
@@ -308,6 +332,10 @@ namespace Atrium.Api
             if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
+            if (supportsAccountIdentification != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_identification", supportsAccountIdentification)); // query parameter
+            if (supportsAccountStatement != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_statement", supportsAccountStatement)); // query parameter
+            if (supportsAccountVerification != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_verification", supportsAccountVerification)); // query parameter
+            if (supportsTransactionHistory != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_transaction_history", supportsTransactionHistory)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -345,10 +373,14 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>Task of InstitutionsResponseBody</returns>
-        public async System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null)
+        public async System.Threading.Tasks.Task<InstitutionsResponseBody> ListInstitutionsAsync (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
         {
-             ApiResponse<InstitutionsResponseBody> localVarResponse = await ListInstitutionsAsyncWithHttpInfo(name, page, recordsPerPage);
+             ApiResponse<InstitutionsResponseBody> localVarResponse = await ListInstitutionsAsyncWithHttpInfo(name, page, recordsPerPage, supportsAccountIdentification, supportsAccountStatement, supportsAccountVerification, supportsTransactionHistory);
              return localVarResponse.Data;
 
         }
@@ -360,8 +392,12 @@ namespace Atrium.Api
         /// <param name="name">This will list only institutions in which the appended string appears. (optional)</param>
         /// <param name="page">Specify current page. (optional)</param>
         /// <param name="recordsPerPage">Specify records per page. (optional)</param>
+        /// <param name="supportsAccountIdentification">Filter only institutions which support account identification. (optional)</param>
+        /// <param name="supportsAccountStatement">Filter only institutions which support account statements. (optional)</param>
+        /// <param name="supportsAccountVerification">Filter only institutions which support account verification. (optional)</param>
+        /// <param name="supportsTransactionHistory">Filter only institutions which support extended transaction history. (optional)</param>
         /// <returns>Task of ApiResponse (InstitutionsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InstitutionsResponseBody>> ListInstitutionsAsyncWithHttpInfo (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
         {
 
             var localVarPath = "/institutions";
@@ -388,6 +424,10 @@ namespace Atrium.Api
             if (name != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "name", name)); // query parameter
             if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
+            if (supportsAccountIdentification != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_identification", supportsAccountIdentification)); // query parameter
+            if (supportsAccountStatement != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_statement", supportsAccountStatement)); // query parameter
+            if (supportsAccountVerification != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_account_verification", supportsAccountVerification)); // query parameter
+            if (supportsTransactionHistory != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "supports_transaction_history", supportsTransactionHistory)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))

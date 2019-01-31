@@ -72,7 +72,11 @@ namespace Atrium.Test
             //string name = null;
             //int? page = null;
             //int? recordsPerPage = null;
-            //var response = instance.ListInstitutions(name, page, recordsPerPage);
+            //bool? supportsAccountIdentification = null;
+            //bool? supportsAccountStatement = null;
+            //bool? supportsAccountVerification = null;
+            //bool? supportsTransactionHistory = null;
+            //var response = instance.ListInstitutions(name, page, recordsPerPage, supportsAccountIdentification, supportsAccountStatement, supportsAccountVerification, supportsTransactionHistory);
             //Assert.IsInstanceOf<InstitutionsResponseBody> (response, "response is InstitutionsResponseBody");
         }
         

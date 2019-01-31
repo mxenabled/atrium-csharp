@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="listinstitutions"></a>
 # **ListInstitutions**
-> InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null)
+> InstitutionsResponseBody ListInstitutions (string name = null, int? page = null, int? recordsPerPage = null, bool? supportsAccountIdentification = null, bool? supportsAccountStatement = null, bool? supportsAccountVerification = null, bool? supportsTransactionHistory = null)
 
 List institutions
 
@@ -32,11 +32,15 @@ namespace Example
             var name = name_example;  // string | This will list only institutions in which the appended string appears. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
+            var supportsAccountIdentification = true;  // bool? | Filter only institutions which support account identification. (optional) 
+            var supportsAccountStatement = true;  // bool? | Filter only institutions which support account statements. (optional) 
+            var supportsAccountVerification = true;  // bool? | Filter only institutions which support account verification. (optional) 
+            var supportsTransactionHistory = true;  // bool? | Filter only institutions which support extended transaction history. (optional) 
 
             try
             {
                 // List institutions
-                InstitutionsResponseBody response = client.institutions.ListInstitutions(name, page, recordsPerPage);
+                InstitutionsResponseBody response = client.institutions.ListInstitutions(name, page, recordsPerPage, supportsAccountIdentification, supportsAccountStatement, supportsAccountVerification, supportsTransactionHistory);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -55,6 +59,10 @@ Name | Type | Description  | Notes
  **name** | **string**| This will list only institutions in which the appended string appears. | [optional] 
  **page** | **int?**| Specify current page. | [optional] 
  **recordsPerPage** | **int?**| Specify records per page. | [optional] 
+ **supportsAccountIdentification** | **bool?**| Filter only institutions which support account identification. | [optional] 
+ **supportsAccountStatement** | **bool?**| Filter only institutions which support account statements. | [optional] 
+ **supportsAccountVerification** | **bool?**| Filter only institutions which support account verification. | [optional] 
+ **supportsTransactionHistory** | **bool?**| Filter only institutions which support extended transaction history. | [optional] 
 
 ### Return type
 
