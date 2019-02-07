@@ -15,6 +15,7 @@ namespace Atrium.Api
     public InstitutionsApi institutions;
     public MembersApi members;
     public MerchantsApi merchants;
+    public StatementsApi statements;
     public TransactionsApi transactions;
     public UsersApi users;
     public VerificationApi verification;
@@ -30,6 +31,7 @@ namespace Atrium.Api
       this.institutions = new InstitutionsApi();
       this.members = new MembersApi();
       this.merchants = new MerchantsApi();
+      this.statements = new StatementsApi();
       this.transactions = new TransactionsApi();
       this.users = new UsersApi();
       this.verification = new VerificationApi();

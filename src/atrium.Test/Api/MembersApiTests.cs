@@ -71,8 +71,7 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //string type = null;
-            //var response = instance.AggregateMember(memberGuid, userGuid, type);
+            //var response = instance.AggregateMember(memberGuid, userGuid);
             //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
@@ -100,6 +99,19 @@ namespace Atrium.Test
             //string userGuid = null;
             //instance.DeleteMember(memberGuid, userGuid);
             
+        }
+        
+        /// <summary>
+        /// Test ExtendHistory
+        /// </summary>
+        [Test]
+        public void ExtendHistoryTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.ExtendHistory(memberGuid, userGuid);
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
         }
         
         /// <summary>
@@ -141,21 +153,6 @@ namespace Atrium.Test
             //string userGuid = null;
             //var response = instance.ListMemberMFAChallenges(memberGuid, userGuid);
             //Assert.IsInstanceOf<ChallengesResponseBody> (response, "response is ChallengesResponseBody");
-        }
-        
-        /// <summary>
-        /// Test ListMemberStatements
-        /// </summary>
-        [Test]
-        public void ListMemberStatementsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //string memberGuid = null;
-            //string userGuid = null;
-            //int? page = null;
-            //int? recordsPerPage = null;
-            //var response = instance.ListMemberStatements(memberGuid, userGuid, page, recordsPerPage);
-            //Assert.IsInstanceOf<StatementsResponseBody> (response, "response is StatementsResponseBody");
         }
         
         /// <summary>

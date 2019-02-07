@@ -5,10 +5,10 @@ Method | HTTP request | Description
 [**AggregateMember**](MembersApi.md#aggregatemember) | **POST** /users/{user_guid}/members/{member_guid}/aggregate | Aggregate member
 [**CreateMember**](MembersApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
 [**DeleteMember**](MembersApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
+[**ExtendHistory**](MembersApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history
 [**ListMemberAccounts**](MembersApi.md#listmemberaccounts) | **GET** /users/{user_guid}/members/{member_guid}/accounts | List member accounts
 [**ListMemberCredentials**](MembersApi.md#listmembercredentials) | **GET** /users/{user_guid}/members/{member_guid}/credentials | List member credentials
 [**ListMemberMFAChallenges**](MembersApi.md#listmembermfachallenges) | **GET** /users/{user_guid}/members/{member_guid}/challenges | List member MFA challenges
-[**ListMemberStatements**](MembersApi.md#listmemberstatements) | **GET** /users/{user_guid}/members/{member_guid}/statements | List member statements
 [**ListMemberTransactions**](MembersApi.md#listmembertransactions) | **GET** /users/{user_guid}/members/{member_guid}/transactions | List member transactions
 [**ListMembers**](MembersApi.md#listmembers) | **GET** /users/{user_guid}/members | List members
 [**ReadMember**](MembersApi.md#readmember) | **GET** /users/{user_guid}/members/{member_guid} | Read member
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 <a name="aggregatemember"></a>
 # **AggregateMember**
-> MemberResponseBody AggregateMember (string memberGuid, string userGuid, string type = null)
+> MemberResponseBody AggregateMember (string memberGuid, string userGuid)
 
 Aggregate member
 
@@ -41,12 +41,11 @@ namespace Example
 
             var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
-            var type = "history";  // string | An optional parameter which determines the type of aggregation to be peformed. Possible values are `statement` and `history`. (optional) 
 
             try
             {
                 // Aggregate member
-                MemberResponseBody response = client.members.AggregateMember(memberGuid, userGuid, type);
+                MemberResponseBody response = client.members.AggregateMember(memberGuid, userGuid);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -64,7 +63,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
- **type** | **string**| An optional parameter which determines the type of aggregation to be peformed. Possible values are &#x60;statement&#x60; and &#x60;history&#x60;. | [optional] 
 
 ### Return type
 
@@ -174,6 +172,59 @@ Name | Type | Description  | Notes
 ### Return type
 
 void (empty response body)
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="extendhistory"></a>
+# **ExtendHistory**
+> MemberResponseBody ExtendHistory (string memberGuid, string userGuid)
+
+Extend history
+
+The extend_history endpoint begins the process of fetching up to 24 months of data associated with a particular `member`.
+
+### Example
+```csharp
+using System;
+using Atrium.Api;
+using Atrium.Model;
+
+namespace Example
+{
+    public class ExtendHistoryExample
+    {
+        public void main()
+        {
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+
+            try
+            {
+                // Extend history
+                MemberResponseBody response = client.members.ExtendHistory(memberGuid, userGuid);
+                Console.WriteLine(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception when calling MembersApi.ExtendHistory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**MemberResponseBody**](MemberResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -337,63 +388,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ChallengesResponseBody**](ChallengesResponseBody.md)
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-<a name="listmemberstatements"></a>
-# **ListMemberStatements**
-> StatementsResponseBody ListMemberStatements (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
-
-List member statements
-
-Certain institutions in Atrium allow developers to access account statements associated with a particular `member`. Use this endpoint to get an array of available statements.  Before this endpoint can be used, an aggregation of type `statement` should be performed on the relevant `member`. 
-
-### Example
-```csharp
-using System;
-using Atrium.Api;
-using Atrium.Model;
-
-namespace Example
-{
-    public class ListMemberStatementsExample
-    {
-        public void main()
-        {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
-
-            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
-            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
-            var page = 1;  // int? | Specify current page. (optional) 
-            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
-
-            try
-            {
-                // List member statements
-                StatementsResponseBody response = client.members.ListMemberStatements(memberGuid, userGuid, page, recordsPerPage);
-                Console.WriteLine(response);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exception when calling MembersApi.ListMemberStatements: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
- **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
- **page** | **int?**| Specify current page. | [optional] 
- **recordsPerPage** | **int?**| Specify records per page. | [optional] 
-
-### Return type
-
-[**StatementsResponseBody**](StatementsResponseBody.md)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

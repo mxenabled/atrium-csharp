@@ -52,20 +52,6 @@ namespace Atrium.Model
         public string CreatedAt { get; private set; }
 
         /// <summary>
-        /// An SHA-256 hash value of the statement&#39;s byte payload, used as a unique identifier.
-        /// </summary>
-        /// <value>An SHA-256 hash value of the statement&#39;s byte payload, used as a unique identifier.</value>
-        [DataMember(Name="content_hash", EmitDefaultValue=false)]
-        public string ContentHash { get; private set; }
-
-        /// <summary>
-        /// The date and time the &#x60;statement&#x60; was deleted. Statements are automatically deleted when an &#x60;account&#x60; is deleted.
-        /// </summary>
-        /// <value>The date and time the &#x60;statement&#x60; was deleted. Statements are automatically deleted when an &#x60;account&#x60; is deleted.</value>
-        [DataMember(Name="deleted_at", EmitDefaultValue=false)]
-        public string DeletedAt { get; private set; }
-
-        /// <summary>
         /// The unique identifier for the &#x60;statement&#x60;. Defined by MX.
         /// </summary>
         /// <value>The unique identifier for the &#x60;statement&#x60;. Defined by MX.</value>
@@ -73,18 +59,11 @@ namespace Atrium.Model
         public string Guid { get; private set; }
 
         /// <summary>
-        /// This indicates whether the &#x60;statement&#x60; has been deleted. Statements are automatically deleted when an &#x60;account&#x60; is deleted.
+        /// The unique identifier for the &#x60;member&#x60; associated with the &#x60;statement&#x60;.  Defined by MX.
         /// </summary>
-        /// <value>This indicates whether the &#x60;statement&#x60; has been deleted. Statements are automatically deleted when an &#x60;account&#x60; is deleted.</value>
-        [DataMember(Name="is_deleted", EmitDefaultValue=false)]
-        public bool? IsDeleted { get; private set; }
-
-        /// <summary>
-        /// The date and time at which the &#x60;statement&#x60; was last updated.
-        /// </summary>
-        /// <value>The date and time at which the &#x60;statement&#x60; was last updated.</value>
-        [DataMember(Name="updated_at", EmitDefaultValue=false)]
-        public string UpdatedAt { get; private set; }
+        /// <value>The unique identifier for the &#x60;member&#x60; associated with the &#x60;statement&#x60;.  Defined by MX.</value>
+        [DataMember(Name="member_guid", EmitDefaultValue=false)]
+        public string MemberGuid { get; private set; }
 
         /// <summary>
         /// A URI for accessing the byte payload of the &#x60;statement&#x60;.
@@ -101,6 +80,13 @@ namespace Atrium.Model
         public string UserGuid { get; private set; }
 
         /// <summary>
+        /// The date and time at which the &#x60;statement&#x60; was last updated.
+        /// </summary>
+        /// <value>The date and time at which the &#x60;statement&#x60; was last updated.</value>
+        [DataMember(Name="updated_at", EmitDefaultValue=false)]
+        public string UpdatedAt { get; private set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -110,13 +96,11 @@ namespace Atrium.Model
             sb.Append("class Statement {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
-            sb.Append("  ContentHash: ").Append(ContentHash).Append("\n");
-            sb.Append("  DeletedAt: ").Append(DeletedAt).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
-            sb.Append("  IsDeleted: ").Append(IsDeleted).Append("\n");
-            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
+            sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  Uri: ").Append(Uri).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
+            sb.Append("  UpdatedAt: ").Append(UpdatedAt).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -162,29 +146,14 @@ namespace Atrium.Model
                     this.CreatedAt.Equals(input.CreatedAt))
                 ) && 
                 (
-                    this.ContentHash == input.ContentHash ||
-                    (this.ContentHash != null &&
-                    this.ContentHash.Equals(input.ContentHash))
-                ) && 
-                (
-                    this.DeletedAt == input.DeletedAt ||
-                    (this.DeletedAt != null &&
-                    this.DeletedAt.Equals(input.DeletedAt))
-                ) && 
-                (
                     this.Guid == input.Guid ||
                     (this.Guid != null &&
                     this.Guid.Equals(input.Guid))
                 ) && 
                 (
-                    this.IsDeleted == input.IsDeleted ||
-                    (this.IsDeleted != null &&
-                    this.IsDeleted.Equals(input.IsDeleted))
-                ) && 
-                (
-                    this.UpdatedAt == input.UpdatedAt ||
-                    (this.UpdatedAt != null &&
-                    this.UpdatedAt.Equals(input.UpdatedAt))
+                    this.MemberGuid == input.MemberGuid ||
+                    (this.MemberGuid != null &&
+                    this.MemberGuid.Equals(input.MemberGuid))
                 ) && 
                 (
                     this.Uri == input.Uri ||
@@ -195,6 +164,11 @@ namespace Atrium.Model
                     this.UserGuid == input.UserGuid ||
                     (this.UserGuid != null &&
                     this.UserGuid.Equals(input.UserGuid))
+                ) && 
+                (
+                    this.UpdatedAt == input.UpdatedAt ||
+                    (this.UpdatedAt != null &&
+                    this.UpdatedAt.Equals(input.UpdatedAt))
                 );
         }
 
@@ -211,20 +185,16 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
-                if (this.ContentHash != null)
-                    hashCode = hashCode * 59 + this.ContentHash.GetHashCode();
-                if (this.DeletedAt != null)
-                    hashCode = hashCode * 59 + this.DeletedAt.GetHashCode();
                 if (this.Guid != null)
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
-                if (this.IsDeleted != null)
-                    hashCode = hashCode * 59 + this.IsDeleted.GetHashCode();
-                if (this.UpdatedAt != null)
-                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
+                if (this.MemberGuid != null)
+                    hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
                 if (this.Uri != null)
                     hashCode = hashCode * 59 + this.Uri.GetHashCode();
                 if (this.UserGuid != null)
                     hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
+                if (this.UpdatedAt != null)
+                    hashCode = hashCode * 59 + this.UpdatedAt.GetHashCode();
                 return hashCode;
             }
         }

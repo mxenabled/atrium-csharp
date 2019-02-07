@@ -81,22 +81,6 @@ namespace Atrium.Test
             // TODO unit test for the property 'CreatedAt'
         }
         /// <summary>
-        /// Test the property 'ContentHash'
-        /// </summary>
-        [Test]
-        public void ContentHashTest()
-        {
-            // TODO unit test for the property 'ContentHash'
-        }
-        /// <summary>
-        /// Test the property 'DeletedAt'
-        /// </summary>
-        [Test]
-        public void DeletedAtTest()
-        {
-            // TODO unit test for the property 'DeletedAt'
-        }
-        /// <summary>
         /// Test the property 'Guid'
         /// </summary>
         [Test]
@@ -105,20 +89,12 @@ namespace Atrium.Test
             // TODO unit test for the property 'Guid'
         }
         /// <summary>
-        /// Test the property 'IsDeleted'
+        /// Test the property 'MemberGuid'
         /// </summary>
         [Test]
-        public void IsDeletedTest()
+        public void MemberGuidTest()
         {
-            // TODO unit test for the property 'IsDeleted'
-        }
-        /// <summary>
-        /// Test the property 'UpdatedAt'
-        /// </summary>
-        [Test]
-        public void UpdatedAtTest()
-        {
-            // TODO unit test for the property 'UpdatedAt'
+            // TODO unit test for the property 'MemberGuid'
         }
         /// <summary>
         /// Test the property 'Uri'
@@ -135,6 +111,14 @@ namespace Atrium.Test
         public void UserGuidTest()
         {
             // TODO unit test for the property 'UserGuid'
+        }
+        /// <summary>
+        /// Test the property 'UpdatedAt'
+        /// </summary>
+        [Test]
+        public void UpdatedAtTest()
+        {
+            // TODO unit test for the property 'UpdatedAt'
         }
 
     }
