@@ -73,6 +73,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'AccountGuid'
         }
         /// <summary>
+        /// Test the property 'ContentHash'
+        /// </summary>
+        [Test]
+        public void ContentHashTest()
+        {
+            // TODO unit test for the property 'ContentHash'
+        }
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Test]

@@ -45,6 +45,13 @@ namespace Atrium.Model
         public string AccountGuid { get; private set; }
 
         /// <summary>
+        /// SHA256 digest of the pdf payload
+        /// </summary>
+        /// <value>SHA256 digest of the pdf payload</value>
+        [DataMember(Name="content_hash", EmitDefaultValue=false)]
+        public string ContentHash { get; private set; }
+
+        /// <summary>
         /// The date and time the &#x60;statement&#x60; was created.
         /// </summary>
         /// <value>The date and time the &#x60;statement&#x60; was created.</value>
@@ -95,6 +102,7 @@ namespace Atrium.Model
             var sb = new StringBuilder();
             sb.Append("class Statement {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
+            sb.Append("  ContentHash: ").Append(ContentHash).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
@@ -141,6 +149,11 @@ namespace Atrium.Model
                     this.AccountGuid.Equals(input.AccountGuid))
                 ) && 
                 (
+                    this.ContentHash == input.ContentHash ||
+                    (this.ContentHash != null &&
+                    this.ContentHash.Equals(input.ContentHash))
+                ) && 
+                (
                     this.CreatedAt == input.CreatedAt ||
                     (this.CreatedAt != null &&
                     this.CreatedAt.Equals(input.CreatedAt))
@@ -183,6 +196,8 @@ namespace Atrium.Model
                 int hashCode = 41;
                 if (this.AccountGuid != null)
                     hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
+                if (this.ContentHash != null)
+                    hashCode = hashCode * 59 + this.ContentHash.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
                 if (this.Guid != null)

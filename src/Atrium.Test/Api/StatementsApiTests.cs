@@ -63,6 +63,20 @@ namespace Atrium.Test
 
         
         /// <summary>
+        /// Test DownloadStatementPdf
+        /// </summary>
+        [Test]
+        public void DownloadStatementPdfTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //string statementGuid = null;
+            //var response = instance.DownloadStatementPdf(memberGuid, userGuid, statementGuid);
+            //Assert.IsInstanceOf<System.IO.Stream> (response, "response is System.IO.Stream");
+        }
+        
+        /// <summary>
         /// Test FetchStatements
         /// </summary>
         [Test]
@@ -88,6 +102,20 @@ namespace Atrium.Test
             //int? recordsPerPage = null;
             //var response = instance.ListMemberStatements(memberGuid, userGuid, page, recordsPerPage);
             //Assert.IsInstanceOf<StatementsResponseBody> (response, "response is StatementsResponseBody");
+        }
+        
+        /// <summary>
+        /// Test ReadMemberStatement
+        /// </summary>
+        [Test]
+        public void ReadMemberStatementTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //string statementGuid = null;
+            //var response = instance.ReadMemberStatement(memberGuid, userGuid, statementGuid);
+            //Assert.IsInstanceOf<StatementResponseBody> (response, "response is StatementResponseBody");
         }
         
     }

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AccountGuid** | **string** | The unique identifier for the &#x60;account&#x60; associated with the &#x60;statement&#x60;. Defined by MX. | [optional] 
+**ContentHash** | **string** | SHA256 digest of the pdf payload | [optional] 
 **CreatedAt** | **string** | The date and time the &#x60;statement&#x60; was created. | [optional] 
 **Guid** | **string** | The unique identifier for the &#x60;statement&#x60;. Defined by MX. | [optional] 
 **MemberGuid** | **string** | The unique identifier for the &#x60;member&#x60; associated with the &#x60;statement&#x60;.  Defined by MX. | [optional] 

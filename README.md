@@ -109,8 +109,10 @@ Class | Method | HTTP request | Description
 *MembersApi* | [**ResumeMember**](docs/MembersApi.md#resumemember) | **PUT** /users/{user_guid}/members/{member_guid}/resume | Resume aggregation from MFA
 *MembersApi* | [**UpdateMember**](docs/MembersApi.md#updatemember) | **PUT** /users/{user_guid}/members/{member_guid} | Update member
 *MerchantsApi* | [**ReadMerchant**](docs/MerchantsApi.md#readmerchant) | **GET** /merchants/{merchant_guid} | Read merchant
+*StatementsApi* | [**DownloadStatementPdf**](docs/StatementsApi.md#downloadstatementpdf) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid}.pdf | Download statement PDF
 *StatementsApi* | [**FetchStatements**](docs/StatementsApi.md#fetchstatements) | **POST** /users/{user_guid}/members/{member_guid}/fetch_statements | Fetch statements
 *StatementsApi* | [**ListMemberStatements**](docs/StatementsApi.md#listmemberstatements) | **GET** /users/{user_guid}/members/{member_guid}/statements | List member statements
+*StatementsApi* | [**ReadMemberStatement**](docs/StatementsApi.md#readmemberstatement) | **GET** /users/{user_guid}/members/{member_guid}/statements/{statement_guid} | Read statement JSON
 *TransactionsApi* | [**CleanseAndCategorizeTransactions**](docs/TransactionsApi.md#cleanseandcategorizetransactions) | **POST** /cleanse_and_categorize | Categorize transactions
 *TransactionsApi* | [**ListUserTransactions**](docs/TransactionsApi.md#listusertransactions) | **GET** /users/{user_guid}/transactions | List transactions for a user
 *TransactionsApi* | [**ReadTransaction**](docs/TransactionsApi.md#readtransaction) | **GET** /users/{user_guid}/transactions/{transaction_guid} | Read a transaction
@@ -165,6 +167,7 @@ Class | Method | HTTP request | Description
  - [Model.MerchantResponseBody](docs/MerchantResponseBody.md)
  - [Model.Pagination](docs/Pagination.md)
  - [Model.Statement](docs/Statement.md)
+ - [Model.StatementResponseBody](docs/StatementResponseBody.md)
  - [Model.StatementsResponseBody](docs/StatementsResponseBody.md)
  - [Model.Transaction](docs/Transaction.md)
  - [Model.TransactionCleanseAndCategorizeRequest](docs/TransactionCleanseAndCategorizeRequest.md)
