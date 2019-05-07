@@ -32,9 +32,18 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Account" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        public Account()
+        /// <param name="cashBalance">cashBalance.</param>
+        /// <param name="cashSurrenderValue">cashSurrenderValue.</param>
+        /// <param name="deathBenefit">deathBenefit.</param>
+        /// <param name="holdingsValue">holdingsValue.</param>
+        /// <param name="loanAmount">loanAmount.</param>
+        public Account(decimal? cashBalance = default(decimal?), decimal? cashSurrenderValue = default(decimal?), decimal? deathBenefit = default(decimal?), decimal? holdingsValue = default(decimal?), decimal? loanAmount = default(decimal?))
         {
+            this.CashBalance = cashBalance;
+            this.CashSurrenderValue = cashSurrenderValue;
+            this.DeathBenefit = deathBenefit;
+            this.HoldingsValue = holdingsValue;
+            this.LoanAmount = loanAmount;
         }
         
         /// <summary>
@@ -68,6 +77,18 @@ namespace Atrium.Model
         public decimal? Balance { get; private set; }
 
         /// <summary>
+        /// Gets or Sets CashBalance
+        /// </summary>
+        [DataMember(Name="cash_balance", EmitDefaultValue=false)]
+        public decimal? CashBalance { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CashSurrenderValue
+        /// </summary>
+        [DataMember(Name="cash_surrender_value", EmitDefaultValue=false)]
+        public decimal? CashSurrenderValue { get; set; }
+
+        /// <summary>
         /// Gets or Sets CreatedAt
         /// </summary>
         [DataMember(Name="created_at", EmitDefaultValue=false)]
@@ -92,10 +113,22 @@ namespace Atrium.Model
         public int? DayPaymentIsDue { get; private set; }
 
         /// <summary>
+        /// Gets or Sets DeathBenefit
+        /// </summary>
+        [DataMember(Name="death_benefit", EmitDefaultValue=false)]
+        public decimal? DeathBenefit { get; set; }
+
+        /// <summary>
         /// Gets or Sets Guid
         /// </summary>
         [DataMember(Name="guid", EmitDefaultValue=false)]
         public string Guid { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets HoldingsValue
+        /// </summary>
+        [DataMember(Name="holdings_value", EmitDefaultValue=false)]
+        public decimal? HoldingsValue { get; set; }
 
         /// <summary>
         /// Gets or Sets InstitutionCode
@@ -120,6 +153,12 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="last_payment", EmitDefaultValue=false)]
         public decimal? LastPayment { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets LoanAmount
+        /// </summary>
+        [DataMember(Name="loan_amount", EmitDefaultValue=false)]
+        public decimal? LoanAmount { get; set; }
 
         /// <summary>
         /// Gets or Sets MaturesOn
@@ -218,15 +257,20 @@ namespace Atrium.Model
             sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
             sb.Append("  AvailableCredit: ").Append(AvailableCredit).Append("\n");
             sb.Append("  Balance: ").Append(Balance).Append("\n");
+            sb.Append("  CashBalance: ").Append(CashBalance).Append("\n");
+            sb.Append("  CashSurrenderValue: ").Append(CashSurrenderValue).Append("\n");
             sb.Append("  CreatedAt: ").Append(CreatedAt).Append("\n");
             sb.Append("  CreditLimit: ").Append(CreditLimit).Append("\n");
             sb.Append("  CurrencyCode: ").Append(CurrencyCode).Append("\n");
             sb.Append("  DayPaymentIsDue: ").Append(DayPaymentIsDue).Append("\n");
+            sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
+            sb.Append("  HoldingsValue: ").Append(HoldingsValue).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
             sb.Append("  LastPayment: ").Append(LastPayment).Append("\n");
+            sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
             sb.Append("  MaturesOn: ").Append(MaturesOn).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  MinimumBalance: ").Append(MinimumBalance).Append("\n");
@@ -301,6 +345,16 @@ namespace Atrium.Model
                     this.Balance.Equals(input.Balance))
                 ) && 
                 (
+                    this.CashBalance == input.CashBalance ||
+                    (this.CashBalance != null &&
+                    this.CashBalance.Equals(input.CashBalance))
+                ) && 
+                (
+                    this.CashSurrenderValue == input.CashSurrenderValue ||
+                    (this.CashSurrenderValue != null &&
+                    this.CashSurrenderValue.Equals(input.CashSurrenderValue))
+                ) && 
+                (
                     this.CreatedAt == input.CreatedAt ||
                     (this.CreatedAt != null &&
                     this.CreatedAt.Equals(input.CreatedAt))
@@ -321,9 +375,19 @@ namespace Atrium.Model
                     this.DayPaymentIsDue.Equals(input.DayPaymentIsDue))
                 ) && 
                 (
+                    this.DeathBenefit == input.DeathBenefit ||
+                    (this.DeathBenefit != null &&
+                    this.DeathBenefit.Equals(input.DeathBenefit))
+                ) && 
+                (
                     this.Guid == input.Guid ||
                     (this.Guid != null &&
                     this.Guid.Equals(input.Guid))
+                ) && 
+                (
+                    this.HoldingsValue == input.HoldingsValue ||
+                    (this.HoldingsValue != null &&
+                    this.HoldingsValue.Equals(input.HoldingsValue))
                 ) && 
                 (
                     this.InstitutionCode == input.InstitutionCode ||
@@ -344,6 +408,11 @@ namespace Atrium.Model
                     this.LastPayment == input.LastPayment ||
                     (this.LastPayment != null &&
                     this.LastPayment.Equals(input.LastPayment))
+                ) && 
+                (
+                    this.LoanAmount == input.LoanAmount ||
+                    (this.LoanAmount != null &&
+                    this.LoanAmount.Equals(input.LoanAmount))
                 ) && 
                 (
                     this.MaturesOn == input.MaturesOn ||
@@ -436,6 +505,10 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.AvailableCredit.GetHashCode();
                 if (this.Balance != null)
                     hashCode = hashCode * 59 + this.Balance.GetHashCode();
+                if (this.CashBalance != null)
+                    hashCode = hashCode * 59 + this.CashBalance.GetHashCode();
+                if (this.CashSurrenderValue != null)
+                    hashCode = hashCode * 59 + this.CashSurrenderValue.GetHashCode();
                 if (this.CreatedAt != null)
                     hashCode = hashCode * 59 + this.CreatedAt.GetHashCode();
                 if (this.CreditLimit != null)
@@ -444,8 +517,12 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.CurrencyCode.GetHashCode();
                 if (this.DayPaymentIsDue != null)
                     hashCode = hashCode * 59 + this.DayPaymentIsDue.GetHashCode();
+                if (this.DeathBenefit != null)
+                    hashCode = hashCode * 59 + this.DeathBenefit.GetHashCode();
                 if (this.Guid != null)
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
+                if (this.HoldingsValue != null)
+                    hashCode = hashCode * 59 + this.HoldingsValue.GetHashCode();
                 if (this.InstitutionCode != null)
                     hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
                 if (this.InterestRate != null)
@@ -454,6 +531,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.IsClosed.GetHashCode();
                 if (this.LastPayment != null)
                     hashCode = hashCode * 59 + this.LastPayment.GetHashCode();
+                if (this.LoanAmount != null)
+                    hashCode = hashCode * 59 + this.LoanAmount.GetHashCode();
                 if (this.MaturesOn != null)
                     hashCode = hashCode * 59 + this.MaturesOn.GetHashCode();
                 if (this.MemberGuid != null)
