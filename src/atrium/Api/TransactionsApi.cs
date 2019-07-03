@@ -295,7 +295,7 @@ namespace Atrium.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling TransactionsApi->CleanseAndCategorizeTransactions");
 
-            var localVarPath = "/cleanse_and_categorize";
+            var localVarPath = "/transactions/cleanse_and_categorize";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -380,7 +380,7 @@ namespace Atrium.Api
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling TransactionsApi->CleanseAndCategorizeTransactions");
 
-            var localVarPath = "/cleanse_and_categorize";
+            var localVarPath = "/transactions/cleanse_and_categorize";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

@@ -105,6 +105,22 @@ namespace Atrium.Test
             // TODO unit test for the property 'Balance'
         }
         /// <summary>
+        /// Test the property 'CashBalance'
+        /// </summary>
+        [Test]
+        public void CashBalanceTest()
+        {
+            // TODO unit test for the property 'CashBalance'
+        }
+        /// <summary>
+        /// Test the property 'CashSurrenderValue'
+        /// </summary>
+        [Test]
+        public void CashSurrenderValueTest()
+        {
+            // TODO unit test for the property 'CashSurrenderValue'
+        }
+        /// <summary>
         /// Test the property 'CreatedAt'
         /// </summary>
         [Test]
@@ -137,12 +153,28 @@ namespace Atrium.Test
             // TODO unit test for the property 'DayPaymentIsDue'
         }
         /// <summary>
+        /// Test the property 'DeathBenefit'
+        /// </summary>
+        [Test]
+        public void DeathBenefitTest()
+        {
+            // TODO unit test for the property 'DeathBenefit'
+        }
+        /// <summary>
         /// Test the property 'Guid'
         /// </summary>
         [Test]
         public void GuidTest()
         {
             // TODO unit test for the property 'Guid'
+        }
+        /// <summary>
+        /// Test the property 'HoldingsValue'
+        /// </summary>
+        [Test]
+        public void HoldingsValueTest()
+        {
+            // TODO unit test for the property 'HoldingsValue'
         }
         /// <summary>
         /// Test the property 'InstitutionCode'
@@ -175,6 +207,14 @@ namespace Atrium.Test
         public void LastPaymentTest()
         {
             // TODO unit test for the property 'LastPayment'
+        }
+        /// <summary>
+        /// Test the property 'LoanAmount'
+        /// </summary>
+        [Test]
+        public void LoanAmountTest()
+        {
+            // TODO unit test for the property 'LoanAmount'
         }
         /// <summary>
         /// Test the property 'MaturesOn'
