@@ -176,6 +176,12 @@ namespace Atrium.Model
         public int? MerchantCategoryCode { get; private set; }
 
         /// <summary>
+        /// Gets or Sets MerchantGuid
+        /// </summary>
+        [DataMember(Name="merchant_guid", EmitDefaultValue=false)]
+        public string MerchantGuid { get; private set; }
+
+        /// <summary>
         /// Gets or Sets OriginalDescription
         /// </summary>
         [DataMember(Name="original_description", EmitDefaultValue=false)]
@@ -254,6 +260,7 @@ namespace Atrium.Model
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  Memo: ").Append(Memo).Append("\n");
             sb.Append("  MerchantCategoryCode: ").Append(MerchantCategoryCode).Append("\n");
+            sb.Append("  MerchantGuid: ").Append(MerchantGuid).Append("\n");
             sb.Append("  OriginalDescription: ").Append(OriginalDescription).Append("\n");
             sb.Append("  PostedAt: ").Append(PostedAt).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -412,6 +419,11 @@ namespace Atrium.Model
                     this.MerchantCategoryCode.Equals(input.MerchantCategoryCode))
                 ) && 
                 (
+                    this.MerchantGuid == input.MerchantGuid ||
+                    (this.MerchantGuid != null &&
+                    this.MerchantGuid.Equals(input.MerchantGuid))
+                ) && 
+                (
                     this.OriginalDescription == input.OriginalDescription ||
                     (this.OriginalDescription != null &&
                     this.OriginalDescription.Equals(input.OriginalDescription))
@@ -508,6 +520,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Memo.GetHashCode();
                 if (this.MerchantCategoryCode != null)
                     hashCode = hashCode * 59 + this.MerchantCategoryCode.GetHashCode();
+                if (this.MerchantGuid != null)
+                    hashCode = hashCode * 59 + this.MerchantGuid.GetHashCode();
                 if (this.OriginalDescription != null)
                     hashCode = hashCode * 59 + this.OriginalDescription.GetHashCode();
                 if (this.PostedAt != null)

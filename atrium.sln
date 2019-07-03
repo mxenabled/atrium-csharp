@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atrium", "src\Atrium\Atrium.csproj", "{897B07D2-2514-493D-80C1-7FFF47CEEE83}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atrium", "src\Atrium\Atrium.csproj", "{5547C3E6-F17E-4D33-9CD0-78CB647BC89A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Atrium.Test", "src\Atrium.Test\Atrium.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{897B07D2-2514-493D-80C1-7FFF47CEEE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{897B07D2-2514-493D-80C1-7FFF47CEEE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{897B07D2-2514-493D-80C1-7FFF47CEEE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{897B07D2-2514-493D-80C1-7FFF47CEEE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5547C3E6-F17E-4D33-9CD0-78CB647BC89A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5547C3E6-F17E-4D33-9CD0-78CB647BC89A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5547C3E6-F17E-4D33-9CD0-78CB647BC89A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5547C3E6-F17E-4D33-9CD0-78CB647BC89A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
