@@ -41,7 +41,8 @@ namespace Atrium.Model
         /// <param name="identifier">identifier.</param>
         /// <param name="institutionCode">institutionCode (required).</param>
         /// <param name="metadata">metadata.</param>
-        public MemberCreateRequest(List<CredentialRequest> credentials = default(List<CredentialRequest>), string identifier = default(string), string institutionCode = default(string), string metadata = default(string))
+        /// <param name="skipAggregation">skipAggregation.</param>
+        public MemberCreateRequest(List<CredentialRequest> credentials = default(List<CredentialRequest>), string identifier = default(string), string institutionCode = default(string), string metadata = default(string), bool? skipAggregation = default(bool?))
         {
             // to ensure "credentials" is required (not null)
             if (credentials == null)
@@ -63,6 +64,7 @@ namespace Atrium.Model
             }
             this.Identifier = identifier;
             this.Metadata = metadata;
+            this.SkipAggregation = skipAggregation;
         }
         
         /// <summary>
@@ -90,6 +92,12 @@ namespace Atrium.Model
         public string Metadata { get; set; }
 
         /// <summary>
+        /// Gets or Sets SkipAggregation
+        /// </summary>
+        [DataMember(Name="skip_aggregation", EmitDefaultValue=false)]
+        public bool? SkipAggregation { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -101,6 +109,7 @@ namespace Atrium.Model
             sb.Append("  Identifier: ").Append(Identifier).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  SkipAggregation: ").Append(SkipAggregation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,6 +163,11 @@ namespace Atrium.Model
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
+                ) && 
+                (
+                    this.SkipAggregation == input.SkipAggregation ||
+                    (this.SkipAggregation != null &&
+                    this.SkipAggregation.Equals(input.SkipAggregation))
                 );
         }
 
@@ -174,6 +188,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.SkipAggregation != null)
+                    hashCode = hashCode * 59 + this.SkipAggregation.GetHashCode();
                 return hashCode;
             }
         }
