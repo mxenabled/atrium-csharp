@@ -96,6 +96,7 @@ Class | Method | HTTP request | Description
 *InstitutionsApi* | [**ReadInstitution**](docs/InstitutionsApi.md#readinstitution) | **GET** /institutions/{institution_code} | Read institution
 *InstitutionsApi* | [**ReadInstitutionCredentials**](docs/InstitutionsApi.md#readinstitutioncredentials) | **GET** /institutions/{institution_code}/credentials | Read institution credentials
 *MembersApi* | [**AggregateMember**](docs/MembersApi.md#aggregatemember) | **POST** /users/{user_guid}/members/{member_guid}/aggregate | Aggregate member
+*MembersApi* | [**AggregateMemberBalances**](docs/MembersApi.md#aggregatememberbalances) | **POST** /users/{user_guid}/members/{member_guid}/balance | Aggregate member account balances
 *MembersApi* | [**CreateMember**](docs/MembersApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
 *MembersApi* | [**DeleteMember**](docs/MembersApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
 *MembersApi* | [**ExtendHistory**](docs/MembersApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history

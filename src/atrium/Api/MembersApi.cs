@@ -47,6 +47,29 @@ namespace Atrium.Api
         /// <returns>ApiResponse of MemberResponseBody</returns>
         ApiResponse<MemberResponseBody> AggregateMemberWithHttpInfo (string memberGuid, string userGuid);
         /// <summary>
+        /// Aggregate member account balances
+        /// </summary>
+        /// <remarks>
+        /// This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>MemberResponseBody</returns>
+        MemberResponseBody AggregateMemberBalances (string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Aggregate member account balances
+        /// </summary>
+        /// <remarks>
+        /// This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        ApiResponse<MemberResponseBody> AggregateMemberBalancesWithHttpInfo (string memberGuid, string userGuid);
+        /// <summary>
         /// Create member
         /// </summary>
         /// <remarks>
@@ -365,6 +388,29 @@ namespace Atrium.Api
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberAsyncWithHttpInfo (string memberGuid, string userGuid);
+        /// <summary>
+        /// Aggregate member account balances
+        /// </summary>
+        /// <remarks>
+        /// This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberBalancesAsync (string memberGuid, string userGuid);
+
+        /// <summary>
+        /// Aggregate member account balances
+        /// </summary>
+        /// <remarks>
+        /// This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberBalancesAsyncWithHttpInfo (string memberGuid, string userGuid);
         /// <summary>
         /// Create member
         /// </summary>
@@ -918,6 +964,171 @@ namespace Atrium.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("AggregateMember", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
+        }
+
+        /// <summary>
+        /// Aggregate member account balances This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>MemberResponseBody</returns>
+        public MemberResponseBody AggregateMemberBalances (string memberGuid, string userGuid)
+        {
+             ApiResponse<MemberResponseBody> localVarResponse = AggregateMemberBalancesWithHttpInfo(memberGuid, userGuid);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Aggregate member account balances This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        public ApiResponse< MemberResponseBody > AggregateMemberBalancesWithHttpInfo (string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->AggregateMemberBalances");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->AggregateMemberBalances");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/balance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AggregateMemberBalances", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
+        }
+
+        /// <summary>
+        /// Aggregate member account balances This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        public async System.Threading.Tasks.Task<MemberResponseBody> AggregateMemberBalancesAsync (string memberGuid, string userGuid)
+        {
+             ApiResponse<MemberResponseBody> localVarResponse = await AggregateMemberBalancesAsyncWithHttpInfo(memberGuid, userGuid);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Aggregate member account balances This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> AggregateMemberBalancesAsyncWithHttpInfo (string memberGuid, string userGuid)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->AggregateMemberBalances");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->AggregateMemberBalances");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/balance";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AggregateMemberBalances", localVarResponse);
                 if (exception != null) throw exception;
             }
 

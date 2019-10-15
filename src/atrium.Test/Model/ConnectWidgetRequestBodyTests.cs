@@ -89,6 +89,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'CurrentMemberGuid'
         }
         /// <summary>
+        /// Test the property 'UiMessageVersion'
+        /// </summary>
+        [Test]
+        public void UiMessageVersionTest()
+        {
+            // TODO unit test for the property 'UiMessageVersion'
+        }
+        /// <summary>
         /// Test the property 'UpdateCredentials'
         /// </summary>
         [Test]
