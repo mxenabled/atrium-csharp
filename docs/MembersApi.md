@@ -3,6 +3,7 @@
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AggregateMember**](MembersApi.md#aggregatemember) | **POST** /users/{user_guid}/members/{member_guid}/aggregate | Aggregate member
+[**AggregateMemberBalances**](MembersApi.md#aggregatememberbalances) | **POST** /users/{user_guid}/members/{member_guid}/balance | Aggregate member account balances
 [**CreateMember**](MembersApi.md#createmember) | **POST** /users/{user_guid}/members | Create member
 [**DeleteMember**](MembersApi.md#deletemember) | **DELETE** /users/{user_guid}/members/{member_guid} | Delete member
 [**ExtendHistory**](MembersApi.md#extendhistory) | **POST** /users/{user_guid}/members/{member_guid}/extend_history | Extend history
@@ -51,6 +52,59 @@ namespace Example
             catch (Exception e)
             {
                 Console.WriteLine("Exception when calling MembersApi.AggregateMember: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
+ **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+
+### Return type
+
+[**MemberResponseBody**](MemberResponseBody.md)
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="aggregatememberbalances"></a>
+# **AggregateMemberBalances**
+> MemberResponseBody AggregateMemberBalances (string memberGuid, string userGuid)
+
+Aggregate member account balances
+
+This endpoint operates much like the _aggregate member_ endpoint except that it gathers only account balance information; it does not gather any transaction data at all.
+
+### Example
+```csharp
+using System;
+using Atrium.Api;
+using Atrium.Model;
+
+namespace Example
+{
+    public class AggregateMemberBalancesExample
+    {
+        public void main()
+        {
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+
+            var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
+            var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+
+            try
+            {
+                // Aggregate member account balances
+                MemberResponseBody response = client.members.AggregateMemberBalances(memberGuid, userGuid);
+                Console.WriteLine(response);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Exception when calling MembersApi.AggregateMemberBalances: " + e.Message );
             }
         }
     }

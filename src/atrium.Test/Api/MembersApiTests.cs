@@ -76,6 +76,19 @@ namespace Atrium.Test
         }
         
         /// <summary>
+        /// Test AggregateMemberBalances
+        /// </summary>
+        [Test]
+        public void AggregateMemberBalancesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //var response = instance.AggregateMemberBalances(memberGuid, userGuid);
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
+        }
+        
+        /// <summary>
         /// Test CreateMember
         /// </summary>
         [Test]

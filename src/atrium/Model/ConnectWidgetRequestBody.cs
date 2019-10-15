@@ -35,12 +35,14 @@ namespace Atrium.Model
         /// <param name="isMobileWebview">isMobileWebview.</param>
         /// <param name="currentInstitutionCode">currentInstitutionCode.</param>
         /// <param name="currentMemberGuid">currentMemberGuid.</param>
+        /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
-        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? updateCredentials = default(bool?))
+        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), decimal? uiMessageVersion = default(decimal?), bool? updateCredentials = default(bool?))
         {
             this.IsMobileWebview = isMobileWebview;
             this.CurrentInstitutionCode = currentInstitutionCode;
             this.CurrentMemberGuid = currentMemberGuid;
+            this.UiMessageVersion = uiMessageVersion;
             this.UpdateCredentials = updateCredentials;
         }
         
@@ -63,6 +65,12 @@ namespace Atrium.Model
         public string CurrentMemberGuid { get; set; }
 
         /// <summary>
+        /// Gets or Sets UiMessageVersion
+        /// </summary>
+        [DataMember(Name="ui_message_version", EmitDefaultValue=false)]
+        public decimal? UiMessageVersion { get; set; }
+
+        /// <summary>
         /// Gets or Sets UpdateCredentials
         /// </summary>
         [DataMember(Name="update_credentials", EmitDefaultValue=false)]
@@ -79,6 +87,7 @@ namespace Atrium.Model
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
             sb.Append("  CurrentMemberGuid: ").Append(CurrentMemberGuid).Append("\n");
+            sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -130,6 +139,11 @@ namespace Atrium.Model
                     this.CurrentMemberGuid.Equals(input.CurrentMemberGuid))
                 ) && 
                 (
+                    this.UiMessageVersion == input.UiMessageVersion ||
+                    (this.UiMessageVersion != null &&
+                    this.UiMessageVersion.Equals(input.UiMessageVersion))
+                ) && 
+                (
                     this.UpdateCredentials == input.UpdateCredentials ||
                     (this.UpdateCredentials != null &&
                     this.UpdateCredentials.Equals(input.UpdateCredentials))
@@ -151,6 +165,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.CurrentInstitutionCode.GetHashCode();
                 if (this.CurrentMemberGuid != null)
                     hashCode = hashCode * 59 + this.CurrentMemberGuid.GetHashCode();
+                if (this.UiMessageVersion != null)
+                    hashCode = hashCode * 59 + this.UiMessageVersion.GetHashCode();
                 if (this.UpdateCredentials != null)
                     hashCode = hashCode * 59 + this.UpdateCredentials.GetHashCode();
                 return hashCode;
