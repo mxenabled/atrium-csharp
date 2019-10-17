@@ -75,6 +75,12 @@ namespace Atrium.Model
         public bool? HasProcessedTransactions { get; private set; }
 
         /// <summary>
+        /// Gets or Sets IsAuthenticated
+        /// </summary>
+        [DataMember(Name="is_authenticated", EmitDefaultValue=false)]
+        public bool? IsAuthenticated { get; private set; }
+
+        /// <summary>
         /// Gets or Sets IsBeingAggregated
         /// </summary>
         [DataMember(Name="is_being_aggregated", EmitDefaultValue=false)]
@@ -106,6 +112,7 @@ namespace Atrium.Model
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HasProcessedAccounts: ").Append(HasProcessedAccounts).Append("\n");
             sb.Append("  HasProcessedTransactions: ").Append(HasProcessedTransactions).Append("\n");
+            sb.Append("  IsAuthenticated: ").Append(IsAuthenticated).Append("\n");
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SuccessfullyAggregatedAt: ").Append(SuccessfullyAggregatedAt).Append("\n");
@@ -174,6 +181,11 @@ namespace Atrium.Model
                     this.HasProcessedTransactions.Equals(input.HasProcessedTransactions))
                 ) && 
                 (
+                    this.IsAuthenticated == input.IsAuthenticated ||
+                    (this.IsAuthenticated != null &&
+                    this.IsAuthenticated.Equals(input.IsAuthenticated))
+                ) && 
+                (
                     this.IsBeingAggregated == input.IsBeingAggregated ||
                     (this.IsBeingAggregated != null &&
                     this.IsBeingAggregated.Equals(input.IsBeingAggregated))
@@ -211,6 +223,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.HasProcessedAccounts.GetHashCode();
                 if (this.HasProcessedTransactions != null)
                     hashCode = hashCode * 59 + this.HasProcessedTransactions.GetHashCode();
+                if (this.IsAuthenticated != null)
+                    hashCode = hashCode * 59 + this.IsAuthenticated.GetHashCode();
                 if (this.IsBeingAggregated != null)
                     hashCode = hashCode * 59 + this.IsBeingAggregated.GetHashCode();
                 if (this.Status != null)
