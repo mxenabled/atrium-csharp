@@ -113,6 +113,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'HasProcessedTransactions'
         }
         /// <summary>
+        /// Test the property 'IsAuthenticated'
+        /// </summary>
+        [Test]
+        public void IsAuthenticatedTest()
+        {
+            // TODO unit test for the property 'IsAuthenticated'
+        }
+        /// <summary>
         /// Test the property 'IsBeingAggregated'
         /// </summary>
         [Test]
