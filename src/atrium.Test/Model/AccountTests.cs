@@ -65,6 +65,14 @@ namespace Atrium.Test
 
 
         /// <summary>
+        /// Test the property 'AccountNumber'
+        /// </summary>
+        [Test]
+        public void AccountNumberTest()
+        {
+            // TODO unit test for the property 'AccountNumber'
+        }
+        /// <summary>
         /// Test the property 'Apr'
         /// </summary>
         [Test]

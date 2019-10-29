@@ -47,6 +47,12 @@ namespace Atrium.Model
         }
         
         /// <summary>
+        /// Gets or Sets AccountNumber
+        /// </summary>
+        [DataMember(Name="account_number", EmitDefaultValue=false)]
+        public string AccountNumber { get; private set; }
+
+        /// <summary>
         /// Gets or Sets Apr
         /// </summary>
         [DataMember(Name="apr", EmitDefaultValue=false)]
@@ -252,6 +258,7 @@ namespace Atrium.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Account {\n");
+            sb.Append("  AccountNumber: ").Append(AccountNumber).Append("\n");
             sb.Append("  Apr: ").Append(Apr).Append("\n");
             sb.Append("  Apy: ").Append(Apy).Append("\n");
             sb.Append("  AvailableBalance: ").Append(AvailableBalance).Append("\n");
@@ -319,6 +326,11 @@ namespace Atrium.Model
                 return false;
 
             return 
+                (
+                    this.AccountNumber == input.AccountNumber ||
+                    (this.AccountNumber != null &&
+                    this.AccountNumber.Equals(input.AccountNumber))
+                ) && 
                 (
                     this.Apr == input.Apr ||
                     (this.Apr != null &&
@@ -495,6 +507,8 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.AccountNumber != null)
+                    hashCode = hashCode * 59 + this.AccountNumber.GetHashCode();
                 if (this.Apr != null)
                     hashCode = hashCode * 59 + this.Apr.GetHashCode();
                 if (this.Apy != null)
