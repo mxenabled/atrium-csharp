@@ -3,6 +3,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**AccountNumber** | **string** |  | [optional] 
 **Apr** | **decimal?** |  | [optional] 
 **Apy** | **decimal?** |  | [optional] 
 **AvailableBalance** | **decimal?** |  | [optional] 
