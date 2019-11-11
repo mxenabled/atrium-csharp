@@ -138,6 +138,7 @@ Class | Method | HTTP request | Description
  - [Model.AccountResponseBody](docs/AccountResponseBody.md)
  - [Model.AccountsResponseBody](docs/AccountsResponseBody.md)
  - [Model.Challenge](docs/Challenge.md)
+ - [Model.ChallengeImageOption](docs/ChallengeImageOption.md)
  - [Model.ChallengeOption](docs/ChallengeOption.md)
  - [Model.ChallengesResponseBody](docs/ChallengesResponseBody.md)
  - [Model.ConnectWidget](docs/ConnectWidget.md)
