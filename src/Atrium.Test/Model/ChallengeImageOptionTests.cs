@@ -23,16 +23,16 @@ using Newtonsoft.Json;
 namespace Atrium.Test
 {
     /// <summary>
-    ///  Class for testing ChallengeOption
+    ///  Class for testing ChallengeImageOption
     /// </summary>
     /// <remarks>
     /// Please update the test case below to test the model.
     /// </remarks>
     [TestFixture]
-    public class ChallengeOptionTests
+    public class ChallengeImageOptionTests
     {
-        // TODO uncomment below to declare an instance variable for ChallengeOption
-        //private ChallengeOption instance;
+        // TODO uncomment below to declare an instance variable for ChallengeImageOption
+        //private ChallengeImageOption instance;
 
         /// <summary>
         /// Setup before each test
@@ -40,8 +40,8 @@ namespace Atrium.Test
         [SetUp]
         public void Init()
         {
-            // TODO uncomment below to create an instance of ChallengeOption
-            //instance = new ChallengeOption();
+            // TODO uncomment below to create an instance of ChallengeImageOption
+            //instance = new ChallengeImageOption();
         }
 
         /// <summary>
@@ -54,16 +54,24 @@ namespace Atrium.Test
         }
 
         /// <summary>
-        /// Test an instance of ChallengeOption
+        /// Test an instance of ChallengeImageOption
         /// </summary>
         [Test]
-        public void ChallengeOptionInstanceTest()
+        public void ChallengeImageOptionInstanceTest()
         {
-            // TODO uncomment below to test "IsInstanceOfType" ChallengeOption
-            //Assert.IsInstanceOfType<ChallengeOption> (instance, "variable 'instance' is a ChallengeOption");
+            // TODO uncomment below to test "IsInstanceOfType" ChallengeImageOption
+            //Assert.IsInstanceOfType<ChallengeImageOption> (instance, "variable 'instance' is a ChallengeImageOption");
         }
 
 
+        /// <summary>
+        /// Test the property 'DataUri'
+        /// </summary>
+        [Test]
+        public void DataUriTest()
+        {
+            // TODO unit test for the property 'DataUri'
+        }
         /// <summary>
         /// Test the property 'Label'
         /// </summary>

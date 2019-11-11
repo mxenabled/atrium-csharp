@@ -89,6 +89,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'ImageData'
         }
         /// <summary>
+        /// Test the property 'ImageOptions'
+        /// </summary>
+        [Test]
+        public void ImageOptionsTest()
+        {
+            // TODO unit test for the property 'ImageOptions'
+        }
+        /// <summary>
         /// Test the property 'Label'
         /// </summary>
         [Test]

@@ -32,9 +32,11 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Challenge" /> class.
         /// </summary>
+        /// <param name="imageOptions">imageOptions.</param>
         /// <param name="options">options.</param>
-        public Challenge(List<ChallengeOption> options = default(List<ChallengeOption>))
+        public Challenge(List<ChallengeImageOption> imageOptions = default(List<ChallengeImageOption>), List<ChallengeOption> options = default(List<ChallengeOption>))
         {
+            this.ImageOptions = imageOptions;
             this.Options = options;
         }
         
@@ -55,6 +57,12 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="image_data", EmitDefaultValue=false)]
         public string ImageData { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets ImageOptions
+        /// </summary>
+        [DataMember(Name="image_options", EmitDefaultValue=false)]
+        public List<ChallengeImageOption> ImageOptions { get; set; }
 
         /// <summary>
         /// Gets or Sets Label
@@ -85,6 +93,7 @@ namespace Atrium.Model
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  ImageData: ").Append(ImageData).Append("\n");
+            sb.Append("  ImageOptions: ").Append(ImageOptions).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Options: ").Append(Options).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -138,6 +147,11 @@ namespace Atrium.Model
                     this.ImageData.Equals(input.ImageData))
                 ) && 
                 (
+                    this.ImageOptions == input.ImageOptions ||
+                    this.ImageOptions != null &&
+                    this.ImageOptions.SequenceEqual(input.ImageOptions)
+                ) && 
+                (
                     this.Label == input.Label ||
                     (this.Label != null &&
                     this.Label.Equals(input.Label))
@@ -169,6 +183,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.ImageData != null)
                     hashCode = hashCode * 59 + this.ImageData.GetHashCode();
+                if (this.ImageOptions != null)
+                    hashCode = hashCode * 59 + this.ImageOptions.GetHashCode();
                 if (this.Label != null)
                     hashCode = hashCode * 59 + this.Label.GetHashCode();
                 if (this.Options != null)

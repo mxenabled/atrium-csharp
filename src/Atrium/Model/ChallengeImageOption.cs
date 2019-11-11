@@ -24,19 +24,25 @@ using DateConverter = Atrium.Client.DateConverter;
 namespace Atrium.Model
 {
     /// <summary>
-    /// ChallengeOption
+    /// ChallengeImageOption
     /// </summary>
     [DataContract]
-    public partial class ChallengeOption :  IEquatable<ChallengeOption>, IValidatableObject
+    public partial class ChallengeImageOption :  IEquatable<ChallengeImageOption>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ChallengeOption" /> class.
+        /// Initializes a new instance of the <see cref="ChallengeImageOption" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        public ChallengeOption()
+        public ChallengeImageOption()
         {
         }
         
+        /// <summary>
+        /// Gets or Sets DataUri
+        /// </summary>
+        [DataMember(Name="data_uri", EmitDefaultValue=false)]
+        public string DataUri { get; private set; }
+
         /// <summary>
         /// Gets or Sets Label
         /// </summary>
@@ -56,7 +62,8 @@ namespace Atrium.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ChallengeOption {\n");
+            sb.Append("class ChallengeImageOption {\n");
+            sb.Append("  DataUri: ").Append(DataUri).Append("\n");
             sb.Append("  Label: ").Append(Label).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -79,20 +86,25 @@ namespace Atrium.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as ChallengeOption);
+            return this.Equals(input as ChallengeImageOption);
         }
 
         /// <summary>
-        /// Returns true if ChallengeOption instances are equal
+        /// Returns true if ChallengeImageOption instances are equal
         /// </summary>
-        /// <param name="input">Instance of ChallengeOption to be compared</param>
+        /// <param name="input">Instance of ChallengeImageOption to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ChallengeOption input)
+        public bool Equals(ChallengeImageOption input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.DataUri == input.DataUri ||
+                    (this.DataUri != null &&
+                    this.DataUri.Equals(input.DataUri))
+                ) && 
                 (
                     this.Label == input.Label ||
                     (this.Label != null &&
@@ -114,6 +126,8 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.DataUri != null)
+                    hashCode = hashCode * 59 + this.DataUri.GetHashCode();
                 if (this.Label != null)
                     hashCode = hashCode * 59 + this.Label.GetHashCode();
                 if (this.Value != null)

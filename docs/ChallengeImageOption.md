@@ -1,8 +1,9 @@
-# Atrium.Model.ChallengeOption
+# Atrium.Model.ChallengeImageOption
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**DataUri** | **string** |  | [optional] 
 **Label** | **string** |  | [optional] 
 **Value** | **string** |  | [optional] 
 

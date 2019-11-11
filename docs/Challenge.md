@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **FieldName** | **string** |  | [optional] 
 **Guid** | **string** |  | [optional] 
 **ImageData** | **string** |  | [optional] 
+**ImageOptions** | [**List&lt;ChallengeImageOption&gt;**](ChallengeImageOption.md) |  | [optional] 
 **Label** | **string** |  | [optional] 
 **Options** | [**List&lt;ChallengeOption&gt;**](ChallengeOption.md) |  | [optional] 
 **Type** | **string** |  | [optional] 
