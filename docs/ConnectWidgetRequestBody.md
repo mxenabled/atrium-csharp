@@ -6,6 +6,8 @@ Name | Type | Description | Notes
 **IsMobileWebview** | **bool?** |  | [optional] 
 **CurrentInstitutionCode** | **string** |  | [optional] 
 **CurrentMemberGuid** | **string** |  | [optional] 
+**DisableInstitutionSearch** | **bool?** |  | [optional] 
+**Mode** | **string** |  | [optional] 
 **UiMessageVersion** | **decimal?** |  | [optional] 
 **UpdateCredentials** | **bool?** |  | [optional] 
 

@@ -35,13 +35,17 @@ namespace Atrium.Model
         /// <param name="isMobileWebview">isMobileWebview.</param>
         /// <param name="currentInstitutionCode">currentInstitutionCode.</param>
         /// <param name="currentMemberGuid">currentMemberGuid.</param>
+        /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
+        /// <param name="mode">mode.</param>
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
-        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), decimal? uiMessageVersion = default(decimal?), bool? updateCredentials = default(bool?))
+        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? disableInstitutionSearch = default(bool?), string mode = default(string), decimal? uiMessageVersion = default(decimal?), bool? updateCredentials = default(bool?))
         {
             this.IsMobileWebview = isMobileWebview;
             this.CurrentInstitutionCode = currentInstitutionCode;
             this.CurrentMemberGuid = currentMemberGuid;
+            this.DisableInstitutionSearch = disableInstitutionSearch;
+            this.Mode = mode;
             this.UiMessageVersion = uiMessageVersion;
             this.UpdateCredentials = updateCredentials;
         }
@@ -63,6 +67,18 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="current_member_guid", EmitDefaultValue=false)]
         public string CurrentMemberGuid { get; set; }
+
+        /// <summary>
+        /// Gets or Sets DisableInstitutionSearch
+        /// </summary>
+        [DataMember(Name="disable_institution_search", EmitDefaultValue=false)]
+        public bool? DisableInstitutionSearch { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Mode
+        /// </summary>
+        [DataMember(Name="mode", EmitDefaultValue=false)]
+        public string Mode { get; set; }
 
         /// <summary>
         /// Gets or Sets UiMessageVersion
@@ -87,6 +103,8 @@ namespace Atrium.Model
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
             sb.Append("  CurrentMemberGuid: ").Append(CurrentMemberGuid).Append("\n");
+            sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
+            sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
             sb.Append("}\n");
@@ -139,6 +157,16 @@ namespace Atrium.Model
                     this.CurrentMemberGuid.Equals(input.CurrentMemberGuid))
                 ) && 
                 (
+                    this.DisableInstitutionSearch == input.DisableInstitutionSearch ||
+                    (this.DisableInstitutionSearch != null &&
+                    this.DisableInstitutionSearch.Equals(input.DisableInstitutionSearch))
+                ) && 
+                (
+                    this.Mode == input.Mode ||
+                    (this.Mode != null &&
+                    this.Mode.Equals(input.Mode))
+                ) && 
+                (
                     this.UiMessageVersion == input.UiMessageVersion ||
                     (this.UiMessageVersion != null &&
                     this.UiMessageVersion.Equals(input.UiMessageVersion))
@@ -165,6 +193,10 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.CurrentInstitutionCode.GetHashCode();
                 if (this.CurrentMemberGuid != null)
                     hashCode = hashCode * 59 + this.CurrentMemberGuid.GetHashCode();
+                if (this.DisableInstitutionSearch != null)
+                    hashCode = hashCode * 59 + this.DisableInstitutionSearch.GetHashCode();
+                if (this.Mode != null)
+                    hashCode = hashCode * 59 + this.Mode.GetHashCode();
                 if (this.UiMessageVersion != null)
                     hashCode = hashCode * 59 + this.UiMessageVersion.GetHashCode();
                 if (this.UpdateCredentials != null)
