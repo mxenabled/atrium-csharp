@@ -89,6 +89,22 @@ namespace Atrium.Test
             // TODO unit test for the property 'CurrentMemberGuid'
         }
         /// <summary>
+        /// Test the property 'DisableInstitutionSearch'
+        /// </summary>
+        [Test]
+        public void DisableInstitutionSearchTest()
+        {
+            // TODO unit test for the property 'DisableInstitutionSearch'
+        }
+        /// <summary>
+        /// Test the property 'Mode'
+        /// </summary>
+        [Test]
+        public void ModeTest()
+        {
+            // TODO unit test for the property 'Mode'
+        }
+        /// <summary>
         /// Test the property 'UiMessageVersion'
         /// </summary>
         [Test]
