@@ -116,6 +116,24 @@ namespace Atrium.Model
         public bool? IsPayrollAdvance { get; private set; }
 
         /// <summary>
+        /// Gets or Sets MerchantCategoryCode
+        /// </summary>
+        [DataMember(Name="merchant_category_code", EmitDefaultValue=false)]
+        public decimal? MerchantCategoryCode { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets MerchantGuid
+        /// </summary>
+        [DataMember(Name="merchant_guid", EmitDefaultValue=false)]
+        public string MerchantGuid { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets OriginalDescription
+        /// </summary>
+        [DataMember(Name="original_description", EmitDefaultValue=false)]
+        public string OriginalDescription { get; private set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -136,6 +154,9 @@ namespace Atrium.Model
             sb.Append("  IsInternational: ").Append(IsInternational).Append("\n");
             sb.Append("  IsOverdraftFee: ").Append(IsOverdraftFee).Append("\n");
             sb.Append("  IsPayrollAdvance: ").Append(IsPayrollAdvance).Append("\n");
+            sb.Append("  MerchantCategoryCode: ").Append(MerchantCategoryCode).Append("\n");
+            sb.Append("  MerchantGuid: ").Append(MerchantGuid).Append("\n");
+            sb.Append("  OriginalDescription: ").Append(OriginalDescription).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -234,6 +255,21 @@ namespace Atrium.Model
                     this.IsPayrollAdvance == input.IsPayrollAdvance ||
                     (this.IsPayrollAdvance != null &&
                     this.IsPayrollAdvance.Equals(input.IsPayrollAdvance))
+                ) && 
+                (
+                    this.MerchantCategoryCode == input.MerchantCategoryCode ||
+                    (this.MerchantCategoryCode != null &&
+                    this.MerchantCategoryCode.Equals(input.MerchantCategoryCode))
+                ) && 
+                (
+                    this.MerchantGuid == input.MerchantGuid ||
+                    (this.MerchantGuid != null &&
+                    this.MerchantGuid.Equals(input.MerchantGuid))
+                ) && 
+                (
+                    this.OriginalDescription == input.OriginalDescription ||
+                    (this.OriginalDescription != null &&
+                    this.OriginalDescription.Equals(input.OriginalDescription))
                 );
         }
 
@@ -272,6 +308,12 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.IsOverdraftFee.GetHashCode();
                 if (this.IsPayrollAdvance != null)
                     hashCode = hashCode * 59 + this.IsPayrollAdvance.GetHashCode();
+                if (this.MerchantCategoryCode != null)
+                    hashCode = hashCode * 59 + this.MerchantCategoryCode.GetHashCode();
+                if (this.MerchantGuid != null)
+                    hashCode = hashCode * 59 + this.MerchantGuid.GetHashCode();
+                if (this.OriginalDescription != null)
+                    hashCode = hashCode * 59 + this.OriginalDescription.GetHashCode();
                 return hashCode;
             }
         }

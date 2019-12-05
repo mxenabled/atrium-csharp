@@ -168,6 +168,30 @@ namespace Atrium.Test
         {
             // TODO unit test for the property 'IsPayrollAdvance'
         }
+        /// <summary>
+        /// Test the property 'MerchantCategoryCode'
+        /// </summary>
+        [Test]
+        public void MerchantCategoryCodeTest()
+        {
+            // TODO unit test for the property 'MerchantCategoryCode'
+        }
+        /// <summary>
+        /// Test the property 'MerchantGuid'
+        /// </summary>
+        [Test]
+        public void MerchantGuidTest()
+        {
+            // TODO unit test for the property 'MerchantGuid'
+        }
+        /// <summary>
+        /// Test the property 'OriginalDescription'
+        /// </summary>
+        [Test]
+        public void OriginalDescriptionTest()
+        {
+            // TODO unit test for the property 'OriginalDescription'
+        }
 
     }
 
