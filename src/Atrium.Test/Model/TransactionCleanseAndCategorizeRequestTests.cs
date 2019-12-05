@@ -89,6 +89,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'Identifier'
         }
         /// <summary>
+        /// Test the property 'MerchantCategoryCode'
+        /// </summary>
+        [Test]
+        public void MerchantCategoryCodeTest()
+        {
+            // TODO unit test for the property 'MerchantCategoryCode'
+        }
+        /// <summary>
         /// Test the property 'Type'
         /// </summary>
         [Test]

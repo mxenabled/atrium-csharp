@@ -35,12 +35,14 @@ namespace Atrium.Model
         /// <param name="amount">amount.</param>
         /// <param name="description">description.</param>
         /// <param name="identifier">identifier.</param>
+        /// <param name="merchantCategoryCode">merchantCategoryCode.</param>
         /// <param name="type">type.</param>
-        public TransactionCleanseAndCategorizeRequest(decimal? amount = default(decimal?), string description = default(string), string identifier = default(string), string type = default(string))
+        public TransactionCleanseAndCategorizeRequest(decimal? amount = default(decimal?), string description = default(string), string identifier = default(string), decimal? merchantCategoryCode = default(decimal?), string type = default(string))
         {
             this.Amount = amount;
             this.Description = description;
             this.Identifier = identifier;
+            this.MerchantCategoryCode = merchantCategoryCode;
             this.Type = type;
         }
         
@@ -63,6 +65,12 @@ namespace Atrium.Model
         public string Identifier { get; set; }
 
         /// <summary>
+        /// Gets or Sets MerchantCategoryCode
+        /// </summary>
+        [DataMember(Name="merchant_category_code", EmitDefaultValue=false)]
+        public decimal? MerchantCategoryCode { get; set; }
+
+        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
@@ -79,6 +87,7 @@ namespace Atrium.Model
             sb.Append("  Amount: ").Append(Amount).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Identifier: ").Append(Identifier).Append("\n");
+            sb.Append("  MerchantCategoryCode: ").Append(MerchantCategoryCode).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -130,6 +139,11 @@ namespace Atrium.Model
                     this.Identifier.Equals(input.Identifier))
                 ) && 
                 (
+                    this.MerchantCategoryCode == input.MerchantCategoryCode ||
+                    (this.MerchantCategoryCode != null &&
+                    this.MerchantCategoryCode.Equals(input.MerchantCategoryCode))
+                ) && 
+                (
                     this.Type == input.Type ||
                     (this.Type != null &&
                     this.Type.Equals(input.Type))
@@ -151,6 +165,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.Identifier != null)
                     hashCode = hashCode * 59 + this.Identifier.GetHashCode();
+                if (this.MerchantCategoryCode != null)
+                    hashCode = hashCode * 59 + this.MerchantCategoryCode.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
                 return hashCode;
