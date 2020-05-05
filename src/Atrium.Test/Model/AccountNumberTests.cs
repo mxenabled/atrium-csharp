@@ -81,6 +81,14 @@ namespace Atrium.Test
             // TODO unit test for the property '_AccountNumber'
         }
         /// <summary>
+        /// Test the property 'InstitutionNumber'
+        /// </summary>
+        [Test]
+        public void InstitutionNumberTest()
+        {
+            // TODO unit test for the property 'InstitutionNumber'
+        }
+        /// <summary>
         /// Test the property 'MemberGuid'
         /// </summary>
         [Test]
@@ -95,6 +103,14 @@ namespace Atrium.Test
         public void RoutingNumberTest()
         {
             // TODO unit test for the property 'RoutingNumber'
+        }
+        /// <summary>
+        /// Test the property 'TransitNumber'
+        /// </summary>
+        [Test]
+        public void TransitNumberTest()
+        {
+            // TODO unit test for the property 'TransitNumber'
         }
         /// <summary>
         /// Test the property 'UserGuid'

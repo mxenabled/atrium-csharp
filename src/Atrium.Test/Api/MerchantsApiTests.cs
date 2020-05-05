@@ -63,6 +63,29 @@ namespace Atrium.Test
 
         
         /// <summary>
+        /// Test ListMerchantLocations
+        /// </summary>
+        [Test]
+        public void ListMerchantLocationsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string merchantGuid = null;
+            //var response = instance.ListMerchantLocations(merchantGuid);
+            //Assert.IsInstanceOf<MerchantLocationsResponseBody> (response, "response is MerchantLocationsResponseBody");
+        }
+        
+        /// <summary>
+        /// Test ListMerchants
+        /// </summary>
+        [Test]
+        public void ListMerchantsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //var response = instance.ListMerchants();
+            //Assert.IsInstanceOf<MerchantsResponseBody> (response, "response is MerchantsResponseBody");
+        }
+        
+        /// <summary>
         /// Test ReadMerchant
         /// </summary>
         [Test]
@@ -72,6 +95,19 @@ namespace Atrium.Test
             //string merchantGuid = null;
             //var response = instance.ReadMerchant(merchantGuid);
             //Assert.IsInstanceOf<MerchantResponseBody> (response, "response is MerchantResponseBody");
+        }
+        
+        /// <summary>
+        /// Test ReadMerchantLocation
+        /// </summary>
+        [Test]
+        public void ReadMerchantLocationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string merchantGuid = null;
+            //string merchantLocationGuid = null;
+            //var response = instance.ReadMerchantLocation(merchantGuid, merchantLocationGuid);
+            //Assert.IsInstanceOf<MerchantLocationResponseBody> (response, "response is MerchantLocationResponseBody");
         }
         
     }

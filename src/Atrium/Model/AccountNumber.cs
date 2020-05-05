@@ -50,6 +50,12 @@ namespace Atrium.Model
         public string _AccountNumber { get; private set; }
 
         /// <summary>
+        /// Gets or Sets InstitutionNumber
+        /// </summary>
+        [DataMember(Name="institution_number", EmitDefaultValue=false)]
+        public string InstitutionNumber { get; private set; }
+
+        /// <summary>
         /// Gets or Sets MemberGuid
         /// </summary>
         [DataMember(Name="member_guid", EmitDefaultValue=false)]
@@ -60,6 +66,12 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="routing_number", EmitDefaultValue=false)]
         public string RoutingNumber { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets TransitNumber
+        /// </summary>
+        [DataMember(Name="transit_number", EmitDefaultValue=false)]
+        public string TransitNumber { get; private set; }
 
         /// <summary>
         /// Gets or Sets UserGuid
@@ -77,8 +89,10 @@ namespace Atrium.Model
             sb.Append("class AccountNumber {\n");
             sb.Append("  AccountGuid: ").Append(AccountGuid).Append("\n");
             sb.Append("  _AccountNumber: ").Append(_AccountNumber).Append("\n");
+            sb.Append("  InstitutionNumber: ").Append(InstitutionNumber).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
             sb.Append("  RoutingNumber: ").Append(RoutingNumber).Append("\n");
+            sb.Append("  TransitNumber: ").Append(TransitNumber).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +139,11 @@ namespace Atrium.Model
                     this._AccountNumber.Equals(input._AccountNumber))
                 ) && 
                 (
+                    this.InstitutionNumber == input.InstitutionNumber ||
+                    (this.InstitutionNumber != null &&
+                    this.InstitutionNumber.Equals(input.InstitutionNumber))
+                ) && 
+                (
                     this.MemberGuid == input.MemberGuid ||
                     (this.MemberGuid != null &&
                     this.MemberGuid.Equals(input.MemberGuid))
@@ -133,6 +152,11 @@ namespace Atrium.Model
                     this.RoutingNumber == input.RoutingNumber ||
                     (this.RoutingNumber != null &&
                     this.RoutingNumber.Equals(input.RoutingNumber))
+                ) && 
+                (
+                    this.TransitNumber == input.TransitNumber ||
+                    (this.TransitNumber != null &&
+                    this.TransitNumber.Equals(input.TransitNumber))
                 ) && 
                 (
                     this.UserGuid == input.UserGuid ||
@@ -154,10 +178,14 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.AccountGuid.GetHashCode();
                 if (this._AccountNumber != null)
                     hashCode = hashCode * 59 + this._AccountNumber.GetHashCode();
+                if (this.InstitutionNumber != null)
+                    hashCode = hashCode * 59 + this.InstitutionNumber.GetHashCode();
                 if (this.MemberGuid != null)
                     hashCode = hashCode * 59 + this.MemberGuid.GetHashCode();
                 if (this.RoutingNumber != null)
                     hashCode = hashCode * 59 + this.RoutingNumber.GetHashCode();
+                if (this.TransitNumber != null)
+                    hashCode = hashCode * 59 + this.TransitNumber.GetHashCode();
                 if (this.UserGuid != null)
                     hashCode = hashCode * 59 + this.UserGuid.GetHashCode();
                 return hashCode;
