@@ -91,6 +91,12 @@ namespace Atrium.Model
         public string Name { get; private set; }
 
         /// <summary>
+        /// Gets or Sets OauthWindowUri
+        /// </summary>
+        [DataMember(Name="oauth_window_uri", EmitDefaultValue=false)]
+        public string OauthWindowUri { get; private set; }
+
+        /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
@@ -124,6 +130,7 @@ namespace Atrium.Model
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OauthWindowUri: ").Append(OauthWindowUri).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SuccessfullyAggregatedAt: ").Append(SuccessfullyAggregatedAt).Append("\n");
             sb.Append("  UserGuid: ").Append(UserGuid).Append("\n");
@@ -202,6 +209,11 @@ namespace Atrium.Model
                     this.Name.Equals(input.Name))
                 ) && 
                 (
+                    this.OauthWindowUri == input.OauthWindowUri ||
+                    (this.OauthWindowUri != null &&
+                    this.OauthWindowUri.Equals(input.OauthWindowUri))
+                ) && 
+                (
                     this.Status == input.Status ||
                     (this.Status != null &&
                     this.Status.Equals(input.Status))
@@ -243,6 +255,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.OauthWindowUri != null)
+                    hashCode = hashCode * 59 + this.OauthWindowUri.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.SuccessfullyAggregatedAt != null)

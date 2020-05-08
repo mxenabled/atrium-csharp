@@ -37,22 +37,16 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MemberCreateRequest" /> class.
         /// </summary>
-        /// <param name="credentials">credentials (required).</param>
+        /// <param name="credentials">credentials.</param>
         /// <param name="identifier">identifier.</param>
+        /// <param name="isOauth">isOauth.</param>
         /// <param name="institutionCode">institutionCode (required).</param>
         /// <param name="metadata">metadata.</param>
+        /// <param name="referralSource">referralSource.</param>
         /// <param name="skipAggregation">skipAggregation.</param>
-        public MemberCreateRequest(List<CredentialRequest> credentials = default(List<CredentialRequest>), string identifier = default(string), string institutionCode = default(string), string metadata = default(string), bool? skipAggregation = default(bool?))
+        /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
+        public MemberCreateRequest(List<CredentialRequest> credentials = default(List<CredentialRequest>), string identifier = default(string), bool? isOauth = default(bool?), string institutionCode = default(string), string metadata = default(string), string referralSource = default(string), bool? skipAggregation = default(bool?), string uiMessageWebviewUrlScheme = default(string))
         {
-            // to ensure "credentials" is required (not null)
-            if (credentials == null)
-            {
-                throw new InvalidDataException("credentials is a required property for MemberCreateRequest and cannot be null");
-            }
-            else
-            {
-                this.Credentials = credentials;
-            }
             // to ensure "institutionCode" is required (not null)
             if (institutionCode == null)
             {
@@ -62,9 +56,13 @@ namespace Atrium.Model
             {
                 this.InstitutionCode = institutionCode;
             }
+            this.Credentials = credentials;
             this.Identifier = identifier;
+            this.IsOauth = isOauth;
             this.Metadata = metadata;
+            this.ReferralSource = referralSource;
             this.SkipAggregation = skipAggregation;
+            this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
         }
         
         /// <summary>
@@ -80,6 +78,12 @@ namespace Atrium.Model
         public string Identifier { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsOauth
+        /// </summary>
+        [DataMember(Name="is_oauth", EmitDefaultValue=false)]
+        public bool? IsOauth { get; set; }
+
+        /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
         [DataMember(Name="institution_code", EmitDefaultValue=false)]
@@ -92,10 +96,22 @@ namespace Atrium.Model
         public string Metadata { get; set; }
 
         /// <summary>
+        /// Gets or Sets ReferralSource
+        /// </summary>
+        [DataMember(Name="referral_source", EmitDefaultValue=false)]
+        public string ReferralSource { get; set; }
+
+        /// <summary>
         /// Gets or Sets SkipAggregation
         /// </summary>
         [DataMember(Name="skip_aggregation", EmitDefaultValue=false)]
         public bool? SkipAggregation { get; set; }
+
+        /// <summary>
+        /// Gets or Sets UiMessageWebviewUrlScheme
+        /// </summary>
+        [DataMember(Name="ui_message_webview_url_scheme", EmitDefaultValue=false)]
+        public string UiMessageWebviewUrlScheme { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -107,9 +123,12 @@ namespace Atrium.Model
             sb.Append("class MemberCreateRequest {\n");
             sb.Append("  Credentials: ").Append(Credentials).Append("\n");
             sb.Append("  Identifier: ").Append(Identifier).Append("\n");
+            sb.Append("  IsOauth: ").Append(IsOauth).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            sb.Append("  ReferralSource: ").Append(ReferralSource).Append("\n");
             sb.Append("  SkipAggregation: ").Append(SkipAggregation).Append("\n");
+            sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +174,11 @@ namespace Atrium.Model
                     this.Identifier.Equals(input.Identifier))
                 ) && 
                 (
+                    this.IsOauth == input.IsOauth ||
+                    (this.IsOauth != null &&
+                    this.IsOauth.Equals(input.IsOauth))
+                ) && 
+                (
                     this.InstitutionCode == input.InstitutionCode ||
                     (this.InstitutionCode != null &&
                     this.InstitutionCode.Equals(input.InstitutionCode))
@@ -165,9 +189,19 @@ namespace Atrium.Model
                     this.Metadata.Equals(input.Metadata))
                 ) && 
                 (
+                    this.ReferralSource == input.ReferralSource ||
+                    (this.ReferralSource != null &&
+                    this.ReferralSource.Equals(input.ReferralSource))
+                ) && 
+                (
                     this.SkipAggregation == input.SkipAggregation ||
                     (this.SkipAggregation != null &&
                     this.SkipAggregation.Equals(input.SkipAggregation))
+                ) && 
+                (
+                    this.UiMessageWebviewUrlScheme == input.UiMessageWebviewUrlScheme ||
+                    (this.UiMessageWebviewUrlScheme != null &&
+                    this.UiMessageWebviewUrlScheme.Equals(input.UiMessageWebviewUrlScheme))
                 );
         }
 
@@ -184,12 +218,18 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Credentials.GetHashCode();
                 if (this.Identifier != null)
                     hashCode = hashCode * 59 + this.Identifier.GetHashCode();
+                if (this.IsOauth != null)
+                    hashCode = hashCode * 59 + this.IsOauth.GetHashCode();
                 if (this.InstitutionCode != null)
                     hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
+                if (this.ReferralSource != null)
+                    hashCode = hashCode * 59 + this.ReferralSource.GetHashCode();
                 if (this.SkipAggregation != null)
                     hashCode = hashCode * 59 + this.SkipAggregation.GetHashCode();
+                if (this.UiMessageWebviewUrlScheme != null)
+                    hashCode = hashCode * 59 + this.UiMessageWebviewUrlScheme.GetHashCode();
                 return hashCode;
             }
         }

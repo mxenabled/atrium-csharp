@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **DisableInstitutionSearch** | **bool?** |  | [optional] 
 **Mode** | **string** |  | [optional] 
 **UiMessageVersion** | **decimal?** |  | [optional] 
+**UiMessageWebviewUrlScheme** | **string** |  | [optional] 
 **UpdateCredentials** | **bool?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

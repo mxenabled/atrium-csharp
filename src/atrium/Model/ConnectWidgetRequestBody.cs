@@ -38,8 +38,9 @@ namespace Atrium.Model
         /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
         /// <param name="mode">mode.</param>
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
+        /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
-        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? disableInstitutionSearch = default(bool?), string mode = default(string), decimal? uiMessageVersion = default(decimal?), bool? updateCredentials = default(bool?))
+        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? disableInstitutionSearch = default(bool?), string mode = default(string), decimal? uiMessageVersion = default(decimal?), string uiMessageWebviewUrlScheme = default(string), bool? updateCredentials = default(bool?))
         {
             this.IsMobileWebview = isMobileWebview;
             this.CurrentInstitutionCode = currentInstitutionCode;
@@ -47,6 +48,7 @@ namespace Atrium.Model
             this.DisableInstitutionSearch = disableInstitutionSearch;
             this.Mode = mode;
             this.UiMessageVersion = uiMessageVersion;
+            this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
             this.UpdateCredentials = updateCredentials;
         }
         
@@ -87,6 +89,12 @@ namespace Atrium.Model
         public decimal? UiMessageVersion { get; set; }
 
         /// <summary>
+        /// Gets or Sets UiMessageWebviewUrlScheme
+        /// </summary>
+        [DataMember(Name="ui_message_webview_url_scheme", EmitDefaultValue=false)]
+        public string UiMessageWebviewUrlScheme { get; set; }
+
+        /// <summary>
         /// Gets or Sets UpdateCredentials
         /// </summary>
         [DataMember(Name="update_credentials", EmitDefaultValue=false)]
@@ -106,6 +114,7 @@ namespace Atrium.Model
             sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
+            sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -172,6 +181,11 @@ namespace Atrium.Model
                     this.UiMessageVersion.Equals(input.UiMessageVersion))
                 ) && 
                 (
+                    this.UiMessageWebviewUrlScheme == input.UiMessageWebviewUrlScheme ||
+                    (this.UiMessageWebviewUrlScheme != null &&
+                    this.UiMessageWebviewUrlScheme.Equals(input.UiMessageWebviewUrlScheme))
+                ) && 
+                (
                     this.UpdateCredentials == input.UpdateCredentials ||
                     (this.UpdateCredentials != null &&
                     this.UpdateCredentials.Equals(input.UpdateCredentials))
@@ -199,6 +213,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Mode.GetHashCode();
                 if (this.UiMessageVersion != null)
                     hashCode = hashCode * 59 + this.UiMessageVersion.GetHashCode();
+                if (this.UiMessageWebviewUrlScheme != null)
+                    hashCode = hashCode * 59 + this.UiMessageWebviewUrlScheme.GetHashCode();
                 if (this.UpdateCredentials != null)
                     hashCode = hashCode * 59 + this.UpdateCredentials.GetHashCode();
                 return hashCode;

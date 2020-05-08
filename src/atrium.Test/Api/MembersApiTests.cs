@@ -226,6 +226,21 @@ namespace Atrium.Test
         }
         
         /// <summary>
+        /// Test ReadOAuthWindowURI
+        /// </summary>
+        [Test]
+        public void ReadOAuthWindowURITest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string memberGuid = null;
+            //string userGuid = null;
+            //string referralSource = null;
+            //string uiMessageWebviewUrlScheme = null;
+            //var response = instance.ReadOAuthWindowURI(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme);
+            //Assert.IsInstanceOf<MemberResponseBody> (response, "response is MemberResponseBody");
+        }
+        
+        /// <summary>
         /// Test ResumeMember
         /// </summary>
         [Test]
