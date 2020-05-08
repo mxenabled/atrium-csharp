@@ -81,6 +81,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'Identifier'
         }
         /// <summary>
+        /// Test the property 'IsOauth'
+        /// </summary>
+        [Test]
+        public void IsOauthTest()
+        {
+            // TODO unit test for the property 'IsOauth'
+        }
+        /// <summary>
         /// Test the property 'InstitutionCode'
         /// </summary>
         [Test]
@@ -97,12 +105,28 @@ namespace Atrium.Test
             // TODO unit test for the property 'Metadata'
         }
         /// <summary>
+        /// Test the property 'ReferralSource'
+        /// </summary>
+        [Test]
+        public void ReferralSourceTest()
+        {
+            // TODO unit test for the property 'ReferralSource'
+        }
+        /// <summary>
         /// Test the property 'SkipAggregation'
         /// </summary>
         [Test]
         public void SkipAggregationTest()
         {
             // TODO unit test for the property 'SkipAggregation'
+        }
+        /// <summary>
+        /// Test the property 'UiMessageWebviewUrlScheme'
+        /// </summary>
+        [Test]
+        public void UiMessageWebviewUrlSchemeTest()
+        {
+            // TODO unit test for the property 'UiMessageWebviewUrlScheme'
         }
 
     }

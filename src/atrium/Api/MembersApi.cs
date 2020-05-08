@@ -314,6 +314,33 @@ namespace Atrium.Api
         /// <returns>ApiResponse of MemberConnectionStatusResponseBody</returns>
         ApiResponse<MemberConnectionStatusResponseBody> ReadMemberStatusWithHttpInfo (string memberGuid, string userGuid);
         /// <summary>
+        /// Read OAuth Window URI
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>MemberResponseBody</returns>
+        MemberResponseBody ReadOAuthWindowURI (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null);
+
+        /// <summary>
+        /// Read OAuth Window URI
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        ApiResponse<MemberResponseBody> ReadOAuthWindowURIWithHttpInfo (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null);
+        /// <summary>
         /// Resume aggregation from MFA
         /// </summary>
         /// <remarks>
@@ -655,6 +682,33 @@ namespace Atrium.Api
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
         /// <returns>Task of ApiResponse (MemberConnectionStatusResponseBody)</returns>
         System.Threading.Tasks.Task<ApiResponse<MemberConnectionStatusResponseBody>> ReadMemberStatusAsyncWithHttpInfo (string memberGuid, string userGuid);
+        /// <summary>
+        /// Read OAuth Window URI
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        System.Threading.Tasks.Task<MemberResponseBody> ReadOAuthWindowURIAsync (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null);
+
+        /// <summary>
+        /// Read OAuth Window URI
+        /// </summary>
+        /// <remarks>
+        /// This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </remarks>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ReadOAuthWindowURIAsyncWithHttpInfo (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null);
         /// <summary>
         /// Resume aggregation from MFA
         /// </summary>
@@ -2837,6 +2891,183 @@ namespace Atrium.Api
             return new ApiResponse<MemberConnectionStatusResponseBody>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (MemberConnectionStatusResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberConnectionStatusResponseBody)));
+        }
+
+        /// <summary>
+        /// Read OAuth Window URI This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>MemberResponseBody</returns>
+        public MemberResponseBody ReadOAuthWindowURI (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null)
+        {
+             ApiResponse<MemberResponseBody> localVarResponse = ReadOAuthWindowURIWithHttpInfo(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Read OAuth Window URI This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>ApiResponse of MemberResponseBody</returns>
+        public ApiResponse< MemberResponseBody > ReadOAuthWindowURIWithHttpInfo (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->ReadOAuthWindowURI");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->ReadOAuthWindowURI");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/oauth_window_uri";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (referralSource != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "referral_source", referralSource)); // query parameter
+            if (uiMessageWebviewUrlScheme != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme)); // query parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReadOAuthWindowURI", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
+        }
+
+        /// <summary>
+        /// Read OAuth Window URI This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>Task of MemberResponseBody</returns>
+        public async System.Threading.Tasks.Task<MemberResponseBody> ReadOAuthWindowURIAsync (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null)
+        {
+             ApiResponse<MemberResponseBody> localVarResponse = await ReadOAuthWindowURIAsyncWithHttpInfo(memberGuid, userGuid, referralSource, uiMessageWebviewUrlScheme);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Read OAuth Window URI This endpoint will generate an &#x60;oauth_window_uri&#x60; for the specified &#x60;member&#x60;.
+        /// </summary>
+        /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
+        /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="referralSource">Should be either BROWSER or APP depending on the implementation. (optional)</param>
+        /// <param name="uiMessageWebviewUrlScheme">A scheme for routing the user back to the application state they were previously in. (optional)</param>
+        /// <returns>Task of ApiResponse (MemberResponseBody)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<MemberResponseBody>> ReadOAuthWindowURIAsyncWithHttpInfo (string memberGuid, string userGuid, string referralSource = null, string uiMessageWebviewUrlScheme = null)
+        {
+            // verify the required parameter 'memberGuid' is set
+            if (memberGuid == null)
+                throw new ApiException(400, "Missing required parameter 'memberGuid' when calling MembersApi->ReadOAuthWindowURI");
+            // verify the required parameter 'userGuid' is set
+            if (userGuid == null)
+                throw new ApiException(400, "Missing required parameter 'userGuid' when calling MembersApi->ReadOAuthWindowURI");
+
+            var localVarPath = "/users/{user_guid}/members/{member_guid}/oauth_window_uri";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/vnd.mx.atrium.v1+json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
+            if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (referralSource != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "referral_source", referralSource)); // query parameter
+            if (uiMessageWebviewUrlScheme != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "ui_message_webview_url_scheme", uiMessageWebviewUrlScheme)); // query parameter
+
+            // authentication (apiKey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
+            {
+                localVarHeaderParams["MX-API-Key"] = this.Configuration.GetApiKeyWithPrefix("MX-API-Key");
+            }
+            // authentication (clientID) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-Client-ID")))
+            {
+                localVarHeaderParams["MX-Client-ID"] = this.Configuration.GetApiKeyWithPrefix("MX-Client-ID");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReadOAuthWindowURI", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MemberResponseBody>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MemberResponseBody) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MemberResponseBody)));
         }
 
         /// <summary>

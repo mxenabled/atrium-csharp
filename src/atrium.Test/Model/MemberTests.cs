@@ -129,6 +129,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
+        /// Test the property 'OauthWindowUri'
+        /// </summary>
+        [Test]
+        public void OauthWindowUriTest()
+        {
+            // TODO unit test for the property 'OauthWindowUri'
+        }
+        /// <summary>
         /// Test the property 'Status'
         /// </summary>
         [Test]

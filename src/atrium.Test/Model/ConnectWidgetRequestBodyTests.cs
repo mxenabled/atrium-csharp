@@ -113,6 +113,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'UiMessageVersion'
         }
         /// <summary>
+        /// Test the property 'UiMessageWebviewUrlScheme'
+        /// </summary>
+        [Test]
+        public void UiMessageWebviewUrlSchemeTest()
+        {
+            // TODO unit test for the property 'UiMessageWebviewUrlScheme'
+        }
+        /// <summary>
         /// Test the property 'UpdateCredentials'
         /// </summary>
         [Test]
