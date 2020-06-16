@@ -12,7 +12,7 @@ OpenAPI spec version: 0.1
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C70AAAA0-4D55-4EFB-ADCD-1BE12E2923BF}</ProjectGuid>
+    <ProjectGuid>{6201211B-9512-4C82-BF22-5D7150BF71E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Atrium</RootNamespace>
