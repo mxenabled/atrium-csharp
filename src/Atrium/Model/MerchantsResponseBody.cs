@@ -32,19 +32,19 @@ namespace Atrium.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="MerchantsResponseBody" /> class.
         /// </summary>
-        /// <param name="merchant">merchant.</param>
+        /// <param name="merchants">merchants.</param>
         /// <param name="pagination">pagination.</param>
-        public MerchantsResponseBody(List<Merchant> merchant = default(List<Merchant>), Pagination pagination = default(Pagination))
+        public MerchantsResponseBody(List<Merchant> merchants = default(List<Merchant>), Pagination pagination = default(Pagination))
         {
-            this.Merchant = merchant;
+            this.Merchants = merchants;
             this.Pagination = pagination;
         }
         
         /// <summary>
-        /// Gets or Sets Merchant
+        /// Gets or Sets Merchants
         /// </summary>
-        [DataMember(Name="merchant", EmitDefaultValue=false)]
-        public List<Merchant> Merchant { get; set; }
+        [DataMember(Name="merchants", EmitDefaultValue=false)]
+        public List<Merchant> Merchants { get; set; }
 
         /// <summary>
         /// Gets or Sets Pagination
@@ -60,7 +60,7 @@ namespace Atrium.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MerchantsResponseBody {\n");
-            sb.Append("  Merchant: ").Append(Merchant).Append("\n");
+            sb.Append("  Merchants: ").Append(Merchants).Append("\n");
             sb.Append("  Pagination: ").Append(Pagination).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -97,9 +97,9 @@ namespace Atrium.Model
 
             return 
                 (
-                    this.Merchant == input.Merchant ||
-                    this.Merchant != null &&
-                    this.Merchant.SequenceEqual(input.Merchant)
+                    this.Merchants == input.Merchants ||
+                    this.Merchants != null &&
+                    this.Merchants.SequenceEqual(input.Merchants)
                 ) && 
                 (
                     this.Pagination == input.Pagination ||
@@ -117,8 +117,8 @@ namespace Atrium.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Merchant != null)
-                    hashCode = hashCode * 59 + this.Merchant.GetHashCode();
+                if (this.Merchants != null)
+                    hashCode = hashCode * 59 + this.Merchants.GetHashCode();
                 if (this.Pagination != null)
                     hashCode = hashCode * 59 + this.Pagination.GetHashCode();
                 return hashCode;

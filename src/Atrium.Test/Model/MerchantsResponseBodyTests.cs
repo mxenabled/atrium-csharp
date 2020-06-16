@@ -65,12 +65,12 @@ namespace Atrium.Test
 
 
         /// <summary>
-        /// Test the property 'Merchant'
+        /// Test the property 'Merchants'
         /// </summary>
         [Test]
-        public void MerchantTest()
+        public void MerchantsTest()
         {
-            // TODO unit test for the property 'Merchant'
+            // TODO unit test for the property 'Merchants'
         }
         /// <summary>
         /// Test the property 'Pagination'
