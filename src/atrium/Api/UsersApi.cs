@@ -257,9 +257,15 @@ namespace Atrium.Api
         /// Initializes a new instance of the <see cref="UsersApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public UsersApi(String basePath)
+        public UsersApi(String apiKey, String clientID, String basePath)
         {
-            this.Configuration = new Atrium.Client.Configuration { BasePath = basePath };
+            this.Configuration = new Atrium.Client.Configuration {
+              BasePath = basePath,
+              ApiKey = {
+                {"MX-API-Key", apiKey},
+                {"MX-Client-ID", clientID}
+              }
+            };
 
             ExceptionFactory = Atrium.Client.Configuration.DefaultExceptionFactory;
         }
