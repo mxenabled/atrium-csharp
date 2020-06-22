@@ -25,7 +25,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new ConnectWidgetRequestBody(); // ConnectWidgetRequestBody | Optional config options for WebView (is_mobile_webview, current_institution_code, current_member_guid, update_credentials)

@@ -27,7 +27,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var name = name_example;  // string | This will list only institutions in which the appended string appears. (optional) 
             var page = 1;  // int? | Specify current page. (optional) 
@@ -90,7 +90,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var institutionCode = "example_institution_code";  // string | The institution_code of the institution.
 
@@ -141,7 +141,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var institutionCode = "example_institution_code";  // string | The institution_code of the institution.
 

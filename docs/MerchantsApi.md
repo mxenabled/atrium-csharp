@@ -28,7 +28,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var merchantGuid = "MCH-123";  // string | The unique identifier for a `merchant`.
 
@@ -79,7 +79,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
 
             try
@@ -126,7 +126,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var merchantGuid = "MCH-123";  // string | The unique identifier for a `merchant`.
 
@@ -177,7 +177,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var merchantGuid = "MCH-123";  // string | The unique identifier for a `merchant`.
             var merchantLocationGuid = "MCL-123";  // string | The unique identifier for a `merchant_location`.

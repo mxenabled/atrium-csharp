@@ -27,7 +27,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
@@ -80,7 +80,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
@@ -133,7 +133,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.

@@ -29,7 +29,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var body = new UserCreateRequestBody(); // UserCreateRequestBody | User object to be created with optional parameters (identifier, is_disabled, metadata)
 
@@ -80,7 +80,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
@@ -130,7 +130,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var page = 1;  // int? | Specify current page. (optional) 
             var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
@@ -183,7 +183,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
 
@@ -234,7 +234,7 @@ namespace Example
     {
         public void main()
         {
-            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID");
+            var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
             var body = new UserUpdateRequestBody(); // UserUpdateRequestBody | User object to be updated with optional parameters (identifier, is_disabled, metadata) (optional) 
