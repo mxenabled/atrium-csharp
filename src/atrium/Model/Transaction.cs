@@ -146,6 +146,12 @@ namespace Atrium.Model
         public bool? IsPayrollAdvance { get; private set; }
 
         /// <summary>
+        /// Gets or Sets IsSubscription
+        /// </summary>
+        [DataMember(Name="is_subscription", EmitDefaultValue=false)]
+        public bool? IsSubscription { get; private set; }
+
+        /// <summary>
         /// Gets or Sets Latitude
         /// </summary>
         [DataMember(Name="latitude", EmitDefaultValue=false)]
@@ -255,6 +261,7 @@ namespace Atrium.Model
             sb.Append("  IsInternational: ").Append(IsInternational).Append("\n");
             sb.Append("  IsOverdraftFee: ").Append(IsOverdraftFee).Append("\n");
             sb.Append("  IsPayrollAdvance: ").Append(IsPayrollAdvance).Append("\n");
+            sb.Append("  IsSubscription: ").Append(IsSubscription).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
             sb.Append("  Longitude: ").Append(Longitude).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
@@ -394,6 +401,11 @@ namespace Atrium.Model
                     this.IsPayrollAdvance.Equals(input.IsPayrollAdvance))
                 ) && 
                 (
+                    this.IsSubscription == input.IsSubscription ||
+                    (this.IsSubscription != null &&
+                    this.IsSubscription.Equals(input.IsSubscription))
+                ) && 
+                (
                     this.Latitude == input.Latitude ||
                     (this.Latitude != null &&
                     this.Latitude.Equals(input.Latitude))
@@ -510,6 +522,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.IsOverdraftFee.GetHashCode();
                 if (this.IsPayrollAdvance != null)
                     hashCode = hashCode * 59 + this.IsPayrollAdvance.GetHashCode();
+                if (this.IsSubscription != null)
+                    hashCode = hashCode * 59 + this.IsSubscription.GetHashCode();
                 if (this.Latitude != null)
                     hashCode = hashCode * 59 + this.Latitude.GetHashCode();
                 if (this.Longitude != null)

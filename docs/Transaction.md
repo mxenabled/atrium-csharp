@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **IsInternational** | **bool?** |  | [optional] 
 **IsOverdraftFee** | **bool?** |  | [optional] 
 **IsPayrollAdvance** | **bool?** |  | [optional] 
+**IsSubscription** | **bool?** |  | [optional] 
 **Latitude** | **decimal?** |  | [optional] 
 **Longitude** | **decimal?** |  | [optional] 
 **MemberGuid** | **string** |  | [optional] 

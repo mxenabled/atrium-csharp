@@ -209,6 +209,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'IsPayrollAdvance'
         }
         /// <summary>
+        /// Test the property 'IsSubscription'
+        /// </summary>
+        [Test]
+        public void IsSubscriptionTest()
+        {
+            // TODO unit test for the property 'IsSubscription'
+        }
+        /// <summary>
         /// Test the property 'Latitude'
         /// </summary>
         [Test]
