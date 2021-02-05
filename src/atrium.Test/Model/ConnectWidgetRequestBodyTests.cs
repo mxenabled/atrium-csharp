@@ -73,6 +73,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'IsMobileWebview'
         }
         /// <summary>
+        /// Test the property 'ColorScheme'
+        /// </summary>
+        [Test]
+        public void ColorSchemeTest()
+        {
+            // TODO unit test for the property 'ColorScheme'
+        }
+        /// <summary>
         /// Test the property 'CurrentInstitutionCode'
         /// </summary>
         [Test]
@@ -95,6 +103,14 @@ namespace Atrium.Test
         public void DisableInstitutionSearchTest()
         {
             // TODO unit test for the property 'DisableInstitutionSearch'
+        }
+        /// <summary>
+        /// Test the property 'IncludeTransactions'
+        /// </summary>
+        [Test]
+        public void IncludeTransactionsTest()
+        {
+            // TODO unit test for the property 'IncludeTransactions'
         }
         /// <summary>
         /// Test the property 'Mode'
@@ -127,6 +143,14 @@ namespace Atrium.Test
         public void UpdateCredentialsTest()
         {
             // TODO unit test for the property 'UpdateCredentials'
+        }
+        /// <summary>
+        /// Test the property 'WaitForFullAggregation'
+        /// </summary>
+        [Test]
+        public void WaitForFullAggregationTest()
+        {
+            // TODO unit test for the property 'WaitForFullAggregation'
         }
 
     }

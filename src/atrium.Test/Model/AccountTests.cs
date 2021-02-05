@@ -185,6 +185,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'HoldingsValue'
         }
         /// <summary>
+        /// Test the property 'InsuredName'
+        /// </summary>
+        [Test]
+        public void InsuredNameTest()
+        {
+            // TODO unit test for the property 'InsuredName'
+        }
+        /// <summary>
         /// Test the property 'InstitutionCode'
         /// </summary>
         [Test]
@@ -287,6 +295,22 @@ namespace Atrium.Test
         public void PayoffBalanceTest()
         {
             // TODO unit test for the property 'PayoffBalance'
+        }
+        /// <summary>
+        /// Test the property 'PayOutAmount'
+        /// </summary>
+        [Test]
+        public void PayOutAmountTest()
+        {
+            // TODO unit test for the property 'PayOutAmount'
+        }
+        /// <summary>
+        /// Test the property 'PremiumAmount'
+        /// </summary>
+        [Test]
+        public void PremiumAmountTest()
+        {
+            // TODO unit test for the property 'PremiumAmount'
         }
         /// <summary>
         /// Test the property 'StartedOn'

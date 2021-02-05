@@ -33,23 +33,29 @@ namespace Atrium.Model
         /// Initializes a new instance of the <see cref="ConnectWidgetRequestBody" /> class.
         /// </summary>
         /// <param name="isMobileWebview">isMobileWebview.</param>
+        /// <param name="colorScheme">colorScheme.</param>
         /// <param name="currentInstitutionCode">currentInstitutionCode.</param>
         /// <param name="currentMemberGuid">currentMemberGuid.</param>
         /// <param name="disableInstitutionSearch">disableInstitutionSearch.</param>
+        /// <param name="includeTransactions">includeTransactions.</param>
         /// <param name="mode">mode.</param>
         /// <param name="uiMessageVersion">uiMessageVersion.</param>
         /// <param name="uiMessageWebviewUrlScheme">uiMessageWebviewUrlScheme.</param>
         /// <param name="updateCredentials">updateCredentials.</param>
-        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? disableInstitutionSearch = default(bool?), string mode = default(string), decimal? uiMessageVersion = default(decimal?), string uiMessageWebviewUrlScheme = default(string), bool? updateCredentials = default(bool?))
+        /// <param name="waitForFullAggregation">waitForFullAggregation.</param>
+        public ConnectWidgetRequestBody(bool? isMobileWebview = default(bool?), string colorScheme = default(string), string currentInstitutionCode = default(string), string currentMemberGuid = default(string), bool? disableInstitutionSearch = default(bool?), bool? includeTransactions = default(bool?), string mode = default(string), decimal? uiMessageVersion = default(decimal?), string uiMessageWebviewUrlScheme = default(string), bool? updateCredentials = default(bool?), bool? waitForFullAggregation = default(bool?))
         {
             this.IsMobileWebview = isMobileWebview;
+            this.ColorScheme = colorScheme;
             this.CurrentInstitutionCode = currentInstitutionCode;
             this.CurrentMemberGuid = currentMemberGuid;
             this.DisableInstitutionSearch = disableInstitutionSearch;
+            this.IncludeTransactions = includeTransactions;
             this.Mode = mode;
             this.UiMessageVersion = uiMessageVersion;
             this.UiMessageWebviewUrlScheme = uiMessageWebviewUrlScheme;
             this.UpdateCredentials = updateCredentials;
+            this.WaitForFullAggregation = waitForFullAggregation;
         }
         
         /// <summary>
@@ -57,6 +63,12 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="is_mobile_webview", EmitDefaultValue=false)]
         public bool? IsMobileWebview { get; set; }
+
+        /// <summary>
+        /// Gets or Sets ColorScheme
+        /// </summary>
+        [DataMember(Name="color_scheme", EmitDefaultValue=false)]
+        public string ColorScheme { get; set; }
 
         /// <summary>
         /// Gets or Sets CurrentInstitutionCode
@@ -75,6 +87,12 @@ namespace Atrium.Model
         /// </summary>
         [DataMember(Name="disable_institution_search", EmitDefaultValue=false)]
         public bool? DisableInstitutionSearch { get; set; }
+
+        /// <summary>
+        /// Gets or Sets IncludeTransactions
+        /// </summary>
+        [DataMember(Name="include_transactions", EmitDefaultValue=false)]
+        public bool? IncludeTransactions { get; set; }
 
         /// <summary>
         /// Gets or Sets Mode
@@ -101,6 +119,12 @@ namespace Atrium.Model
         public bool? UpdateCredentials { get; set; }
 
         /// <summary>
+        /// Gets or Sets WaitForFullAggregation
+        /// </summary>
+        [DataMember(Name="wait_for_full_aggregation", EmitDefaultValue=false)]
+        public bool? WaitForFullAggregation { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -109,13 +133,16 @@ namespace Atrium.Model
             var sb = new StringBuilder();
             sb.Append("class ConnectWidgetRequestBody {\n");
             sb.Append("  IsMobileWebview: ").Append(IsMobileWebview).Append("\n");
+            sb.Append("  ColorScheme: ").Append(ColorScheme).Append("\n");
             sb.Append("  CurrentInstitutionCode: ").Append(CurrentInstitutionCode).Append("\n");
             sb.Append("  CurrentMemberGuid: ").Append(CurrentMemberGuid).Append("\n");
             sb.Append("  DisableInstitutionSearch: ").Append(DisableInstitutionSearch).Append("\n");
+            sb.Append("  IncludeTransactions: ").Append(IncludeTransactions).Append("\n");
             sb.Append("  Mode: ").Append(Mode).Append("\n");
             sb.Append("  UiMessageVersion: ").Append(UiMessageVersion).Append("\n");
             sb.Append("  UiMessageWebviewUrlScheme: ").Append(UiMessageWebviewUrlScheme).Append("\n");
             sb.Append("  UpdateCredentials: ").Append(UpdateCredentials).Append("\n");
+            sb.Append("  WaitForFullAggregation: ").Append(WaitForFullAggregation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,6 +183,11 @@ namespace Atrium.Model
                     this.IsMobileWebview.Equals(input.IsMobileWebview))
                 ) && 
                 (
+                    this.ColorScheme == input.ColorScheme ||
+                    (this.ColorScheme != null &&
+                    this.ColorScheme.Equals(input.ColorScheme))
+                ) && 
+                (
                     this.CurrentInstitutionCode == input.CurrentInstitutionCode ||
                     (this.CurrentInstitutionCode != null &&
                     this.CurrentInstitutionCode.Equals(input.CurrentInstitutionCode))
@@ -169,6 +201,11 @@ namespace Atrium.Model
                     this.DisableInstitutionSearch == input.DisableInstitutionSearch ||
                     (this.DisableInstitutionSearch != null &&
                     this.DisableInstitutionSearch.Equals(input.DisableInstitutionSearch))
+                ) && 
+                (
+                    this.IncludeTransactions == input.IncludeTransactions ||
+                    (this.IncludeTransactions != null &&
+                    this.IncludeTransactions.Equals(input.IncludeTransactions))
                 ) && 
                 (
                     this.Mode == input.Mode ||
@@ -189,6 +226,11 @@ namespace Atrium.Model
                     this.UpdateCredentials == input.UpdateCredentials ||
                     (this.UpdateCredentials != null &&
                     this.UpdateCredentials.Equals(input.UpdateCredentials))
+                ) && 
+                (
+                    this.WaitForFullAggregation == input.WaitForFullAggregation ||
+                    (this.WaitForFullAggregation != null &&
+                    this.WaitForFullAggregation.Equals(input.WaitForFullAggregation))
                 );
         }
 
@@ -203,12 +245,16 @@ namespace Atrium.Model
                 int hashCode = 41;
                 if (this.IsMobileWebview != null)
                     hashCode = hashCode * 59 + this.IsMobileWebview.GetHashCode();
+                if (this.ColorScheme != null)
+                    hashCode = hashCode * 59 + this.ColorScheme.GetHashCode();
                 if (this.CurrentInstitutionCode != null)
                     hashCode = hashCode * 59 + this.CurrentInstitutionCode.GetHashCode();
                 if (this.CurrentMemberGuid != null)
                     hashCode = hashCode * 59 + this.CurrentMemberGuid.GetHashCode();
                 if (this.DisableInstitutionSearch != null)
                     hashCode = hashCode * 59 + this.DisableInstitutionSearch.GetHashCode();
+                if (this.IncludeTransactions != null)
+                    hashCode = hashCode * 59 + this.IncludeTransactions.GetHashCode();
                 if (this.Mode != null)
                     hashCode = hashCode * 59 + this.Mode.GetHashCode();
                 if (this.UiMessageVersion != null)
@@ -217,6 +263,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.UiMessageWebviewUrlScheme.GetHashCode();
                 if (this.UpdateCredentials != null)
                     hashCode = hashCode * 59 + this.UpdateCredentials.GetHashCode();
+                if (this.WaitForFullAggregation != null)
+                    hashCode = hashCode * 59 + this.WaitForFullAggregation.GetHashCode();
                 return hashCode;
             }
         }

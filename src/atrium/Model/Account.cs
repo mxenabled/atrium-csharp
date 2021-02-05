@@ -137,6 +137,12 @@ namespace Atrium.Model
         public decimal? HoldingsValue { get; set; }
 
         /// <summary>
+        /// Gets or Sets InsuredName
+        /// </summary>
+        [DataMember(Name="insured_name", EmitDefaultValue=false)]
+        public string InsuredName { get; private set; }
+
+        /// <summary>
         /// Gets or Sets InstitutionCode
         /// </summary>
         [DataMember(Name="institution_code", EmitDefaultValue=false)]
@@ -215,6 +221,18 @@ namespace Atrium.Model
         public decimal? PayoffBalance { get; private set; }
 
         /// <summary>
+        /// Gets or Sets PayOutAmount
+        /// </summary>
+        [DataMember(Name="pay_out_amount", EmitDefaultValue=false)]
+        public decimal? PayOutAmount { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets PremiumAmount
+        /// </summary>
+        [DataMember(Name="premium_amount", EmitDefaultValue=false)]
+        public decimal? PremiumAmount { get; private set; }
+
+        /// <summary>
         /// Gets or Sets StartedOn
         /// </summary>
         [DataMember(Name="started_on", EmitDefaultValue=false)]
@@ -273,6 +291,7 @@ namespace Atrium.Model
             sb.Append("  DeathBenefit: ").Append(DeathBenefit).Append("\n");
             sb.Append("  Guid: ").Append(Guid).Append("\n");
             sb.Append("  HoldingsValue: ").Append(HoldingsValue).Append("\n");
+            sb.Append("  InsuredName: ").Append(InsuredName).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
@@ -286,6 +305,8 @@ namespace Atrium.Model
             sb.Append("  OriginalBalance: ").Append(OriginalBalance).Append("\n");
             sb.Append("  PaymentDueAt: ").Append(PaymentDueAt).Append("\n");
             sb.Append("  PayoffBalance: ").Append(PayoffBalance).Append("\n");
+            sb.Append("  PayOutAmount: ").Append(PayOutAmount).Append("\n");
+            sb.Append("  PremiumAmount: ").Append(PremiumAmount).Append("\n");
             sb.Append("  StartedOn: ").Append(StartedOn).Append("\n");
             sb.Append("  Subtype: ").Append(Subtype).Append("\n");
             sb.Append("  TotalAccountValue: ").Append(TotalAccountValue).Append("\n");
@@ -402,6 +423,11 @@ namespace Atrium.Model
                     this.HoldingsValue.Equals(input.HoldingsValue))
                 ) && 
                 (
+                    this.InsuredName == input.InsuredName ||
+                    (this.InsuredName != null &&
+                    this.InsuredName.Equals(input.InsuredName))
+                ) && 
+                (
                     this.InstitutionCode == input.InstitutionCode ||
                     (this.InstitutionCode != null &&
                     this.InstitutionCode.Equals(input.InstitutionCode))
@@ -465,6 +491,16 @@ namespace Atrium.Model
                     this.PayoffBalance == input.PayoffBalance ||
                     (this.PayoffBalance != null &&
                     this.PayoffBalance.Equals(input.PayoffBalance))
+                ) && 
+                (
+                    this.PayOutAmount == input.PayOutAmount ||
+                    (this.PayOutAmount != null &&
+                    this.PayOutAmount.Equals(input.PayOutAmount))
+                ) && 
+                (
+                    this.PremiumAmount == input.PremiumAmount ||
+                    (this.PremiumAmount != null &&
+                    this.PremiumAmount.Equals(input.PremiumAmount))
                 ) && 
                 (
                     this.StartedOn == input.StartedOn ||
@@ -537,6 +573,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.Guid.GetHashCode();
                 if (this.HoldingsValue != null)
                     hashCode = hashCode * 59 + this.HoldingsValue.GetHashCode();
+                if (this.InsuredName != null)
+                    hashCode = hashCode * 59 + this.InsuredName.GetHashCode();
                 if (this.InstitutionCode != null)
                     hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
                 if (this.InterestRate != null)
@@ -563,6 +601,10 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.PaymentDueAt.GetHashCode();
                 if (this.PayoffBalance != null)
                     hashCode = hashCode * 59 + this.PayoffBalance.GetHashCode();
+                if (this.PayOutAmount != null)
+                    hashCode = hashCode * 59 + this.PayOutAmount.GetHashCode();
+                if (this.PremiumAmount != null)
+                    hashCode = hashCode * 59 + this.PremiumAmount.GetHashCode();
                 if (this.StartedOn != null)
                     hashCode = hashCode * 59 + this.StartedOn.GetHashCode();
                 if (this.Subtype != null)
