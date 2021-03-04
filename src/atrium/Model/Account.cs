@@ -167,6 +167,12 @@ namespace Atrium.Model
         public decimal? LastPayment { get; private set; }
 
         /// <summary>
+        /// Gets or Sets LastPaymentAt
+        /// </summary>
+        [DataMember(Name="last_payment_at", EmitDefaultValue=false)]
+        public string LastPaymentAt { get; private set; }
+
+        /// <summary>
         /// Gets or Sets LoanAmount
         /// </summary>
         [DataMember(Name="loan_amount", EmitDefaultValue=false)]
@@ -296,6 +302,7 @@ namespace Atrium.Model
             sb.Append("  InterestRate: ").Append(InterestRate).Append("\n");
             sb.Append("  IsClosed: ").Append(IsClosed).Append("\n");
             sb.Append("  LastPayment: ").Append(LastPayment).Append("\n");
+            sb.Append("  LastPaymentAt: ").Append(LastPaymentAt).Append("\n");
             sb.Append("  LoanAmount: ").Append(LoanAmount).Append("\n");
             sb.Append("  MaturesOn: ").Append(MaturesOn).Append("\n");
             sb.Append("  MemberGuid: ").Append(MemberGuid).Append("\n");
@@ -448,6 +455,11 @@ namespace Atrium.Model
                     this.LastPayment.Equals(input.LastPayment))
                 ) && 
                 (
+                    this.LastPaymentAt == input.LastPaymentAt ||
+                    (this.LastPaymentAt != null &&
+                    this.LastPaymentAt.Equals(input.LastPaymentAt))
+                ) && 
+                (
                     this.LoanAmount == input.LoanAmount ||
                     (this.LoanAmount != null &&
                     this.LoanAmount.Equals(input.LoanAmount))
@@ -583,6 +595,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.IsClosed.GetHashCode();
                 if (this.LastPayment != null)
                     hashCode = hashCode * 59 + this.LastPayment.GetHashCode();
+                if (this.LastPaymentAt != null)
+                    hashCode = hashCode * 59 + this.LastPaymentAt.GetHashCode();
                 if (this.LoanAmount != null)
                     hashCode = hashCode * 59 + this.LoanAmount.GetHashCode();
                 if (this.MaturesOn != null)

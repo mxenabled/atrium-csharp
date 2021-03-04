@@ -225,6 +225,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'LastPayment'
         }
         /// <summary>
+        /// Test the property 'LastPaymentAt'
+        /// </summary>
+        [Test]
+        public void LastPaymentAtTest()
+        {
+            // TODO unit test for the property 'LastPaymentAt'
+        }
+        /// <summary>
         /// Test the property 'LoanAmount'
         /// </summary>
         [Test]
