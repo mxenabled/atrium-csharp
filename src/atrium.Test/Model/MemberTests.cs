@@ -113,6 +113,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'IsBeingAggregated'
         }
         /// <summary>
+        /// Test the property 'IsOauth'
+        /// </summary>
+        [Test]
+        public void IsOauthTest()
+        {
+            // TODO unit test for the property 'IsOauth'
+        }
+        /// <summary>
         /// Test the property 'Metadata'
         /// </summary>
         [Test]

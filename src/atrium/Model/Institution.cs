@@ -80,6 +80,12 @@ namespace Atrium.Model
         public bool? SupportsAccountVerification { get; private set; }
 
         /// <summary>
+        /// Gets or Sets SupportsOauth
+        /// </summary>
+        [DataMember(Name="supports_oauth", EmitDefaultValue=false)]
+        public bool? SupportsOauth { get; private set; }
+
+        /// <summary>
         /// Gets or Sets SupportsTransactionHistory
         /// </summary>
         [DataMember(Name="supports_transaction_history", EmitDefaultValue=false)]
@@ -106,6 +112,7 @@ namespace Atrium.Model
             sb.Append("  SupportsAccountIdentification: ").Append(SupportsAccountIdentification).Append("\n");
             sb.Append("  SupportsAccountStatement: ").Append(SupportsAccountStatement).Append("\n");
             sb.Append("  SupportsAccountVerification: ").Append(SupportsAccountVerification).Append("\n");
+            sb.Append("  SupportsOauth: ").Append(SupportsOauth).Append("\n");
             sb.Append("  SupportsTransactionHistory: ").Append(SupportsTransactionHistory).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
@@ -178,6 +185,11 @@ namespace Atrium.Model
                     this.SupportsAccountVerification.Equals(input.SupportsAccountVerification))
                 ) && 
                 (
+                    this.SupportsOauth == input.SupportsOauth ||
+                    (this.SupportsOauth != null &&
+                    this.SupportsOauth.Equals(input.SupportsOauth))
+                ) && 
+                (
                     this.SupportsTransactionHistory == input.SupportsTransactionHistory ||
                     (this.SupportsTransactionHistory != null &&
                     this.SupportsTransactionHistory.Equals(input.SupportsTransactionHistory))
@@ -212,6 +224,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.SupportsAccountStatement.GetHashCode();
                 if (this.SupportsAccountVerification != null)
                     hashCode = hashCode * 59 + this.SupportsAccountVerification.GetHashCode();
+                if (this.SupportsOauth != null)
+                    hashCode = hashCode * 59 + this.SupportsOauth.GetHashCode();
                 if (this.SupportsTransactionHistory != null)
                     hashCode = hashCode * 59 + this.SupportsTransactionHistory.GetHashCode();
                 if (this.Url != null)

@@ -121,6 +121,14 @@ namespace Atrium.Test
             // TODO unit test for the property 'SupportsAccountVerification'
         }
         /// <summary>
+        /// Test the property 'SupportsOauth'
+        /// </summary>
+        [Test]
+        public void SupportsOauthTest()
+        {
+            // TODO unit test for the property 'SupportsOauth'
+        }
+        /// <summary>
         /// Test the property 'SupportsTransactionHistory'
         /// </summary>
         [Test]
