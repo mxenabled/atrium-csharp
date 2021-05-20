@@ -79,6 +79,12 @@ namespace Atrium.Model
         public bool? IsBeingAggregated { get; private set; }
 
         /// <summary>
+        /// Gets or Sets IsOauth
+        /// </summary>
+        [DataMember(Name="is_oauth", EmitDefaultValue=false)]
+        public bool? IsOauth { get; private set; }
+
+        /// <summary>
         /// Gets or Sets Metadata
         /// </summary>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
@@ -128,6 +134,7 @@ namespace Atrium.Model
             sb.Append("  Identifier: ").Append(Identifier).Append("\n");
             sb.Append("  InstitutionCode: ").Append(InstitutionCode).Append("\n");
             sb.Append("  IsBeingAggregated: ").Append(IsBeingAggregated).Append("\n");
+            sb.Append("  IsOauth: ").Append(IsOauth).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  OauthWindowUri: ").Append(OauthWindowUri).Append("\n");
@@ -199,6 +206,11 @@ namespace Atrium.Model
                     this.IsBeingAggregated.Equals(input.IsBeingAggregated))
                 ) && 
                 (
+                    this.IsOauth == input.IsOauth ||
+                    (this.IsOauth != null &&
+                    this.IsOauth.Equals(input.IsOauth))
+                ) && 
+                (
                     this.Metadata == input.Metadata ||
                     (this.Metadata != null &&
                     this.Metadata.Equals(input.Metadata))
@@ -251,6 +263,8 @@ namespace Atrium.Model
                     hashCode = hashCode * 59 + this.InstitutionCode.GetHashCode();
                 if (this.IsBeingAggregated != null)
                     hashCode = hashCode * 59 + this.IsBeingAggregated.GetHashCode();
+                if (this.IsOauth != null)
+                    hashCode = hashCode * 59 + this.IsOauth.GetHashCode();
                 if (this.Metadata != null)
                     hashCode = hashCode * 59 + this.Metadata.GetHashCode();
                 if (this.Name != null)
