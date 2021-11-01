@@ -70,7 +70,9 @@ namespace Atrium.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string merchantGuid = null;
-            //var response = instance.ListMerchantLocations(merchantGuid);
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListMerchantLocations(merchantGuid, page, recordsPerPage);
             //Assert.IsInstanceOf<MerchantLocationsResponseBody> (response, "response is MerchantLocationsResponseBody");
         }
         
@@ -81,7 +83,9 @@ namespace Atrium.Test
         public void ListMerchantsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.ListMerchants();
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListMerchants(page, recordsPerPage);
             //Assert.IsInstanceOf<MerchantsResponseBody> (response, "response is MerchantsResponseBody");
         }
         

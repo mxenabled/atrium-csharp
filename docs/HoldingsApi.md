@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listholdings"></a>
 # **ListHoldings**
-> HoldingsResponseBody ListHoldings (string userGuid)
+> HoldingsResponseBody ListHoldings (string userGuid, int? page = null, int? recordsPerPage = null)
 
 List holdings
 
@@ -31,11 +31,13 @@ namespace Example
             var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List holdings
-                HoldingsResponseBody response = client.holdings.ListHoldings(userGuid);
+                HoldingsResponseBody response = client.holdings.ListHoldings(userGuid, page, recordsPerPage);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -52,6 +54,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type
 
@@ -61,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="listholdingsbyaccount"></a>
 # **ListHoldingsByAccount**
-> HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid)
+> HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
 List holdings by account
 
@@ -83,11 +87,13 @@ namespace Example
 
             var accountGuid = "ACT-123";  // string | The unique identifier for an `account`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List holdings by account
-                HoldingsResponseBody response = client.holdings.ListHoldingsByAccount(accountGuid, userGuid);
+                HoldingsResponseBody response = client.holdings.ListHoldingsByAccount(accountGuid, userGuid, page, recordsPerPage);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -105,6 +111,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **accountGuid** | **string**| The unique identifier for an &#x60;account&#x60;. | 
  **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type
 
@@ -114,7 +122,7 @@ Name | Type | Description  | Notes
 
 <a name="listholdingsbymember"></a>
 # **ListHoldingsByMember**
-> HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid)
+> HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
 
 List holdings by member
 
@@ -136,11 +144,13 @@ namespace Example
 
             var memberGuid = "MBR-123";  // string | The unique identifier for a `member`.
             var userGuid = "USR-123";  // string | The unique identifier for a `user`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List holdings by member
-                HoldingsResponseBody response = client.holdings.ListHoldingsByMember(memberGuid, userGuid);
+                HoldingsResponseBody response = client.holdings.ListHoldingsByMember(memberGuid, userGuid, page, recordsPerPage);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -158,6 +168,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **memberGuid** | **string**| The unique identifier for a &#x60;member&#x60;. | 
  **userGuid** | **string**| The unique identifier for a &#x60;user&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type
 

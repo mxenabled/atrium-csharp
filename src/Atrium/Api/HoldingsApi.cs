@@ -31,8 +31,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        HoldingsResponseBody ListHoldings (string userGuid);
+        HoldingsResponseBody ListHoldings (string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings
@@ -42,8 +44,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        ApiResponse<HoldingsResponseBody> ListHoldingsWithHttpInfo (string userGuid);
+        ApiResponse<HoldingsResponseBody> ListHoldingsWithHttpInfo (string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List holdings by account
         /// </summary>
@@ -53,8 +57,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid);
+        HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings by account
@@ -65,8 +71,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        ApiResponse<HoldingsResponseBody> ListHoldingsByAccountWithHttpInfo (string accountGuid, string userGuid);
+        ApiResponse<HoldingsResponseBody> ListHoldingsByAccountWithHttpInfo (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List holdings by member
         /// </summary>
@@ -76,8 +84,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid);
+        HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings by member
@@ -88,8 +98,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        ApiResponse<HoldingsResponseBody> ListHoldingsByMemberWithHttpInfo (string memberGuid, string userGuid);
+        ApiResponse<HoldingsResponseBody> ListHoldingsByMemberWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read holding
         /// </summary>
@@ -123,8 +135,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsAsync (string userGuid);
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsAsync (string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings
@@ -134,8 +148,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsAsyncWithHttpInfo (string userGuid);
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsAsyncWithHttpInfo (string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List holdings by account
         /// </summary>
@@ -145,8 +161,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync (string accountGuid, string userGuid);
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings by account
@@ -157,8 +175,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountAsyncWithHttpInfo (string accountGuid, string userGuid);
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountAsyncWithHttpInfo (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List holdings by member
         /// </summary>
@@ -168,8 +188,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByMemberAsync (string memberGuid, string userGuid);
+        System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByMemberAsync (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List holdings by member
@@ -180,8 +202,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByMemberAsyncWithHttpInfo (string memberGuid, string userGuid);
+        System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByMemberAsyncWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read holding
         /// </summary>
@@ -316,10 +340,12 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        public HoldingsResponseBody ListHoldings (string userGuid)
+        public HoldingsResponseBody ListHoldings (string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsWithHttpInfo(userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsWithHttpInfo(userGuid, page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -328,8 +354,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        public ApiResponse< HoldingsResponseBody > ListHoldingsWithHttpInfo (string userGuid)
+        public ApiResponse< HoldingsResponseBody > ListHoldingsWithHttpInfo (string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -357,6 +385,8 @@ namespace Atrium.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -392,10 +422,12 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsAsync (string userGuid)
+        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsAsync (string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsAsyncWithHttpInfo(userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsAsyncWithHttpInfo(userGuid, page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -405,8 +437,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsAsyncWithHttpInfo (string userGuid)
+        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsAsyncWithHttpInfo (string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'userGuid' is set
             if (userGuid == null)
@@ -434,6 +468,8 @@ namespace Atrium.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -470,10 +506,12 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        public HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid)
+        public HoldingsResponseBody ListHoldingsByAccount (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsByAccountWithHttpInfo(accountGuid, userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsByAccountWithHttpInfo(accountGuid, userGuid, page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -483,8 +521,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        public ApiResponse< HoldingsResponseBody > ListHoldingsByAccountWithHttpInfo (string accountGuid, string userGuid)
+        public ApiResponse< HoldingsResponseBody > ListHoldingsByAccountWithHttpInfo (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
@@ -516,6 +556,8 @@ namespace Atrium.Api
 
             if (accountGuid != null) localVarPathParams.Add("account_guid", this.Configuration.ApiClient.ParameterToString(accountGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -552,10 +594,12 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync (string accountGuid, string userGuid)
+        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByAccountAsync (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsByAccountAsyncWithHttpInfo(accountGuid, userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsByAccountAsyncWithHttpInfo(accountGuid, userGuid, page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -566,8 +610,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="accountGuid">The unique identifier for an &#x60;account&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountAsyncWithHttpInfo (string accountGuid, string userGuid)
+        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByAccountAsyncWithHttpInfo (string accountGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'accountGuid' is set
             if (accountGuid == null)
@@ -599,6 +645,8 @@ namespace Atrium.Api
 
             if (accountGuid != null) localVarPathParams.Add("account_guid", this.Configuration.ApiClient.ParameterToString(accountGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -635,10 +683,12 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>HoldingsResponseBody</returns>
-        public HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid)
+        public HoldingsResponseBody ListHoldingsByMember (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsByMemberWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = ListHoldingsByMemberWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -648,8 +698,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of HoldingsResponseBody</returns>
-        public ApiResponse< HoldingsResponseBody > ListHoldingsByMemberWithHttpInfo (string memberGuid, string userGuid)
+        public ApiResponse< HoldingsResponseBody > ListHoldingsByMemberWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -681,6 +733,8 @@ namespace Atrium.Api
 
             if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -717,10 +771,12 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of HoldingsResponseBody</returns>
-        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByMemberAsync (string memberGuid, string userGuid)
+        public async System.Threading.Tasks.Task<HoldingsResponseBody> ListHoldingsByMemberAsync (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsByMemberAsyncWithHttpInfo(memberGuid, userGuid);
+             ApiResponse<HoldingsResponseBody> localVarResponse = await ListHoldingsByMemberAsyncWithHttpInfo(memberGuid, userGuid, page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -731,8 +787,10 @@ namespace Atrium.Api
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="memberGuid">The unique identifier for a &#x60;member&#x60;.</param>
         /// <param name="userGuid">The unique identifier for a &#x60;user&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (HoldingsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByMemberAsyncWithHttpInfo (string memberGuid, string userGuid)
+        public async System.Threading.Tasks.Task<ApiResponse<HoldingsResponseBody>> ListHoldingsByMemberAsyncWithHttpInfo (string memberGuid, string userGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'memberGuid' is set
             if (memberGuid == null)
@@ -764,6 +822,8 @@ namespace Atrium.Api
 
             if (memberGuid != null) localVarPathParams.Add("member_guid", this.Configuration.ApiClient.ParameterToString(memberGuid)); // path parameter
             if (userGuid != null) localVarPathParams.Add("user_guid", this.Configuration.ApiClient.ParameterToString(userGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))

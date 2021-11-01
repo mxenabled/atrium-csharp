@@ -31,8 +31,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>MerchantLocationsResponseBody</returns>
-        MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid);
+        MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List merchant locations
@@ -42,8 +44,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of MerchantLocationsResponseBody</returns>
-        ApiResponse<MerchantLocationsResponseBody> ListMerchantLocationsWithHttpInfo (string merchantGuid);
+        ApiResponse<MerchantLocationsResponseBody> ListMerchantLocationsWithHttpInfo (string merchantGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List merchants
         /// </summary>
@@ -51,8 +55,10 @@ namespace Atrium.Api
         /// Returns a list of merchnants.
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>MerchantsResponseBody</returns>
-        MerchantsResponseBody ListMerchants ();
+        MerchantsResponseBody ListMerchants (int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List merchants
@@ -61,8 +67,10 @@ namespace Atrium.Api
         /// Returns a list of merchnants.
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of MerchantsResponseBody</returns>
-        ApiResponse<MerchantsResponseBody> ListMerchantsWithHttpInfo ();
+        ApiResponse<MerchantsResponseBody> ListMerchantsWithHttpInfo (int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read merchant
         /// </summary>
@@ -117,8 +125,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of MerchantLocationsResponseBody</returns>
-        System.Threading.Tasks.Task<MerchantLocationsResponseBody> ListMerchantLocationsAsync (string merchantGuid);
+        System.Threading.Tasks.Task<MerchantLocationsResponseBody> ListMerchantLocationsAsync (string merchantGuid, int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List merchant locations
@@ -128,8 +138,10 @@ namespace Atrium.Api
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (MerchantLocationsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MerchantLocationsResponseBody>> ListMerchantLocationsAsyncWithHttpInfo (string merchantGuid);
+        System.Threading.Tasks.Task<ApiResponse<MerchantLocationsResponseBody>> ListMerchantLocationsAsyncWithHttpInfo (string merchantGuid, int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// List merchants
         /// </summary>
@@ -137,8 +149,10 @@ namespace Atrium.Api
         /// Returns a list of merchnants.
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of MerchantsResponseBody</returns>
-        System.Threading.Tasks.Task<MerchantsResponseBody> ListMerchantsAsync ();
+        System.Threading.Tasks.Task<MerchantsResponseBody> ListMerchantsAsync (int? page = null, int? recordsPerPage = null);
 
         /// <summary>
         /// List merchants
@@ -147,8 +161,10 @@ namespace Atrium.Api
         /// Returns a list of merchnants.
         /// </remarks>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (MerchantsResponseBody)</returns>
-        System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null);
         /// <summary>
         /// Read merchant
         /// </summary>
@@ -304,10 +320,12 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>MerchantLocationsResponseBody</returns>
-        public MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid)
+        public MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<MerchantLocationsResponseBody> localVarResponse = ListMerchantLocationsWithHttpInfo(merchantGuid);
+             ApiResponse<MerchantLocationsResponseBody> localVarResponse = ListMerchantLocationsWithHttpInfo(merchantGuid, page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -316,8 +334,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of MerchantLocationsResponseBody</returns>
-        public ApiResponse< MerchantLocationsResponseBody > ListMerchantLocationsWithHttpInfo (string merchantGuid)
+        public ApiResponse< MerchantLocationsResponseBody > ListMerchantLocationsWithHttpInfo (string merchantGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'merchantGuid' is set
             if (merchantGuid == null)
@@ -345,6 +365,8 @@ namespace Atrium.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (merchantGuid != null) localVarPathParams.Add("merchant_guid", this.Configuration.ApiClient.ParameterToString(merchantGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -380,10 +402,12 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of MerchantLocationsResponseBody</returns>
-        public async System.Threading.Tasks.Task<MerchantLocationsResponseBody> ListMerchantLocationsAsync (string merchantGuid)
+        public async System.Threading.Tasks.Task<MerchantLocationsResponseBody> ListMerchantLocationsAsync (string merchantGuid, int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<MerchantLocationsResponseBody> localVarResponse = await ListMerchantLocationsAsyncWithHttpInfo(merchantGuid);
+             ApiResponse<MerchantLocationsResponseBody> localVarResponse = await ListMerchantLocationsAsyncWithHttpInfo(merchantGuid, page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -393,8 +417,10 @@ namespace Atrium.Api
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="merchantGuid">The unique identifier for a &#x60;merchant&#x60;.</param>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (MerchantLocationsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MerchantLocationsResponseBody>> ListMerchantLocationsAsyncWithHttpInfo (string merchantGuid)
+        public async System.Threading.Tasks.Task<ApiResponse<MerchantLocationsResponseBody>> ListMerchantLocationsAsyncWithHttpInfo (string merchantGuid, int? page = null, int? recordsPerPage = null)
         {
             // verify the required parameter 'merchantGuid' is set
             if (merchantGuid == null)
@@ -422,6 +448,8 @@ namespace Atrium.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (merchantGuid != null) localVarPathParams.Add("merchant_guid", this.Configuration.ApiClient.ParameterToString(merchantGuid)); // path parameter
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -456,10 +484,12 @@ namespace Atrium.Api
         /// List merchants Returns a list of merchnants.
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>MerchantsResponseBody</returns>
-        public MerchantsResponseBody ListMerchants ()
+        public MerchantsResponseBody ListMerchants (int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<MerchantsResponseBody> localVarResponse = ListMerchantsWithHttpInfo();
+             ApiResponse<MerchantsResponseBody> localVarResponse = ListMerchantsWithHttpInfo(page, recordsPerPage);
              return localVarResponse.Data;
         }
 
@@ -467,8 +497,10 @@ namespace Atrium.Api
         /// List merchants Returns a list of merchnants.
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>ApiResponse of MerchantsResponseBody</returns>
-        public ApiResponse< MerchantsResponseBody > ListMerchantsWithHttpInfo ()
+        public ApiResponse< MerchantsResponseBody > ListMerchantsWithHttpInfo (int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/merchants";
@@ -492,6 +524,8 @@ namespace Atrium.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))
@@ -526,10 +560,12 @@ namespace Atrium.Api
         /// List merchants Returns a list of merchnants.
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of MerchantsResponseBody</returns>
-        public async System.Threading.Tasks.Task<MerchantsResponseBody> ListMerchantsAsync ()
+        public async System.Threading.Tasks.Task<MerchantsResponseBody> ListMerchantsAsync (int? page = null, int? recordsPerPage = null)
         {
-             ApiResponse<MerchantsResponseBody> localVarResponse = await ListMerchantsAsyncWithHttpInfo();
+             ApiResponse<MerchantsResponseBody> localVarResponse = await ListMerchantsAsyncWithHttpInfo(page, recordsPerPage);
              return localVarResponse.Data;
 
         }
@@ -538,8 +574,10 @@ namespace Atrium.Api
         /// List merchants Returns a list of merchnants.
         /// </summary>
         /// <exception cref="Atrium.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="page">Specify current page. (optional)</param>
+        /// <param name="recordsPerPage">Specify records per page. (optional)</param>
         /// <returns>Task of ApiResponse (MerchantsResponseBody)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<MerchantsResponseBody>> ListMerchantsAsyncWithHttpInfo (int? page = null, int? recordsPerPage = null)
         {
 
             var localVarPath = "/merchants";
@@ -563,6 +601,8 @@ namespace Atrium.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (page != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (recordsPerPage != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "records_per_page", recordsPerPage)); // query parameter
 
             // authentication (apiKey) required
             if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("MX-API-Key")))

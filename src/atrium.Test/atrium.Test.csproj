@@ -81,7 +81,7 @@ OpenAPI spec version: 0.1
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\Atrium\Atrium.csproj">
-          <Project>{725E3AE0-466C-4AEB-A383-658F1FB1F443}</Project>
+          <Project>{83D959FC-A472-4DAA-9E23-0D03D82B0C13}</Project>
           <Name>Atrium</Name>
       </ProjectReference>
   </ItemGroup>
