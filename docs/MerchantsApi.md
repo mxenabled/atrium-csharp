@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="listmerchantlocations"></a>
 # **ListMerchantLocations**
-> MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid)
+> MerchantLocationsResponseBody ListMerchantLocations (string merchantGuid, int? page = null, int? recordsPerPage = null)
 
 List merchant locations
 
@@ -31,11 +31,13 @@ namespace Example
             var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
             var merchantGuid = "MCH-123";  // string | The unique identifier for a `merchant`.
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List merchant locations
-                MerchantLocationsResponseBody response = client.merchants.ListMerchantLocations(merchantGuid);
+                MerchantLocationsResponseBody response = client.merchants.ListMerchantLocations(merchantGuid, page, recordsPerPage);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -52,6 +54,8 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **merchantGuid** | **string**| The unique identifier for a &#x60;merchant&#x60;. | 
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type
 
@@ -61,7 +65,7 @@ Name | Type | Description  | Notes
 
 <a name="listmerchants"></a>
 # **ListMerchants**
-> MerchantsResponseBody ListMerchants ()
+> MerchantsResponseBody ListMerchants (int? page = null, int? recordsPerPage = null)
 
 List merchants
 
@@ -81,11 +85,13 @@ namespace Example
         {
             var client = new AtriumClient("YOUR_API_KEY", "YOUR_CLIENT_ID", "https://vestibule.mx.com");
 
+            var page = 1;  // int? | Specify current page. (optional) 
+            var recordsPerPage = 12;  // int? | Specify records per page. (optional) 
 
             try
             {
                 // List merchants
-                MerchantsResponseBody response = client.merchants.ListMerchants();
+                MerchantsResponseBody response = client.merchants.ListMerchants(page, recordsPerPage);
                 Console.WriteLine(response);
             }
             catch (Exception e)
@@ -98,7 +104,11 @@ namespace Example
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int?**| Specify current page. | [optional] 
+ **recordsPerPage** | **int?**| Specify records per page. | [optional] 
 
 ### Return type
 

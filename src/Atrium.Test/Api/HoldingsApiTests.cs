@@ -70,7 +70,9 @@ namespace Atrium.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string userGuid = null;
-            //var response = instance.ListHoldings(userGuid);
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListHoldings(userGuid, page, recordsPerPage);
             //Assert.IsInstanceOf<HoldingsResponseBody> (response, "response is HoldingsResponseBody");
         }
         
@@ -83,7 +85,9 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string accountGuid = null;
             //string userGuid = null;
-            //var response = instance.ListHoldingsByAccount(accountGuid, userGuid);
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListHoldingsByAccount(accountGuid, userGuid, page, recordsPerPage);
             //Assert.IsInstanceOf<HoldingsResponseBody> (response, "response is HoldingsResponseBody");
         }
         
@@ -96,7 +100,9 @@ namespace Atrium.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string memberGuid = null;
             //string userGuid = null;
-            //var response = instance.ListHoldingsByMember(memberGuid, userGuid);
+            //int? page = null;
+            //int? recordsPerPage = null;
+            //var response = instance.ListHoldingsByMember(memberGuid, userGuid, page, recordsPerPage);
             //Assert.IsInstanceOf<HoldingsResponseBody> (response, "response is HoldingsResponseBody");
         }
         
